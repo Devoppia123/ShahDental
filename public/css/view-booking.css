@@ -1,0 +1,274 @@
+.veiw-booking-lsit-head h2 {
+    color: #8b91a2;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.veiw-booking-lsit-head h3 {
+    font-weight: 700;
+    color: #001746;
+    margin-bottom: 15px;
+}
+
+.veiw-booking-lsit-head span {
+    color: #001746;
+}
+
+.icon-top-right .fa-chevron-left {
+    background-color: #e6edfc;
+    padding: 8px 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #0f5ef7;
+}
+
+.icon-top-right {
+    margin-top: -25px;
+    margin-bottom: 15px;
+}
+
+.icon-top-right span {
+    color: #001746;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.slot-img-calender span {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2e2e2e;
+    place-self: center;
+}
+
+table.dataTable thead>tr>th.sorting:before,
+table.dataTable thead>tr>th.sorting:after,
+table.dataTable thead>tr>td.sorting:before,
+table.dataTable thead>tr>td.sorting:after {
+    opacity: .6;
+    display: none !important;
+}
+
+table#example {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+
+.todays-book-table th {
+    background-color: #f4f7ff;
+    border-bottom: 5px solid #c5ceda !important;
+    color: #555555;
+}
+
+.todays-book-table th.sorting.sorting_asc {
+    background-color: #98a5b5;
+    color: #fff !important;
+}
+
+.todays-book-table tbody {
+    font-weight: 600;
+}
+
+.todays-book-table td.text-center.td-text-btn span {
+    background-color: #fff;
+    font-size: 13px;
+    padding: 5px 35px;
+    font-weight: 500;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    margin: 0px;
+}
+
+.todays-book-table th.text-center.sorting {
+    padding-right: 0px;
+}
+
+.todays-book-table thead th {
+    border-right: 1px solid #d9d9d9;
+}
+
+.dataTables_info {
+    display: none;
+}
+
+
+.todays-book-table .fa-caret-down {
+    padding: 1px 4px;
+    font-size: 14px;
+    background-color: #60c27b;
+    border-radius: 50%;
+    color: #fff;
+    margin-left: 6px;
+}
+
+.todays-book-table td span {
+    color: #f79a63;
+}
+
+.td-text-btn span {
+    color: #000 !important;
+}
+
+
+table.dataTable.display>tbody>tr:hover>* {
+    box-shadow: none;
+}
+
+table.dataTable.stripe>tbody>tr.odd>*,
+table.dataTable.display>tbody>tr.odd>* {
+    box-shadow: none !important;
+}
+
+table.dataTable.order-column>tbody tr>.sorting_1,
+table.dataTable.order-column>tbody tr>.sorting_2,
+table.dataTable.order-column>tbody tr>.sorting_3,
+table.dataTable.display>tbody tr>.sorting_1,
+table.dataTable.display>tbody tr>.sorting_2,
+table.dataTable.display>tbody tr>.sorting_3 {
+    box-shadow: none !important;
+}
+
+table.dataTable.hover>tbody>tr:hover>*,
+table.dataTable.display>tbody>tr:hover>* {
+    box-shadow: none !important;
+}
+
+.dt-buttons button {
+    background-color: #fff !important;
+    box-shadow: none;
+    background: #fff !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+    border: 1px solid #d9d9d9 !important;
+}
+
+.dt-buttons button:hover {
+    background: #fff !important;
+    border: 1px solid #d9d9d9;
+}
+
+.dt-buttons {
+    margin-bottom: 10px;
+}
+
+.todays-book-datatable .fa-chevron-left {
+    margin-bottom: 15px;
+    font-size: 13px;
+    padding: 8px 10px;
+    background-color: #e6edfc;
+    border-radius: 50%;
+    margin-right: 7px;
+    color: #0f5ef7;
+}
+
+.todays-book-datatable div span {
+    font-size: 18px;
+    color: #001746;
+}
+
+.todays-book-datatable a {
+    color: #fff;
+    background-color: #0f5ef7;
+    font-size: 600;
+    font-size: 20px;
+}
+
+table#example {
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.reading-tble {
+    width: 100%;
+}
+
+.reading-table-main {
+    border: 1px solid #f1f1f1;
+    padding: 3px;
+    border-radius: 8px;
+}
+
+.reading-tble tr {
+    color: #555555;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.reading-tble th:last-child {
+    border-top-right-radius: 7px;
+    border: none;
+}
+
+.reading-tble th:first-child {
+    border-top-left-radius: 7px;
+}
+
+.reading-tble thead {
+    border-bottom: 4px solid #c5ceda;
+}
+
+.reading-tble th {
+    background-color: #f4f7ff;
+    padding: 8px 8px;
+    border-right: 1px solid #dfe1ef;
+}
+
+.reading-tble td span {
+    display: block;
+    color: #f79a63;
+    line-height: 10px;
+}
+
+.reading-tble tbody td {
+    padding: 8px 0px 9px 8px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.reading-tble tbody tr:last-child td {
+    border: none !important;
+}
+
+.reading-tble tbody tr:first-child td {
+    background-color: #fffbd4;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    padding: 10px;
+    border-bottom: none !important;
+}
+
+table.dataTable thead>tr>th.sorting,
+table.dataTable thead>tr>th.sorting_asc,
+table.dataTable thead>tr>th.sorting_desc,
+table.dataTable thead>tr>th.sorting_asc_disabled,
+table.dataTable thead>tr>th.sorting_desc_disabled,
+table.dataTable thead>tr>td.sorting,
+table.dataTable thead>tr>td.sorting_asc,
+table.dataTable thead>tr>td.sorting_desc,
+table.dataTable thead>tr>td.sorting_asc_disabled,
+table.dataTable thead>tr>td.sorting_desc_disabled {
+
+    border-bottom: 4px solid #c5ceda !important;
+}
+
+#alert {
+    display: none;
+}
+
+.btn-li {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.btn-group-sm>.btn,
+.btn-sm {
+    padding: 5px 2px;
+    font-size: 10px;
+    line-height: 1.5;
+    border-radius: 3px;
+}

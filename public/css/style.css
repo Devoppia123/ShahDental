@@ -1,0 +1,922 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/b356f067ad2ac668fd8d20873e523214?family=bill+corporate+narrow+W00+super');
+@import url('https://db.onlinewebfonts.com/c/02654c5f87934978cd2129477ad40869?family=bill+corporate+narrow+W00medium');
+
+@font-face {
+    font-family: "bill corporate narrow W00 super";
+    src: url("fonts/bill\ corporate\ narrow\ W00\ super.ttf");
+}
+
+@font-face {
+    font-family: "bill corporate narrow W00medium";
+    src: url("fonts/bill\ corporate\ narrow\ W00medium.ttf");
+}
+
+
+body {
+    margin: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'bill corporate narrow W00medium';
+}
+
+p,
+li {
+    font-family: poppins;
+}
+
+.container {
+    width: 1500px !important;
+    margin: 0 auto;
+}
+
+.all-txt-blk {
+    width: 100%;
+}
+
+/* header */
+
+.main-section {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: block;
+}
+
+#header-main {
+    background-image: url('../images/banner-image_01.png');
+    height: 1100px;
+}
+#header-inner {
+    background-image: url('../images/Inner-page01-header-bg_01.png');
+    height: 350px;
+}
+
+.top-header {
+    width: 100% !important;
+    display: flex;
+}
+
+.empty-blk-01 {
+    /* width: 55%; */
+    width: 77%;
+}
+
+.top-image-box {
+    /* width: 30%; */
+    /* width: 15% !important; */
+    display: flex;
+    gap: 10px;
+}
+
+.top-cell-us {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    font-family: "poppins";
+}
+
+.top-txt-box {
+    width: 70%;
+    text-align: right;
+    display: flex;
+    gap: 40px;
+}
+.top-txt-box p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.top-image-box img {
+    /* width: 13%; */
+    /* width: 31%; */
+    height: 38px;
+    margin: 15px 0 0;
+}
+
+
+.top-image-box a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.call-bold {
+    font-family: "bill corporate narrow W00 super" !important;
+    margin-left: 6px;
+}
+
+/* nav */
+
+.nav-txt-blk {
+    display: flex;
+    width: 100%;
+}
+
+.nav-bar-blk {
+    width: 75%;
+    text-align: right;
+    align-content: center;
+}
+
+.logo-image-blk {
+    width: 25%;
+}
+
+.nav-bar-blk {
+    width: 75%;
+    text-align: right;
+}
+
+.nav-link a {
+    padding: 15px;
+    color: #1b1b1b;
+    font-size: 16px;
+    font-family: "poppins";
+    text-decoration: none;
+}
+
+a.nav-btn-01 {
+    padding: 15px 20px;
+    border: 2px solid #1b1b1b;
+    border-radius: 70px;
+    margin: 0 0 0 30px;
+}
+
+/* nav */
+
+/* banner */
+
+.p-01 {
+    font-size: 16px;
+    font-family: "poppins";
+    color: #8d1a22;
+    border-left: 2px solid #8d1a22;
+    padding: 0 0 0 15px;
+}
+
+.banner-txt-blk h1 {
+    font-size: 60px;
+    margin: 0 0 0;
+    font-family: "bill corporate narrow W00medium";
+    font-weight: 100;
+    line-height: 75px;
+}
+
+.color-01 {
+    color: #8d1a22;
+}
+
+.banner-txt-blk {
+    width: 100%;
+    margin-top: 120px;
+}
+
+.banner-txt-blk p {
+    font-size: 16px;
+    font-family: "poppins";
+    line-height: 28px;
+}
+
+.banner-txt-blk a {
+    padding: 20px 30px;
+    background-color: #8d1a22;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'bill corporate narrow W00medium';
+    font-size: 18px;
+    border-radius: 100px;
+}
+
+.banner-txt-blk a img {
+    border-radius: 100%;
+    top: 18px;
+    position: relative;
+    left: 15px;
+}
+
+div#banner-block-01 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.follow-main p {
+    transform: rotate(90deg);
+    font-size: 16px;
+    font-family: poppins;
+}
+
+.follow-main {
+    text-align: center;
+    width: 10%;
+}
+
+/* banner */
+
+/* header */
+
+/* body */
+
+#appointment-main {
+    padding: 120px 0 80px;
+}
+
+.appoint-inner-block {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.appoint-img-box {
+    text-align: center;
+    width: 25%;
+}
+
+.appoint-img-box h3 {
+    font-size: 25px;
+    font-family: 'bill corporate narrow W00medium';
+    color: #a62830;
+    margin: 15px 0 -5px;
+}
+
+.appoint-img-box p {
+    font-size: 14px;
+    font-family: "Red Hat Display", sans-serif;
+
+}
+
+.appoint-inner-block::before {
+    content: " ";
+    background-image: url("../images/Shah-Dental2_03.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    position: absolute;
+    height: 141px;
+    z-index: -1;
+    top: 30px;
+}
+
+/* branhes */
+
+.branch-heading {
+    text-align: center;
+}
+
+.branch-heading h2,
+.recorde-txt h2 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #424343;
+    margin: 0;
+    font-family: "poppins";
+}
+
+.branch-heading p,
+.recorde-txt p {
+    font-size: 16px;
+    color: #424343;
+    font-family: "poppins";
+    line-height: 28px;
+}
+
+.address-detail {
+    display: flex;
+    gap: 20px;
+    background-color: #9b212a;
+    padding: 45px 40px 10px 0;
+    border-radius: 50px;
+    box-shadow: 0 0 50px 1px #0000003b;
+    width: 80%;
+    margin: 60px auto 230px;
+}
+
+.clinic-img-box:hover {
+    position: relative;
+    background-image: linear-gradient(to right, #6d171e, #6d171e29);
+}
+
+.dental-block {
+    width: 50%;
+}
+
+.botted-border {
+    padding: 10px 0 20px;
+    border-top: 3px dotted #b2b2b2;
+    border-bottom: 3px dotted #b2b2b2;
+    margin: 10px 0;
+}
+
+.clinic-img-box {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    padding: 15px 0 15px 35px;
+}
+
+.clinic-txt-01 {
+    font-family: poppins;
+}
+
+.clinic-txt-01 p {
+    font-size: 15px;
+    color: #cd9095;
+}
+
+.clinic-txt-01 h3 {
+    font-size: 20px;
+    margin: 4px 0 -10px;
+}
+
+.clinic-address {
+    width: 50%;
+}
+
+.clinic-address {
+    width: 41%;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 0px 20px 60px 1px #00000063;
+    bottom: -80px;
+    position: relative;
+}
+
+.clinic-address h3 {
+    font-family: poppins;
+    font-size: 25px;
+}
+
+.address-icon-blk {
+    display: flex;
+}
+
+.address-icon-blk img {
+    width: 30px;
+    height: 40px;
+    margin: 18px 20px 0 0;
+}
+
+.address-icon-blk a {
+    font-size: 16px;
+    font-family: poppins;
+    color: #424343;
+    text-decoration: none;
+}
+
+.map-img-box {
+    width: 100%;
+    display: flex;
+    margin: 40px 0 0;
+    gap: 20px;
+}
+
+.map-txt-01 h3 {
+    /* font-size: 14px; */
+}
+
+.map-txt-01 p {
+    font-size: 20px;
+    font-family: poppins;
+    font-weight: 900;
+    margin: -14px 0 0;
+}
+
+.map-txt-01 span {
+    font-family: poppins;
+}
+
+.botted-img {
+    margin: -30px 70px 10px;
+    width: 75%;
+}
+
+/* branches */
+
+/* team */
+
+.team-card-block {
+    width: 100%;
+    display: flex;
+    gap: 120px;
+    margin: 60px 0 0;
+}
+
+.team-card-box {
+    width: 25%;
+    text-align: center;
+}
+
+
+/* reh code */
+.top-r {
+    display: flex !important;
+    background-color:#424343 !important;
+    border-radius:0px 0px 0px 50px !important;
+    color:#fff;
+}
+.page-heading {
+    text-align: center;
+}
+
+.team-card-box p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reh-record button.btn.btn-primary {
+    font-size: 18px;
+    padding: 15px 30px;
+    background-color: #9b212a;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+.reh-cus-box {
+    border: 1px solid #9b212a;
+    border-radius: 25px;
+    width: 50vw;
+    margin: auto;
+    margin-top: 38px;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.reh-text-left {
+    text-align: left;
+}
+
+.reh-cus-box p {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+/* all-articles page */
+
+.reh-cus-article {
+    width: 70%;
+    margin: auto;
+}
+
+.reh-article-img {
+    height: 100%;
+}
+
+.pagination .page-item .page-link {
+    padding: 12px;
+    font-size: 18px;
+}
+
+.nav-txt-blk .nav-link {
+    padding: 0px !important;
+}
+
+.reh-contact-form {
+    width: 75% !important;
+    margin: auto;
+}
+
+/* .cus-img {
+    top: 0 !important;
+} */
+span {
+    font-family: poppins;
+}
+
+/* end reh code */
+.team-card-box p a {
+    background-color: transparent !important;
+    color: #000;
+}
+
+
+.ahmed,
+.rukhsar {
+    padding-top: 100px;
+}
+
+.team-card-box img {
+    width: 100%;
+    box-shadow: 0 0 30px 1px #00000038;
+    border-radius: 230px;
+}
+
+.team-card-box h3 {
+    color: #424343;
+    font-size: 22px;
+    font-family: poppins;
+    margin-bottom: 35px;
+}
+
+.team-card-box a,
+.team-view {
+    padding: 15px 30px;
+    font-size: 17px;
+    font-family: poppins;
+    background-color: #9b212a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+}
+
+.team-card-box p {
+    font-size: 16px;
+    font-family: poppins;
+    margin: 30px 0 0;
+}
+
+.view-more {
+    width: 100%;
+    text-align: center;
+    padding: 120px 0 120px;
+}
+
+/* team */
+
+/* services */
+
+#services-main {
+    background-image: url("../images/cards-bg_02.png");
+    padding: 230px 0 280px;
+}
+
+.services-txt-blk .branch-heading h2 {
+    color: #fff !important;
+}
+
+.services-blocks {
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.services-box-blk {
+    width: 25%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.ser-img-box img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.ser-txt-box {
+    padding: 0px 30px 30px;
+}
+
+.ser-txt-box h3 {
+    font-size: 24px;
+    font-family: poppins;
+    margin: 15px 0 20px;
+}
+
+.ser-txt-box a {
+    font-family: poppins;
+    color: #000;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.services-txt-blk .view-more {
+    padding: 10px 0 0;
+}
+
+.services-txt-blk .branch-heading {
+    padding: 0 0 50px;
+}
+
+.p-02 {
+    color: #fff !important;
+}
+
+/* services */
+
+/* patient */
+
+#patient-main {
+    background-image: url("../images/Shah-Dental-tab_02.png");
+    padding: 200px 0 920px;
+    z-index: -1;
+    position: relative;
+    margin: -60px 0;
+}
+
+.tabs-button {
+    width: 80%;
+    margin: 80px auto 0;
+    text-align: center;
+}
+
+.tabs-button a {
+    padding: 20px 40px;
+    margin: 0px 8px 0;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: poppins;
+    text-decoration: none;
+    color: #424343;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px #00000030;
+}
+
+/* patient */
+
+/* record */
+
+#record-main {
+    background-image: url("../images/Shah-Dental-gourp_02.png");
+    padding: 260px 0;
+}
+
+.record-block {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+.recorde-txt,
+.record-img {
+    width: 50%;
+}
+
+.record-list ul {
+    list-style: none;
+    padding: 0;
+    font-family: poppins;
+    line-height: 35px;
+}
+
+.record-list img {
+    margin: 0 15px 0 0;
+}
+
+/* record */
+
+/* customer */
+
+.red-heading {
+    font-size: 30px;
+    color: #9b212a;
+    font-family: poppins;
+}
+
+.slider-container-01 {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.product-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.product-item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    text-align: left;
+    margin: -15px 0 20px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.slider-navigation {
+    display: flex;
+    margin-top: 0px;
+    gap: 15px;
+}
+
+.proprev,
+.pronext {
+    cursor: pointer;
+    font-size: 27px;
+    padding: 4px 16px;
+    color: #931f28;
+    border: 3px solid #931f28;
+    border-radius: 40px;
+}
+
+#customer-main {
+    padding: 150px 0;
+}
+
+
+/* customer */
+
+/* Articles */
+
+#article-main {
+    background-image: url("../images/red_02.png");
+    padding: 170px 0 240px;
+}
+
+.article-block {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    color: #fff;
+    font-family: poppins;
+    margin: 80px 0 0;
+}
+
+.articles {
+    width: 55%;
+    display: flex;
+    gap: 35px;
+}
+
+.art-img-box {
+    width: 50%;
+}
+
+.art-img-box img {
+    width: 100%;
+}
+
+.art-txt-box {
+    width: 50%;
+}
+
+.art-txt-box h3 {
+    font-size: 24px;
+    margin: -15px 0 0;
+}
+
+.art-txt-box h4 {
+    font-size: 14px;
+}
+
+.art-txt-box a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.article-02 {
+    display: block;
+    width: 45%;
+}
+
+.article-root {
+    width: 100%;
+    display: flex;
+}
+
+.article-02 {
+    display: block;
+}
+
+.article-02 img {
+    /* width: auto; */
+    /* width: auto; */
+}
+
+.article-root .art-img-box {
+    width: 50%;
+    text-align: right;
+    margin: 0 30px 0 0;
+}
+
+/* Articles */
+
+/* footer */
+
+.footer-blocks {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    padding: 80px 0;
+}
+
+.footer-blk-01 {
+    width: 35%;
+}
+
+.footer-blk-02,
+.footer-blk-03 {
+    width: 15%;
+}
+
+.footer-blk-04 {
+    width: 25%;
+}
+
+.footer-blk p {
+    font-size: 15px;
+    font-family: poppins;
+    margin: 25px 0;
+}
+
+.footer-blk h3 {
+    font-size: 23px;
+    font-family: 'bill corporate narrow W00medium';
+    margin: 0 0;
+}
+
+.soical-icon {
+    gap: 10px;
+    display: flex;
+    margin: 20px 0 0;
+}
+
+.icon-list a {
+    display: flex;
+    color: #5e5e5e;
+    text-decoration: none;
+    vertical-align: bottom;
+    align-items: center;
+    height: 42px;
+    gap: 12px;
+}
+
+.icon-address .art-txt-box {
+    width: 85%;
+}
+
+.icon-list {
+    margin: 20px 0 0;
+}
+
+.icon-address {
+    display: flex;
+    align-items: center;
+}
+
+.icon-address .art-img-box {
+    width: 17%;
+    margin: 0 15px 0 0;
+}
+
+.icon-address h4 {
+    font-size: 14px;
+    font-family: poppins;
+    margin: 0;
+}
+
+.icon-address a {
+    color: #5e5e5e;
+    text-decoration: none;
+    font-family: poppins;
+    height: 30px;
+}
+
+.gap {
+    margin: 20px 0;
+}
+
+.soct-cout {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+
+.site-map {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.site-map a {
+    font-size: 15px;
+    font-family: poppins;
+    text-decoration: none;
+    padding: 0 30px;
+    color: #000;
+}
+
+.privacy {
+    width: 50%;
+    font-size: 15px;
+    font-family: poppins;
+    text-align: right;
+}
+
+#soct-cout-main {
+    border-top: 2px solid #cccccc;
+}
+
+/* footer */
+
+/* body */

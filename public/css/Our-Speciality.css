@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+@font-face {
+    font-family: "RedHatDisplay-Medium";
+    src: url(../Fonts/RedHatDisplay-Medium.ttf);
+}
+
+@font-face {
+    font-family: "RedHatDisplay-Regular";
+    src: url(../Fonts/RedHatDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: "RedHatDisplay-Bold";
+    src: url(../Fonts/RedHatDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: "CorporateNarrow-Bold";
+    src: url(../Fonts/Bill\ Corporate\ Narrow\ Bold\ [TheFontsMaster.com].otf);
+}
+
+@font-face {
+    font-family: "CorporateNarrow-ExtraBold";
+    src: url(../Fonts/Bill\ Corporate\ Narrow\ Extrabold\ [TheFontsMaster.com].otf);
+}
+
+@font-face {
+    font-family: "CorporateNarrow-Book";
+    src: url(../Fonts/Bill\ Corporate\ Narrow\ Book\ [TheFontsMaster.com].otf);
+}
+
+body {
+    font-family: "CorporateNarrow-Book";
+}
+
+.row {
+    --bs-gutter-x: 0px;
+}
+
+.main-banner {
+    background-image: url(../images/Inner-page01-header-bg_01.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 84vh;
+}
+
+.inner-top-bar {
+    display: flex;
+    font-family: RedHatDisplay-Regular;
+    background-color: #424343;
+    color: #fff;
+    border-radius: 0px 0px 0px 100px;
+    padding: 3px 20px;
+    font-size: 13px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.call-tag {
+    display: flex;
+    align-items: center;
+}
+
+.call-tag span {
+    font-weight: 600;
+    font-family: CorporateNarrow-Book;
+
+}
+
+.call-tag i {
+    background-color: #fff;
+    padding: 6px 8px;
+    border-radius: 100%;
+    margin-right: 10px;
+    color: #2e4672;
+}
+
+.inner-top-bar p {
+    margin: 0px;
+}
+
+header nav {
+    font-family: RedHatDisplay-Medium;
+}
+
+.nav-brand img {
+    width: 70%;
+    margin-left: 25px;
+}
+
+.nav-main-sec {
+    display: flex;
+    justify-content: end;
+}
+
+.nav-sec-btn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+li.nav-item {
+    padding: 0px 0px;
+    line-height: unset;
+}
+
+.top-bar-servics {
+    padding: 0px 41px;
+}
+
+.call-tag.top-bar-servics a {
+    color: #fff;
+    text-decoration: none;
+}
+
+li.nav-item .nav-link {
+    color: #111111;
+    font-size: 14px;
+    font-family: 'RedHatDisplay-Bold';
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    clear: both;
+    font-weight: 400;
+    color: var(--bs-dropdown-link-color);
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    padding: 6px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.dropdown-menu {
+    border-radius: 1px;
+    border: none;
+    --bs-dropdown-min-width: 110px;
+}
+
+button#dropdownMenuButton1 {
+    background-color: transparent;
+    border: none;
+}
+
+.make_appoitnment_btn {
+    border-radius: 22px;
+    border: 1px solid;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 13px !important;
+}
+
+.nav-sec-btn button {
+    border-radius: 37px;
+    border: 1px solid #111;
+    color: #000;
+}
+
+.nav-sec-btn button:hover {
+    background-color: #8d1a22 !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.banar-social p {
+    transform: rotateZ(90deg);
+    margin: 0px;
+    position: relative;
+    font-family: 'CorporateNarrow-bold';
+}
+
+.social-icon {
+    display: grid;
+}
+
+.banar-social p:after {
+    content: '';
+    height: 70px;
+    position: absolute;
+    width: 5px;
+    color: azure;
+    background-color: black;
+    transform: inherit;
+    top: -21px;
+    right: -10px;
+}
+
+.banar-social {
+    position: relative;
+}
+
+.social-icon {
+    display: grid;
+    position: absolute;
+    top: 125px;
+    left: 35px;
+}
+
+.social-icon i {
+    min-width: 35px;
+    text-align: center;
+    min-height: 35px;
+    margin-bottom: 21px;
+    border: 2px solid;
+    border-radius: 24px;
+    padding-top: 8px;
+}
+
+.banar-social {
+    position: relative;
+    top: 60px;
+}
+
+.baner-inner-text {
+    text-align: center;
+    margin-top: 95px;
+}
+
+.baner-inner-text h2 {
+    font-family: 'CorporateNarrow-Book';
+    font-size: 48px;
+}
+
+.baner-inner-text h2 span {
+    font-family: CorporateNarrow-ExtraBold;
+    color: #111111;
+}
+
+.baner-inner-text h3 {
+    font-family: 'CorporateNarrow-Book';
+    font-size: 48px;
+}
+
+.baner-inner-text h3 span {
+    font-family: CorporateNarrow-ExtraBold;
+    color: #8d1a22;
+}
+
+.navbar .show .nav-item {
+    padding: 20px 0px;
+    border: none;
+}
+
+.footer-logo img {
+    width: 75%;
+    margin-bottom: 20px;
+}
+
+.footer-privacy-policy ul {
+    justify-content: flex-start;
+}
+
+.footer-privacy-policy ul li {
+    padding: 0px 10px;
+    border-right: 1px solid;
+    line-height: 10px;
+    padding-bottom: 5px;
+}
+
+.footer-logo-col h5 {
+    font-family: 'RedHatDisplay-Medium';
+    font-size: 15px;
+    line-height: 30px;
+    color: #5e5e5e;
+}
+
+.fter-submenu-head {
+    color: #000;
+    font-family: RedHatDisplay-Bold;
+    position: relative;
+}
+
+.ftr-submenu span {
+    color: #5e5e5e;
+    margin-left: 5px;
+    font-family: RedHatDisplay-regular;
+    position: relative;
+}
+
+.ftr-submenu span em {
+    text-decoration: none;
+    font-style: normal;
+    font-family: RedHatDisplay-Bold !important;
+    color: #000;
+}
+
+
+.ftr-submenu span strong {
+    font-size: 14px;
+    font-family: RedHatDisplay-regular;
+    color: #5e5e5e;
+    position: relative;
+    right: -40px;
+}
+
+.footer-nav i {
+    font-size: 15px;
+    background-color: #a2262e;
+    border-radius: 26px;
+    min-width: 35px;
+    min-height: 35px;
+    text-align: center;
+    padding-top: 9px;
+    color: #fff;
+    border: 1px solid #cf9497;
+}
+
+.ftr-submenu ul li {
+    padding: 3px 0px;
+}
+
+footer {
+    padding-top: 30px;
+}
+
+.ftr-submenu-last:after {
+    content: url(../images/before1_03.png);
+}
+
+.footer-social-logo i {
+    font-size: 15px;
+    background-color: #a2262e;
+    border-radius: 26px;
+    min-width: 35px;
+    min-height: 35px;
+    text-align: center;
+    padding-top: 9px;
+    color: #fff;
+    border: 1px solid #cf9497;
+}
+
+.doctor-section {
+    background-image: url(../images/doctor-section.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 130vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.ftr-submenu {
+    position: relative;
+}
+
+.contat-us {
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.footer-privacy-policy p {
+    font-size: 14px;
+    text-align: end;
+    font-family: RedHatDisplay-regular;
+
+}
+
+.footer-row {
+    justify-content: space-between;
+}
+
+.footer-social-logo {
+    margin-top: 15px;
+}
+
+/* -------------------------------------------Speciality-Section----------------------------------------- */
+.speciality-name {
+    text-align: center;
+    margin: 90px 0px;
+}
+
+.speciality-blog {
+    text-align: center;
+}
+
+section.speciality-name h6 {
+    font-family: 'RedHatDisplay-Regular';
+    line-height: 30px;
+    font-size: 17px;
+}
+
+section.speciality-name h2 {
+    font-family: 'RedHatDisplay-Bold';
+    margin-bottom: 10px;
+}
+
+section.speciality-blog h2 {
+    font-family: 'RedHatDisplay-Bold';
+    margin-bottom: 60px;
+}
+
+.blog-sec-01 {
+    text-align: start;
+}
+
+.blog-sec-01 h3 {
+    font-family: poppins;
+    font-weight: 800;
+    margin: 15px 0px;
+}
+
+.blog-sec-01 p {
+    font-size: 15px;
+    margin-top: -10px;
+    line-height: 25px;
+}
+
+.blog-content {
+    text-align: start;
+    word-break: break-word;
+}
+
+.blog-content p {
+    color: #466585;
+    font-size: 13px;
+    margin-bottom: 3px;
+    font-family: poppins;
+
+
+}
+
+.blog-content h5 {
+    color: #111111;
+    font-size: 22px;
+    font-family: poppins;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.blog-content h6 {
+    font-family: poppins;
+    font-size: 13px;
+    margin-top: 15px;
+    color: #474747;
+}
+
+.related-videos {
+    background-image: url(../images/video-sec_02.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 140vh;
+    display: flex;
+    align-items: center;
+}
+
+.health-video-content h2 {
+    font-family: 'RedHatDisplay-Bold';
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.health-video-content h5 {
+    color: #9b212a;
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.health-video-content p {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 5px;
+}
+
+/* .video-inner-frame {
+    margin-bottom: 15px;
+} */
+
+@media screen and (max-width:1024px) {
+    .top-bar-servics {
+        padding: 0px 10px;
+    }
+
+    .banar-social {
+        display: none;
+    }
+
+    iframe {
+        border: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .inner-top-bar {
+        display: none;
+    }
+
+    .footer-privacy-policy ul {
+        justify-content: center;
+    }
+
+    .footer-privacy-policy p {
+        font-size: 14px;
+        text-align: center;
+        font-family: RedHatDisplay-regular;
+    }
+
+    .footer-social-logo {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .related-videos {
+        background-image: url(../images/video-sec_02.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 1500px;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .ftr-submenu span {
+        color: #5e5e5e;
+        margin-left: 5px;
+        font-family: RedHatDisplay-regular;
+        position: relative;
+        font-size: 13px;
+    }
+
+    .blog-content h5 {
+        color: #111111;
+        font-size: 18px;
+        font-family: poppins;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+
+
+    @media screen and (max-width:428px) {
+        .related-videos {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            background-color: #2f2f2f;
+            background-image: none;
+            height: auto;
+            padding: 40px 0px;
+        }
+
+        .ftr-location {
+            word-break: break-word;
+            width: 150px;
+            display: -webkit-inline-box;
+        }
+    }
+}
