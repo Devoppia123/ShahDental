@@ -28,12 +28,19 @@ class HomeController extends Controller
 
     public function home()
     {
-        $doctors = Doctor::with('user_role', 'doctor_specaility.specialities_list', 'doctor_language.languages_list')->take(4)->inRandomOrder()->get();
-
         // $doctors = Doctor::with('user_role', 'doctor_specaility.specialities_list', 'doctor_language.languages_list')
         // ->inRandomOrder()
         // ->take(4);
-        $specialities = DB::table('specialities')->take(8)->orderBy('id', 'desc')->get();
+        $doctors = Doctor::with('user_role', 'doctor_specaility.specialities_list', 'doctor_language.languages_list')
+            ->take(4)
+            ->inRandomOrder()
+            ->get();
+
+        $specialities = DB::table('specialities')
+            ->take(8)
+            ->orderBy('id', 'desc')
+            ->get();
+
         $articles = DB::table('articles')
             ->join('specialities', 'articles.speciality_id', '=', 'specialities.id')
             ->where('articles.status', 1)
@@ -41,7 +48,6 @@ class HomeController extends Controller
             ->limit(3)
             ->orderBy('id', 'desc')
             ->get();
-
 
         return view('index', compact('doctors', 'specialities', 'articles'));
     }
@@ -137,6 +143,7 @@ class HomeController extends Controller
             ]);
         }
     }
+<<<<<<< Updated upstream
 
     public function make_an_appointment(Request $request)
     {
@@ -170,6 +177,9 @@ class HomeController extends Controller
 
         return view('make_an_appointment', compact('branches', 'procedures', 'doctors'));
     }
+=======
+   
+>>>>>>> Stashed changes
     public function find_doctors()
     {
         $doctors = Doctor::with('user_role', 'doctor_specaility.specialities_list', 'doctor_language.languages_list')->get();
@@ -235,6 +245,7 @@ class HomeController extends Controller
 
     public function branch_directions()
     {
+        dd('yasir');
         return view('directions');
     }
     public function services()
@@ -390,6 +401,7 @@ class HomeController extends Controller
     public function get_appointment($doctor_id)
     {
         $doctor = DB::table('users')->where('id', $doctor_id)->first();
+        $branches = Branch::where('status', 1)->get();
         $procedures = DB::table('procedures')->where('status', 1)->get();
         $check_enable_slots = DB::table('doctors')->where('doctors.doctorID', $doctor_id)->first();
         $check_slots = DB::table('doctors')
@@ -399,7 +411,7 @@ class HomeController extends Controller
         // dd($doctor);
         $appointment_sessions = DB::table('sessions')->where('status', 1)->get();
         // return view('wordpress.book_appointment', compact('doctor', 'procedures', 'doctor_id', 'check_enable_slots', 'check_slots', 'appointment_sessions'));
-        return view('book_appointment', compact('doctor', 'procedures', 'doctor_id', 'check_enable_slots', 'check_slots', 'appointment_sessions'));
+        return view('book_appointment', compact('branches','doctor', 'procedures', 'doctor_id', 'check_enable_slots', 'check_slots', 'appointment_sessions'));
     }
 
     // use Avaliable_dates;
@@ -468,260 +480,101 @@ class HomeController extends Controller
             return response()->json($appointment_session);
         }
     }
+    public function make_an_appointment(Request $request)
+    {
+        // Fetching necessary data
+        $branches = Branch::where('status', 1)->get();
+        $procedures = DB::table('procedures')->where('status', 1)->get();
+        $doctors = Doctor::with('user_role', 'doctor_specaility.specialities_list', 'doctor_language.languages_list')->get();
+        // Returning the view with necessary data
+        return view('make_an_appointment', compact('branches', 'procedures', 'doctors'));
+    }
 
     public function booked_appointment_withoutlogin(Request $request)
     {
-
-        // $validator = Validator::make($request->all(), [
-        //     'patient_name' => 'required|string|max:255',
-        //     'patient_email' => 'required|email',
-        //     'patient_phone' => 'required|regex:/^[\d\s()+-]+$/',
-        //     'gender' => 'required|in:0,1',
-        //     'appointment_procedure' => 'nullable|exists:procedures,id',
-        //     'mode' => 'required|in:Online,At Clinic',
-        //     'platform' => 'required_if:mode,Online|in:Facebook,Twitter,Skype,Google Meet',
-        //     'id_number' => 'required_if:mode,Online|string|max:255',
-        //     'identity_no' => 'required|in:on,passport-input',
-        //     'get_number_identity' => 'required_if:identity_no,on|numeric',
-        //     'passport_date' => 'nullable|date_format:Y-m-d',
-        //     'consultation_type' => 'required|',
-        //     'appointment_reason' => 'required|string|max:1000',
-        // ]);
-        // if ($validator->fails()) {
-        //     return response()->json(['error' => $validator->errors()], 400);
-        // }
-        // if ($request->get_value != null) {
-
-        //     $random_string = substr(md5(uniqid(mt_rand(), true)), 0, 10);
-
-        //     if ($request->check_value == 1) {
-
-        //         $patient_id = DB::table('patient_profiles')->insertGetId([
-        //             'patient_name' => $request->patient_name,
-        //             'patient_email' => $request->patient_email,
-        //             'patient_phone' => $request->patient_phone,
-        //             'mrn' => $random_string,
-        //             'gender' => $request->gender,
-        //             'dob' => $request->dob,
-        //             'age' => $request->age
-        //         ]);
-
-        //         $booking_id = DB::table('booked_appointments')->insertGetId([
-        //             'slot_id' => $request->get_value,
-        //             'patient_id' => $patient_id,
-        //             'appointment_procedure' => $request->appointment_procedure,
-        //             'mode' => $request->mode,
-        //             'platform' => $request->platform,
-        //             'id_number' => $request->id_number,
-        //             'identity_no' =>  $request->get_number_identity,
-        //             'passport_date' => null,
-        //             'consultation_type' => $request->consultation_type,
-        //             'appointment_reason' => $request->appointment_reason,
-        //             'status' => 1
-        //         ]);
-        //     } else {
-
-
-        //         $patient_id = DB::table('patient_profiles')->insertGetId([
-        //             'patient_name' => $request->patient_name,
-        //             'patient_email' => $request->patient_email,
-        //             'patient_phone' => $request->patient_phone,
-        //             'mrn' => $random_string,
-        //             'gender' => $request->gender,
-        //             'dob' => $request->dob,
-        //             'age' => $request->age
-        //         ]);
-
-        //         $booking_id = DB::table('booked_appointments')->insertGetId([
-        //             'slot_id' => $request->get_value,
-        //             'patient_id' => $patient_id,
-        //             'appointment_procedure' => $request->appointment_procedure,
-        //             'mode' => $request->mode,
-        //             'platform' => $request->platform,
-        //             'id_number' => $request->id_number,
-        //             'identity_no' =>  $request->get_number_identity,
-        //             'passport_date' => date("d/m/Y", strtotime($request->passport_date)),
-        //             'consultation_type' => $request->consultation_type,
-        //             'appointment_reason' => $request->appointment_reason,
-        //             'status' => 1
-        //         ]);
-        //     }
-
-        //     DB::table('appointment_slots')
-        //         ->where('slot_id', $request->get_value)
-        //         ->update(['booking_id' => $booking_id]);
-        // } else {
-
-        //     $request->validate([
-        //         'session' => 'required'
-        //     ]);
-
-        //     $random_string = substr(md5(uniqid(mt_rand(), true)), 0, 10);
-
-        //     if ($request->check_value == 1) {
-
-        //         $patient_id = DB::table('patient_profiles')->insertGetId([
-        //             'patient_name' => $request->patient_name,
-        //             'patient_email' => $request->patient_email,
-        //             'patient_phone' => $request->patient_phone,
-        //             'mrn' => $random_string,
-        //             'gender' => $request->gender,
-        //             'dob' => $request->dob,
-        //             'age' => $request->age
-        //         ]);
-
-
-
-        //         $booking_id = DB::table('booked_appointments')->insertGetId([
-        //             'session' => $request->session,
-        //             'patient_id' => $patient_id,
-        //             'doctor_id' => $request->doctor_id,
-        //             'appointment_procedure' => $request->appointment_procedure,
-        //             'mode' => $request->mode,
-        //             'platform' => $request->platform,
-        //             'id_number' => $request->id_number,
-        //             'identity_no' =>  $request->get_number_identity,
-        //             'passport_date' => null,
-        //             'consultation_type' => $request->consultation_type,
-        //             'appointment_reason' => $request->appointment_reason,
-        //             'appointment_date' => $request->appointment_date,
-        //             'status' => 1
-        //         ]);
-        //     } else {
-        //         $patient_id = DB::table('patient_profiles')->insertGetId([
-        //             'patient_name' => $request->patient_name,
-        //             'patient_email' => $request->patient_email,
-        //             'patient_phone' => $request->patient_phone,
-        //             'mrn' => $random_string,
-        //             'gender' => $request->gender,
-        //             'dob' => $request->dob,
-        //             'age' => $request->age
-        //         ]);
-
-        //         $booking_id = DB::table('booked_appointments')->insertGetId([
-        //             'session' => $request->session,
-        //             'patient_id' => $patient_id,
-        //             'appointment_procedure' => $request->appointment_procedure,
-        //             'mode' => $request->mode,
-        //             'platform' => $request->platform,
-        //             'id_number' => $request->id_number,
-        //             'identity_no' =>  $request->get_number_identity,
-        //             'passport_date' => date("d/m/Y", strtotime($request->passport_date)),
-        //             'consultation_type' => $request->consultation_type,
-        //             'appointment_reason' => $request->appointment_reason,
-        //             'appointment_date' => $request->appointment_date,
-        //             'status' => 1
-        //         ]);
-        //     }
-        // }
-        // return redirect("/appointment_instructions/$booking_id");
-
-        // validation apply
-        // $validator = Validator::make($request->all(), [
-        //     'patient_name' => 'required|string|max:255',
-        //     'patient_email' => 'required|email',
-        //     'patient_phone' => 'required|regex:/^[\d\s()+-]+$/',
-        //     'gender' => 'required|in:0,1',
-        //     'appointment_procedure' => 'nullable|exists:procedures,id',
-        //     'mode' => 'required|in:Online,At Clinic',
-        //     'platform' => 'required_if:mode,Online|in:Facebook,Twitter,Skype,Google Meet',
-        //     'id_number' => 'required_if:mode,Online|string|max:255',
-        //     'identity_no' => 'required|in:on,passport-input',
-        //     'get_number_identity' => 'required_if:identity_no,on|numeric',
-        //     'passport_date' => 'nullable|date_format:Y-m-d',
-        //     'consultation_type' => 'required|',
-        //     'appointment_reason' => 'required|string|max:1000',
-        // ]);
-        // if ($validator->fails()) {
-        //     return response()->json([
-        //         'status' => false,
-        //         'errors' => $validator->errors()
-        //     ], 422);
-        // }
-
-        // proceed with appointment booking logic
-        $random_string = substr(md5(uniqid(mt_rand(), true)), 0, 10);
-
-        // Create new Patient
-        $newPatient_id = DB::table('patient_profiles')->insertGetId([
-            'patient_name' => $request->patient_name,
-            'patient_email' => $request->patient_email,
-            'patient_phone' => $request->patient_phone,
-            'mrn' => $random_string,
-            'gender' => $request->gender,
-            'dob' => $request->dob,
-            'age' => $request->age
+        // dd($request);
+        // Define validation rules
+        $validator = Validator::make($request->all(), [
+            'patient_name' => 'required|string|max:255',
+            'patient_email' => 'required|email|max:255',
+            'patient_phone' => 'required|string|max:20',
+            'gender' => 'required|in:1,0',
+            'appointment_reason' => 'required|string',
+            'mode' => 'required|in:At Clinic,Online',
+            'doctor_id' => 'required|integer',
+            'branch_id' => 'required_if:mode,At Clinic|integer',
+            'get_number_identity' => 'required|numeric',
+            'get_passport_number' => 'required|numeric',
+            'platform' => 'required_if:mode,Online|string',
+            'passport_date' => 'required|',
+            'id_number' => 'required_if:mode,Online|string',
+            // 'get_value' => 'required_without:session|integer',
+            // 'session' => 'required_without:get_value|string',
+            'session' => 'required',
         ]);
 
-        // dd($newPatient_id);
-        if ($request->get_value != null) {
-            // $booking_id = DB::table('booked_appointments')->insertGetId([
-            $bookingAppointment = DB::table('booked_appointments')->insertGetId([
-                'slot_id' => $request->get_value,
-                'patient_id' => $newPatient_id,
-                'appointment_procedure' => $request->appointment_procedure,
-                'mode' => $request->mode,
-                'platform' => $request->platform,
-                'id_number' => $request->id_number,
-                'identity_no' => $request->get_number_identity,
-                'passport_date' => $request->check_value == 1 ? null : date("d/m/Y", strtotime($request->passport_date)),
-                'consultation_type' => $request->consultation_type,
-                'appointment_reason' => $request->appointment_reason,
-                'status' => 1,
-                'branch_id' => $request->branch_id  //add this line
-            ]);
-
-            DB::table('appointment_slots')
-                ->where('slot_id', $request->get_value)
-                // ->update(['booking_id' => $booking_id]);
-                ->update(['booking_id' => $bookingAppointment]);
-        } else {
-
-            dd($request);
-
+        if ($validator->passes()) {
+            // proceed with appointment booking logic
             $random_string = substr(md5(uniqid(mt_rand(), true)), 0, 10);
 
-            $bookingAppointment = new BookedAppointment;
-            $bookingAppointment->patient_id = $newPatient_id;
-            $bookingAppointment->doctor_id = $request->doctor_id;
-            $bookingAppointment->appointment_procedure = $request->appointment_procedure;
-            $bookingAppointment->mode = $request->mode;
-            if ($request->mode == 'At Clinic') {
-                $bookingAppointment->branch_id = $request->branch_id;
-            } elseif ($request->mode == 'Online') {
-                $bookingAppointment->platform = $request->platform;
-                $bookingAppointment->id_number = $request->id_number;
+            $patient_id = DB::table('patient_profiles')->insertGetId([
+                'patient_name' => $request->patient_name,
+                'patient_email' => $request->patient_email,
+                'patient_phone' => $request->patient_phone,
+                'mrn' => $random_string,
+                'gender' => $request->gender,
+                'dob' => $request->dob,
+                'age' => $request->age
+            ]);
+
+            if ($request->get_value != null) {
+                $booking_id = DB::table('booked_appointments')->insertGetId([
+                    'slot_id' => $request->get_value,
+                    'patient_id' => $patient_id,
+                    'appointment_procedure' => $request->appointment_procedure,
+                    'mode' => $request->mode,
+                    'platform' => $request->platform,
+                    'id_number' => $request->id_number,
+                    'identity_no' => $request->get_number_identity,
+                    'passport_date' => $request->check_value == 1 ? null : date("d/m/Y", strtotime($request->passport_date)),
+                    'consultation_type' => $request->consultation_type,
+                    'appointment_reason' => $request->appointment_reason,
+                    'status' => 1,
+                    'session' => $request->session_id,
+                    'branch_id' => $request->branch_id
+                ]);
+
+                DB::table('appointment_slots')
+                    ->where('slot_id', $request->get_value)
+                    ->update(['booking_id' => $booking_id]);
+            } else {
+                $booking_id = DB::table('booked_appointments')->insertGetId([
+                    'session' => $request->session_id,
+                    'patient_id' => $patient_id,
+                    'doctor_id' => $request->doctor_id,
+                    'appointment_procedure' => $request->appointment_procedure,
+                    'mode' => $request->mode,
+                    'platform' => $request->platform,
+                    'id_number' => $request->id_number,
+                    'identity_no' => $request->get_number_identity,
+                    'passport_date' => $request->check_value == 1 ? null : date("d/m/Y", strtotime($request->passport_date)),
+                    'consultation_type' => $request->consultation_type,
+                    'appointment_reason' => $request->appointment_reason,
+                    'appointment_date' => $request->appointment_date,
+                    'status' => 1
+                ]);
+                return response()->json([
+                    'status' => true,
+                    'message' => 'Appointment booked successfully!',
+                    'redirect_url' => url("/appointment_instructions/$booking_id")
+                ]);
             }
-            $bookingAppointment->session = $request->session_id;
-            $bookingAppointment->identity_no = $request->get_number_identity;
-            $bookingAppointment->passport_date = $request->check_value == 1 ? null : date("d/m/Y", strtotime($request->passport_date));
-            $bookingAppointment->consultation_type = $request->consultation_type;
-            $bookingAppointment->appointment_reason = $request->appointment_reason;
-            $bookingAppointment->appointment_date = $request->appointment_date;
-            $bookingAppointment->status = 1;
-
-            // $booking_id = DB::table('booked_appointments')->insertGetId([
-            //     'patient_id' => $newPatient_id,
-            //     'doctor_id' => $request->doctor_id,
-            //     'appointment_procedure' => $request->appointment_procedure,
-            //     'mode' => $request->mode,
-            //     'session' => $request->session_id,
-            //     'platform' => $request->platform,
-            //     'id_number' => $request->id_number,
-            //     'identity_no' => $request->get_number_identity,
-            //     'passport_date' => $request->check_value == 1 ? null : date("d/m/Y", strtotime($request->passport_date)),
-            //     'consultation_type' => $request->consultation_type,
-            //     'appointment_reason' => $request->appointment_reason,
-            //     'appointment_date' => $request->appointment_date,
-            //     'status' => 1
-            // ]);
+        } else {
+            return response()->json([
+                'status' => false,
+                'errors' => $validator->errors()
+            ]);
         }
-
-        return response()->json([
-            'status' => true,
-            'message' => 'Appointment booked successfully!',
-            'redirect_url' => url("/appointment_instructions/$bookingAppointment")
-        ]);
     }
 
     public function appointment_instructions($booking_id)
@@ -849,23 +702,10 @@ class HomeController extends Controller
         return view('patient.find_doctor_appointment', compact('speciaities', 'doctor', 'patient'));
     }
 
-
-
     public function thankyou()
     {
         return view('wordpress.thanks_page');
     }
-
-
-
-
-
-
-
-
-
-
-
     public function our_team()
     {
         return view('our_team');

@@ -19,7 +19,7 @@
         /* Header Max Width */
         .main-section .container {
             max-width: 1600px;
-            margin:  0 auto;
+            margin: 0 auto;
         }
 
         .pass_box select {
@@ -204,54 +204,60 @@
         </div>
         <section class="main-content-section container">
             <div id="skip" class="container">
-                <div class="half_leftcol_app">
-                    <h5>Please Select a Date</h5>
-                    <div id="datepicker" style="width:100%;"></div>
+                <div class="row" style="margin-left: 20%">
+                    <div class="col-md-12">
+                        <div class="half_leftcol_app">
+                            <h5>Please Select a Date</h5>
+                            {{-- <div id="datepicker" style="width:100%;"></div> --}}
+                            <div id="datepicker"></div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="Cardiology">
-                    <h2 style="font-weight: 700;" id="hide">Get An Appointment From {{ $doctor->name }}</h2>
+                    <h2 style="font-weight: 700;" id="hide">Make An Appointment From</h2>
                 </div>
                 <form action="{{ url('booked_appointment_withoutlogin') }}" method="POST" id="get_appointment_form">
                     @csrf
-                    <input type="hidden" id="date_input" name="appointment_date" value="">
-                    <input type="hidden" name="doctor_id" value="{{ $doctor->id }}">
+                    <input type="hidden" id="date_input" class="form-control" name="appointment_date" value="">
+                    <input type="hidden" id="doctor_id" name="doctor_id" value="">
                     <div class="row">
                         <div class="col-md-4 p-2 form-group">
                             <label>Full Name</label>
-                            <input type="text" name="patient_name" class="form-control">
+                            <input type="text" name="patient_name" id="patient_name" class="form-control">
+                            <p class="invalid-feedback" id="patient_name-error"></p>
                         </div>
                         <div class="col-md-4 p-2 form-group">
                             <label>Email </label>
-                            <input type="email" name="patient_email"
-                                class="form-control @error('email') is-invalid @enderror">
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="email" name="patient_email" id="patient_email" class="form-control">
+                            <p class="invalid-feedback" id="patient_email-error"></p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4 p-2 form-group">
                             <label>Phone</label>
-                            <input type="text" name="patient_phone" class="form-control">
+                            <input type="text" name="patient_phone" id="patient_phone" class="form-control">
+                            <p class="invalid-feedback" id="patient_phone-error"></p>
                         </div>
                         <div class="col-md-4 p-2 form-group" id="show-slots" style="display: none;">
                             <label>Available Slots</label>
                             <div id="appointments-container">
                             </div>
+                            <p class="invalid-feedback" id="show-slots-error"></p>
                         </div>
                     </div>
                     <div class="row">
                         <p>Gender</p>
                         <div class="col-md-4 p-2 form-group">
-                            <input type="radio" name="gender" value="1">
                             <label>Male</label>
+                            <input type="radio" name="male" id="gender" value="1">
+
                         </div>
                         <div class="col-md-4 p-2 form-group">
-
-                            <input type="radio" name="gender" value="0">
                             <label>Female</label>
+                            <input type="radio" name="female" value="0">
+                            <p class="invalid-feedback" id="gender-error"></p>
+
                         </div>
                     </div>
                     <br>
@@ -268,20 +274,31 @@
                     <div>
                         <div class="col-md-6 services-col-multi">
                             <label>Select Procedure (Optional)</label>
-                            <select name="appointment_procedure" class="form-control">
+                            <select name="appointment_procedure" id="appointment_procedure" class="form-control">
                                 <option value="">Select Procedure</option>
                                 @foreach ($procedures as $procedure)
                                     <option value="{{ $procedure->id }}">{{ $procedure->name }}</option>
                                 @endforeach
                             </select>
+                            <p class="invalid-feedback" id="appointment_procedure-error"></p>
                         </div>
                     </div>
-                    <div class="additional-search col-lg-8">
+                    <div class="additional-search col-lg-8" id="clinic">
                         <div class="xyz row">
                             <div class="col-lg-6"> <label for="Radio">
-                                    <input type="radio" id="At_Clinic" name="mode" value="At Clinic" checked="checked"
-                                        class="">
+                                    <input type="radio" id="At_Clinic" name="mode" value="At Clinic"
+                                        checked="checked" class="">
                                     At Clinic</label></div>
+                            <div class="row p-2 branch_value">
+                                <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                    @foreach ($branches as $branch)
+                                        <input type="radio" name="branch_id" value="{{ $branch->id }}"
+                                            class="branch-radio" id="branch_{{ $branch->id }}">
+                                        <label for="branch_{{ $branch->id }}">{{ $branch->branch_name }}</label>
+                                    @endforeach
+                                    <p class="invalid-feedback" id="branch_id-error"></p>
+                                </div>
+                            </div>
                             <div class="col-lg-6"> <label for="Radio"> <input type="radio" name="mode"
                                         id="online_option" value="Online" class="">
                                     Online</label></div>
@@ -290,18 +307,20 @@
                         <div class="online_value">
                             <div class="row">
                                 <div class="col-lg-6"><label for="select">Platform:</label>
-                                    <select id="Social" class="form-control" name="platform">
+                                    <select id="platform" class="form-control" name="platform">
                                         <option value="">Select Option</option>
                                         <option value="Facebook">Facebook</option>
                                         <option value="Twitter">Twitter</option>
                                         <option value="Skype">Skype</option>
                                         <option value="Google Meet">Google Meet</option>
                                     </select>
+                                    <p class="text-danger" id="platform-error"></p>
                                 </div>
-                                <div class="col-lg-6">
+                                {{-- <div class="col-lg-6">
                                     <label for="Id_Number">ID/number:</label>
                                     <input type="text" class="form-control" name="id_number" value="">
-                                </div>
+                                    <p class="text-danger" id="id_number-error"></p>
+                                </div> --}}
                             </div>
 
 
@@ -310,20 +329,29 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-12 p-0">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <input type="radio" id="ic_number" name="identity_no" checked="checked">
-                                        <label for="Radio"> IC Number:</label>
+                                        <input type="radio" id="ic_number" name="identity_no" checked="checked"
+                                            value="identity">
+                                        <label for="ic_number">Identity Number:</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <input type="radio" value="passport-input" name="identity_no"
-                                            id="passport-input">
-                                        <label for="Radio" class="passport_no" style="margin-left:15px"
-                                            id="passport">
-                                            Passport Number:</label>
+                                        <input type="radio" id="passport-input" name="identity_no" value="passport">
+                                        <label for="passport-input" class="passport_no" style="margin-left:15px">Passport
+                                            Number:</label>
                                     </div>
                                 </div>
-                                <input type="number" class="form-control" name="get_number_identity">
-                                <input type="hidden" name="check_value" id="check_value" value="1">
+                                <div class="row mt-2">
+                                    <div class="col-md-12">
+                                        <input type="number" class="form-control" id="identity_number"
+                                            name="get_number_identity" placeholder="Identity Number">
+                                        <p class="invalid-feedback" id="get_number_identity-error"></p>
+                                        <input type="number" class="form-control d-none" id="passport_number"
+                                            name="get_passport_number" placeholder="Passport Number">
+                                        <p class="invalid-feedback" id="get_passport_number-error"></p>
+                                        <input type="hidden" name="check_value" id="check_value" value="1">
+                                    </div>
+                                </div>
                             </div>
+
                             <br> <br>
                             <div class="pass_box col-lg-12">
                                 <label for="select">Platform:</label>
@@ -365,8 +393,10 @@
                                                 {{ $i }}</option>
                                         @endfor
                                     </select>
+                                    <p class="invalid-feedback col-3" id="passport_date-error"></p>
                                 </div>
                             </div>
+
                             <div class="col-lg-12">
                                 <label for="Radio"> Appointment Reason: <input style="margin-left:0px !important"
                                         class="inpt-alignment" type="radio" value="1st Time Consultation"
@@ -378,8 +408,9 @@
                                     Follow up
                                     Consultation</label>
                                 <br>
-                                <textarea class="txt-area mandtry form-control" name="appointment_reason" id="reason" cols="45"
+                                <textarea class="txt-area mandtry form-control" name="appointment_reason" id="appointment_reason" cols="45"
                                     rows="5"></textarea>
+                                <p class="invalid-feedback" id="appointment_reason-error"></p>
                                 <br>
                                 <button type="submit" style="margin-top: 20px"
                                     class="nxt-btn btn btn-warning action-button">Submit</button>
@@ -402,6 +433,22 @@
     <script type="text/javascript" src="{{ url('public/js/jquery-ui-1.7.3.custom.min.js') }}"></script>
     <script>
         $(document).ready(function() {
+            $('input[name="identity_no"]').change(function() {
+                if ($(this).val() === 'identity') {
+                    $('#identity_number').removeClass('d-none');
+                    $('#passport_number').addClass('d-none');
+                } else if ($(this).val() === 'passport') {
+                    $('#passport_number').removeClass('d-none');
+                    $('#identity_number').addClass('d-none');
+                }
+            });
+
+            // Trigger the change event on page load to ensure the correct input is displayed
+            $('input[name="identity_no"]:checked').trigger('change');
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
 
             $('input[type="radio"]').change(function() {
                 if ($('#ic_number').is(':checked')) {
@@ -418,10 +465,12 @@
 
             $("#At_Clinic").click(function() {
                 $(".online_value").hide();
+                $(".branch_value").show();
             });
 
             $("#online_option").click(function() {
                 $(".online_value").show();
+                $(".branch_value").hide();
             });
 
             $("#passport-input").click(function() {
@@ -506,6 +555,110 @@
                 }
 
             });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#get_appointment_form").submit(function(e) {
+                e.preventDefault(); // Prevent the default form submission
+                var element = $(this);
+
+
+                $("button[type=submit]").attr('disabled', true);
+                // Send an AJAX request to the server
+                $.ajax({
+                    url: "{{ url('booked_appointment_withoutlogin') }}",
+                    type: "POST",
+                    data: element.serialize(),
+                    dataType: "json",
+                    success: function(response) {
+                        console.log(response);
+                        $("button[type=submit]").attr('disabled', false);
+
+                        // Clear previous errors
+                        $(".invalid-feedback").html("");
+                        $(".form-control").removeClass("is-invalid");
+
+                        if (response["status"] == true) {
+                            // Redirect to the specified URL
+                            window.location.href = "{{ url('make-an-appointment') }}";
+                        } else {
+                            var errors = response['errors'];
+                            if (errors['patient_name']) {
+                                $("#patient_name").addClass('is-invalid');
+                                $("#patient_name-error").html(errors['patient_name'][0]);
+                            }
+                            if (errors['patient_email']) {
+                                $("#patient_email").addClass('is-invalid');
+                                $("#patient_email-error").html(errors['patient_email'][0]);
+                            }
+                            if (errors['patient_phone']) {
+                                $("#patient_phone").addClass('is-invalid');
+                                $("#patient_phone-error").html(errors['patient_phone'][0]);
+                            }
+                            if (errors['gender']) {
+                                // Check if both male and female radio buttons are unchecked
+                                if (!$("input[name='male']").is(":checked") && !$(
+                                        "input[name='female']").is(":checked")) {
+                                    $("input[name='male'], input[name='female']").addClass(
+                                        'is-invalid');
+                                    $("#gender-error").html(errors['gender'][0]);
+                                }
+                            }
+                            if (errors['branch_id']) {
+                                $("input[name='branch_id']").addClass('is-invalid');
+                                $("#branch_id-error").html(errors['branch_id'][0]);
+                            }
+                            if (errors['platform']) {
+                                $("input[name='platform']").addClass('is-invalid');
+                                $("#platform-error").html(errors['platform'][0]);
+                            }
+                            var selectedIdentityType = $("input[name='identity_no']:checked")
+                                .val();
+                            // Display errors based on the selected identity type
+                            if (selectedIdentityType === 'identity' && errors[
+                                    'get_number_identity']) {
+                                $("input[name='get_number_identity']").addClass('is-invalid');
+                                $("#get_number_identity-error").html(errors[
+                                    'get_number_identity'][0]);
+                            }
+                            if (selectedIdentityType === 'passport' && errors[
+                                    'get_passport_number']) {
+                                $("input[name='get_passport_number']").addClass('is-invalid');
+                                $("#get_passport_number-error").html(errors[
+                                    'get_passport_number'][0]);
+                            }
+                            if (errors['passport_date']) {
+                                $(".pass_box select").addClass(
+                                    'is-invalid'
+                                    ); // Add 'is-invalid' class to all select elements inside .pass_box
+                                $("#passport_date-error").html(errors['passport_date'][0]);
+                            }
+                            // if (errors['id_number']) {
+                            //     $("input[name='id_number']").addClass('is-invalid');
+                            //     $("#id_number-error").html(errors['id_number'][0]);
+                            // }
+                            if (errors['appointment_reason']) {
+                                $("#appointment_reason").addClass('is-invalid');
+                                $("#appointment_reason-error").html(errors['appointment_reason']
+                                    [0]);
+                            }
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+
         });
     </script>
 @endsection
