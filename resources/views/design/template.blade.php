@@ -10,7 +10,7 @@
     @yield('customCSS')
 </head>
 <body>
-    
+
     @yield('header-main')
     
     @yield('content')
@@ -30,7 +30,7 @@
     @yield('customer-main')
   
     @yield('article-main')
-   
+
     @yield('footer-main')
 
     <script>

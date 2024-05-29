@@ -1,5 +1,5 @@
 <div id="header-main" class="main-section">
-  <div class="cus-container">  
+  <div class="container">  
     <div class="header-txt-blk all-txt-blk">
         <div class="top-header row">
           <div class="empty-blk-01 col-md-2">

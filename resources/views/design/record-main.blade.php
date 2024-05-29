@@ -27,18 +27,22 @@
                                 Videos</li>
                         </ul>
                     </div>
+                    <form action="https://getphr.com/" method="get">
+                        <input type="hidden" name="hospID" value="7" id="">
+                        <button type="submit" class="patient_login btn btn-primary" target="blank">Access Pateint Records</button>
+                    </form>
                 </div>
                 <div class="record-img">
                     <img src=" {{ url('public/images/Shah-Dental-com_03.png') }}" alt="">
                 </div>
             </div>
-            <div class="row">
-                {{-- <button class="btn btn-primary">Access Pateint Records</button> --}}
+            {{-- <div class="row">
+                <button class="btn btn-primary">Access Pateint Records</button>
                 <form action="https://getphr.com/" method="get">
                     <input type="hidden" name="hospID" value="7" id="">
                     <button type="submit" class="patient_login btn btn-primary" target="blank">Access Pateint Records</button>
                 </form>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
