@@ -145,6 +145,29 @@ class HomeController extends Controller
         $doctors = Doctor::with('user_role', 'doctor_specaility.specialities_list', 'doctor_language.languages_list')->get();
         // return view('wordpress.make_an_appointment', compact('branches'));
         // return view('make_an_appointment', compact('branches'));
+
+        // $date = Carbon::createFromFormat('d-m-Y', $request->dateas)->format('Y-m-d');
+        // $check_slots = DB::table('doctors')
+        //     ->join('appointment_schedules', 'appointment_schedules.doctor_id', '=', 'doctors.doctorID')
+        //     ->where('doctors.doctorID', $doctor_id)
+        //     ->where('appointment_schedules.schedule_date', $date)
+        //     ->first();
+
+        // if ($check_slots != null && $check_slots->enable_slots == 1) {
+        //     $appointment = DB::table('appointment_schedules')
+        //         ->join('appointment_slots', 'appointment_slots.schedule_id', '=', 'appointment_schedules.id')
+        //         ->where('appointment_slots.booking_id', null)
+        //         ->where('doctor_id', $doctor_id)
+        //         ->where('appointment_schedules.schedule_date', $date)
+        //         ->take(2)
+        //         ->get();
+        //     return response()->json($appointment);
+        // } else {
+        //     $appointment_session = DB::table('sessions')->where('status', 1)->get();
+        //     return response()->json($appointment_session);
+        // }
+
+
         return view('make_an_appointment', compact('branches', 'procedures', 'doctors'));
     }
     public function find_doctors()

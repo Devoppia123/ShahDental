@@ -20,6 +20,16 @@
             text-decoration: underline;
             /* Underline on hover */
         }
+
+        button.patient_login {
+            background: none;
+            border: none;
+            color: #5e5e5e;
+        }
+        
+        button.patient_login:hover {
+            color: blue !important;
+        }
     </style>
 @endsection
 

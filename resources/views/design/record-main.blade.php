@@ -40,7 +40,8 @@
                 <button class="btn btn-primary">Access Pateint Records</button>
                 <form action="https://getphr.com/" method="get">
                     <input type="hidden" name="hospID" value="7" id="">
-                    <button type="submit" class="patient_login btn btn-primary" target="blank">Access Pateint Records</button>
+                    <button type="submit" class="patient_login btn btn-primary" target="blank">Access Pateint
+                        Records</button>
                 </form>
             </div> --}}
         </div>

@@ -35,7 +35,7 @@
                     <a href="{{ url('/our-team') }}">>> <p>Our Team</p></a>
                     <a href="#">>> <p>Blog & News</p></a>
                     <a href="#">>> <p>FAQ's</p></a>
-                </div>                
+                </div>
             </div>
             <div class="col-lg-2 col-md-4 mb-sc col-sm-12">
                 <h3>Quick Links</h3>

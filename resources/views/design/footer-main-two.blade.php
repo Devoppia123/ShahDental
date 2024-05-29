@@ -1,16 +1,4 @@
 
-<style>
-    .footer-blk form button {
-        border: none;
-        background: none;
-        color: #5e5e5e;
-
-    }
-
-    .footer-blk form button:hover {
-        color: blue;
-    }
-</style>
 <div id="footer-main" class="main-section">
     <div class="container">
         <div class="footer-txt-blk all-txt-blk">
