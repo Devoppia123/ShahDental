@@ -1,7 +1,8 @@
 @extends('design.template')
 @section('title', 'Shah Dental | Service Details')
 @section('header-main')
-    @include('design.header-main')
+    {{-- @include('design.header-main') --}}
+    @include('inc.inner-header-header')
 
 @endsection
 @section('customCSS')
@@ -27,7 +28,7 @@
 
         /* Header Max Width */
         .main-section .container {
-            max-width: 1600px;
+            /* max-width: 1600px; */
             margin: 0 auto;
         }
 
@@ -60,17 +61,17 @@
 
 
         .btn-appointment {
-            background-color: #35b34a;
-            color: #fff;
-            text-decoration: none !important;
-            font-size: 14px;
-            padding: 12px 22px;
-            border-radius: 5px;
-            cursor: pointer;
+            padding: 15px 30px;
+            font-size: 17px;
+            font-family: poppins;
+            background-color: #fff;
+            color: #9b212a;
+            text-decoration: none;
+            border-radius: 12px;
         }
 
         .btn-appointment:hover {
-            color: #fff;
+            color: #000;
         }
 
         .top {
@@ -131,14 +132,14 @@
         </section>
 
         {{-- Doctors List --}}
-        <section class="doctor-section" style="padding-bottom: 300px">
+        <section class="doctor-section">
             <div class="container">
-                <h1 style="color: white;font-weight: 900; margin-top:300px;">
+                <h1 style="color: white;font-weight: 900;">
                     Consultant Doctors</h1>
                 @if (!$doctor->isEmpty())
                     <div class="row top" style="margin-bottom: 50px">
                         @foreach ($doctor as $index => $doc)
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                                 {{-- style="{{ $index == 1 || $index == 2 ? 'margin-top: 50px;' : '' }}"> --}}
                                 <div class="text-center">
                                     <img class="card-img-top doctor-image"
@@ -159,7 +160,7 @@
                                 </div>
                             </div>
                         @endforeach
-                        <div class="row text-center m-auto">
+                        <div class="row text-center m-auto view-more-btn">
                             <div class="col-sm-12">
                                 <a class="btn-appointment text-center" href="{{ url('/find_doctors') }}">VIEW MORE >> </a>
                             </div>
@@ -187,7 +188,7 @@
                     <div class="row">
                         @if (!$articles->isEmpty())
                             {{-- Latest Article --}}
-                            <div class="col-lg-4 col-md-4">
+                            <div class="col-lg-4 col-md-12">
                                 <div class="blog-sec-01">
                                     <img style="width: 300px" src="{{ url("public/articles/$latest_article->image") }}"
                                         alt="">
@@ -199,7 +200,7 @@
 
                             </div>
                             {{-- All previous Articles --}}
-                            <div class="col-lg-8" style="display: flex; flex-direction: column; align-items: center;">
+                            <div class="col-lg-8 col-md-12" style="display: flex; flex-direction: column; align-items: center;">
                                 @foreach ($articles as $article)
                                     <div class="col-lg-10">
                                         <div class="row">

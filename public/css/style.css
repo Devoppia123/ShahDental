@@ -89,6 +89,7 @@ li {
     text-align: right;
     display: flex;
     gap: 40px;
+    margin-left: 12px;
 }
 .top-txt-box p a {
     color: #fff;
@@ -304,12 +305,16 @@ div#banner-block-01 {
 
 .address-detail {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     background-color: #9b212a;
     padding: 45px 40px 10px 0;
     border-radius: 50px;
     box-shadow: 0 0 50px 1px #0000003b;
     width: 80%;
+    /* width: max(1036px, 100vw); */
     margin: 60px auto 230px;
 }
 
@@ -350,13 +355,14 @@ div#banner-block-01 {
     font-size: 20px;
     margin: 4px 0 -10px;
 }
-
+.clinic-list{
+    width: 520px;
+}
 .clinic-address {
-    width: 50%;
+    width: 440px;
 }
 
 .clinic-address {
-    width: 41%;
     background-color: #fff;
     padding: 50px;
     border-radius: 50px;
@@ -440,6 +446,7 @@ div#banner-block-01 {
     border-radius:0px 0px 0px 50px !important;
     color:#fff;
     justify-content: flex-end;
+    padding-top: 12px;
 }
 .inner-heading {
     text-align: center;
@@ -982,9 +989,31 @@ span {
 @media only screen and (max-width: 1024px) {
     .reh-cus-box{
         width: 70vw;
+    }    
+    .address-detail {
+        width: 100%;
     }
-
 }
+/* @media only screen and (min-width: 1024px) { */
+@media only screen and (min-width: 1024px) and (max-width: 1400px)  {
+    .top-txt-box {
+        width: 86% !important;
+        gap: 14px !important;
+        margin-left: 12px;
+    }
+    
+    .address-detail {
+        width: 90%;
+    }
+    .clinic-list {
+        width: 380px;
+    }
+    .clinic-address {
+        width: 390px;
+        border: 1px solid green;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .reh-cus-box{
         width: 90vw;
@@ -995,6 +1024,9 @@ span {
     }
     .inner-heading h1{
         font-size:44px;
+    }
+        .address-detail {
+        width: 90%;
     }
 }
 

@@ -338,17 +338,21 @@ footer {
 }
 
 .doctor-section {
-    background-image: url(../images/doctor-section.png);
+    background-color: #8d1a22;
+    /* background-image: url(../images/doctor-section.png); */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 130vh;
+    /* height: 130vh; */
+    height: auto;
     display: flex;
     align-items: center;
     text-align: center;
-    padding-bottom: 100px;
+    padding: 100px 0px;
 }
-
+.view-more-btn{
+    margin-top: 60px !important;
+}
 .ftr-submenu {
     position: relative;
 }

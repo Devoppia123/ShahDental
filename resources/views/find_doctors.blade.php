@@ -40,12 +40,6 @@
             color: #fff !important;
         }
 
-        /* Width Css */
-        .main-section .container {
-            max-width: 1600px !important;
-            margin: 0 auto;
-        }
-
         /* Form Search CSS */
         /* Custom CSS for gender buttons */
         .gender-btn {
@@ -64,7 +58,9 @@
 @endsection
 
 @section('header-main')
-    @include('design.header-main')
+    {{-- @include('design.header-main') --}}
+    @include('inc.inner-header-header')
+
 @endsection
 
 @section('content')

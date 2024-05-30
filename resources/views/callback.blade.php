@@ -26,7 +26,7 @@
         }
 
         .main-section .container {
-            max-width: 1600px !important;
+            /* max-width: 1600px !important; */
             margin: 0 auto;
         }
     </style>

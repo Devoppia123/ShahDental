@@ -143,7 +143,7 @@ class HomeController extends Controller
             ]);
         }
     }
-<<<<<<< Updated upstream
+
 
     public function make_an_appointment(Request $request)
     {
@@ -177,9 +177,8 @@ class HomeController extends Controller
 
         return view('make_an_appointment', compact('branches', 'procedures', 'doctors'));
     }
-=======
+
    
->>>>>>> Stashed changes
     public function find_doctors()
     {
         $doctors = Doctor::with('user_role', 'doctor_specaility.specialities_list', 'doctor_language.languages_list')->get();
@@ -480,15 +479,18 @@ class HomeController extends Controller
             return response()->json($appointment_session);
         }
     }
-    public function make_an_appointment(Request $request)
+
+    /*
+     public function make_an_appointment(Request $request)
     {
-        // Fetching necessary data
+       
         $branches = Branch::where('status', 1)->get();
         $procedures = DB::table('procedures')->where('status', 1)->get();
         $doctors = Doctor::with('user_role', 'doctor_specaility.specialities_list', 'doctor_language.languages_list')->get();
-        // Returning the view with necessary data
+       
         return view('make_an_appointment', compact('branches', 'procedures', 'doctors'));
     }
+    */
 
     public function booked_appointment_withoutlogin(Request $request)
     {

@@ -5,8 +5,8 @@
                 <h2>Our Branches</h2>
                 <p>Online to know about our locations and ease yourself in finding us wherever you are</p>
             </div>
-            <div class="address-detail">
-                <div class="dental-block">
+            <div class="address-detail clinic-details" style="border:2px solid;">
+                <div class="dental-block clinic-list">
                     <div class="clinic-img-box" data-clinic="shah-dental-clinic">
                         <div class="clinic-img-01">
                             <img src="{{ url('public/images/Shah-Dental5_17.png') }}" alt="">
