@@ -1,5 +1,5 @@
 @extends('design.template')
-
+@section('title', 'Shah Dental | Service Treamtment')
 @section('header-main')
     {{-- @include('design.header-main') --}}
     @include('inc.inner-header-header')

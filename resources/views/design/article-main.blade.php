@@ -32,6 +32,7 @@
                                   <div class="art-txt-box">
                                       <h3>{{ $article->title }}</h3>
                                       <h4>{{ $article->speciality }}</h4>
+                                      <p>{!! Str::limit($article->description, 100) !!}</p>
                                       <a href="{{ url("/view_article/$article->id") }}">Read More >></a>
                                   </div>
                               </div>

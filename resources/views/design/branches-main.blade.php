@@ -49,7 +49,9 @@
                     <h3 id="shah-dental-clinic">Shah Dental Clinic:</h3>
                     <div class="address-icon-blk">
                         <img src="{{ url('public/images/Shah-Dental5_22.png') }}" alt="">
-                        <p><a href="#">Saima Heaven, Opp. New Dhora Jee Colony, Block-4, Gulshan-e-Iqbal,
+                        <p><a
+                                href="{{ url('/branch-directions') }}?location=Saima+Heaven,+Opp.+New+Dhora+Jee+Colony,+Block-4+Shah+Dental+Clinic+Gulshan-e-Iqbal+Karachi">Saima
+                                Heaven, Opp. New Dhora Jee Colony, Block-4, Gulshan-e-Iqbal,
                                 Karachi.</a></p>
                     </div>
                     <div class="address-icon-blk botted-border">
@@ -90,6 +92,7 @@
 </div>
 
 {{-- add this javascript doctor details in click event --}}
+{{-- update script yasir add click p tages and show location on branch directions page 30-05-2024 --}}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const clinicDetails = {
@@ -98,7 +101,7 @@
           <h3>Shah Dental Clinic:</h3>
           <div class="address-icon-blk">
               <img src="{{ url('public/images/Shah-Dental5_22.png') }}" alt="">
-              <p><a href="#">Saima Heaven, Opp. New Dhora Jee Colony, Block-4, Gulshan-e-Iqbal, Karachi.</a></p>
+              <p><a href="{{ url('/branch-directions') }}?location=Saima+Heaven,+Opp.+New+Dhora+Jee+Colony,+Block-4+Shah+Dental+Clinic+Gulshan-e-Iqbal+Karachi">Saima Heaven, Opp. New Dhora Jee Colony, Block-4, Gulshan-e-Iqbal, Karachi.</a></p>
           </div>
           <div class="address-icon-blk botted-border">
               <img src="{{ url('public/images/Shah-Dental5_28.png') }}" alt="">
@@ -130,7 +133,7 @@
           <h3>Dental Art Clinic:</h3>
           <div class="address-icon-blk">
               <img src="{{ url('public/images/Shah-Dental5_22.png') }}" alt="">
-              <p><a href="#">Phase 6, DHA, Karachi.</a></p>
+              <p><a href="{{ url('/branch-directions') }}?location=Dental+Art+Clinic+Phase+6+DHA+Karachi">Phase 6, DHA, Karachi.</a></p>
           </div>
           <div class="address-icon-blk botted-border">
               <img src="{{ url('public/images/Shah-Dental5_28.png') }}" alt="">
@@ -161,7 +164,7 @@
           <h3>Prof Syed Shah Faisal:</h3>
           <div class="address-icon-blk">
               <img src="{{ url('public/images/Shah-Dental5_22.png') }}" alt="">
-              <p><a href="#">Bahadurabad, Karachi.</a></p>
+              <p><a href="{{ url('/branch-directions') }}?location=Prof+Syed+Shah+Faisal+Bahadurabad+Karachi">Bahadurabad, Karachi.</a></p>
           </div>
           <div class="address-icon-blk botted-border">
               <img src="{{ url('public/images/Shah-Dental5_28.png') }}" alt="">

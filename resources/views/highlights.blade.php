@@ -1,4 +1,5 @@
 @extends('design.template')
+@section('title', 'Shah Dental | Highlights')
 @section('customCSS')
     <style>
         h1 {

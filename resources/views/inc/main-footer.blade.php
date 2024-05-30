@@ -45,7 +45,7 @@
                     <a href="{{ url('/make-an-appointment') }}">>> <p>Appointments</p></a>
                     <a href="{{ url('/contact-us') }}">>> <p>Contact Us</p></a>
                     <a href="{{ url('/gallery') }}">>> <p>Gallery</p></a>
-                    <a href="#">>> <p>Our Branches</p></a>
+                    <a href="{{ url('/branch-directions') }}">>> <p>Our Branches</p></a>
                     {{-- <a href="#">>> <p>Patient Check-in</p></a> --}}
                     <form action="https://getphr.com/" method="get">
                         <input type="hidden" name="hospID" value="7" id="">
@@ -72,7 +72,7 @@
                         </div>
                         <div class="art-txt-box">
                             <h4>Email :</h4>
-                            <a href="mailto:Info@gmail.com">Info@gmail.com</a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Info@gmail.com">Info@gmail.com</a>
                         </div>
                     </div>
                     <div class="icon-address">
@@ -81,7 +81,7 @@
                         </div>
                         <div class="art-txt-box">
                             <h4>Location :</h4>
-                            <a href="#">3920 Market Street, Camp Hill, PA 17011 Make an Appointment</a>
+                            <a href="{{ url('branch-directions') }}?location=3920+Market+Street,+Camp+Hill,+PA+17011" target="_blank">3920 Market Street, Camp Hill, PA 17011 Make an Appointment</a>
                         </div>
                     </div>
                 </div>

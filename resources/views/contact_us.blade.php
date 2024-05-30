@@ -1,4 +1,5 @@
 @extends('design.template')
+@section('title', 'Shah Dental | ContactUs')
 @section('customCSS')
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link rel="stylesheet" href="{{ url('public/css/Our-Speciality.css') }}"> --}}

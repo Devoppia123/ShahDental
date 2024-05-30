@@ -1,4 +1,5 @@
 @extends('design.template')
+@section('title', 'Shah Dental | Our Teams')
 
 @section('header-main')
     @include('design.header-main')

@@ -67,6 +67,8 @@
     <section>
         <div class="container">
             <div class="header-sec">
+                <h1 style="color: rgb(137, 30, 30); font-weight: bold; font-size: 50px; margin-left: 45%;
+                margin-top: 0%">Find Doctors</h1>
                 <form action="">
                     <div class="row" style="align-items: center;">
 
