@@ -247,6 +247,10 @@ class HomeController extends Controller
 
     public function branch_directions()
     {
+<<<<<<< HEAD
+=======
+        // dd('yasir');
+>>>>>>> 424291eb17812f37a51824b32bc054cd3e23c2d2
         return view('directions');
     }
     public function services()
