@@ -244,7 +244,7 @@ class HomeController extends Controller
 
     public function branch_directions()
     {
-        dd('yasir');
+        // dd('yasir');
         return view('directions');
     }
     public function services()
