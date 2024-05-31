@@ -21,7 +21,7 @@
     <div class="page-heading">
         <h1>Our Mission</h1>
     </div>
-    <div id="our-mission" class="our-mission bg-main">
+    <div id="our-mission" class="our-mission-con bg-main">
         <div class="container">
             <div class="reh-cus-box our-mission-cont">
                 <p>Our mission for humanity is to gladly impart a family-oriented concern for all of our patients without

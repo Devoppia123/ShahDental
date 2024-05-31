@@ -53,9 +53,22 @@ li {
 #header-main {
     background-image: url('../images/banner-image_01.jpg');
     height: 1100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
 }
-#header-inner {
+/* #header-inner {
     background-image: url('../images/Inner-page01-header-bg_01.png');
+    height: 350px;
+} */
+
+.our-mission {
+    background-image: url('../images/our-mission-bg.jpg');
+    height: 350px;
+}
+
+.message {
+    background-image: url('../images/message-banner.png');
     height: 350px;
 }
 
@@ -85,9 +98,10 @@ li {
 }
 
 .top-txt-box {
-    width: 70%;
+    width: 100%;
     text-align: right;
     display: flex;
+    justify-content: space-around;
     gap: 40px;
     margin-left: 12px;
 }
@@ -96,7 +110,10 @@ li {
     text-decoration: none;
 }
 
-
+/* find doc */
+.reh-find-doc{
+    margin-top: 100px;
+}
 
 .top-image-box img {
     /* width: 13%; */
@@ -200,7 +217,7 @@ a.nav-btn-01 {
 
 .banner-txt-blk a img {
     border-radius: 100%;
-    top: 18px;
+    top: 0px;
     position: relative;
     left: 15px;
 }
@@ -443,7 +460,7 @@ div#banner-block-01 {
 .top-r {
     display: flex !important;
     background-color:#424343 !important;
-    border-radius:0px 0px 0px 50px !important;
+    /* border-radius:0px 0px 0px 50px !important; */
     color:#fff;
     justify-content: flex-end;
     padding-top: 12px;
@@ -500,8 +517,11 @@ div#banner-block-01 {
     width: 70%;
     margin: auto;
 }
-
+.reh-img-col-4 {
+    width: 40%;
+}
 .reh-article-img {
+    width: 100%;
     height: 100%;
 }
 
@@ -525,7 +545,26 @@ div#banner-block-01 {
 span {
     font-family: poppins;
 }
-
+.re-cus-des {
+    margin-top: 24px;
+}
+.reh-arti-img-box {
+    margin-right: 22px;
+}
+.reh-arti-img-box img {
+    height: 100%;
+    border-radius: 20px;
+}
+.reh-arti-text .arti-head {
+    margin: 12px 0px;
+}
+.clinic-list .clinic-txt-01 p {
+    margin-top:18px;
+}
+/* reh footer */
+.foo-address {
+    margin-top: 32px;
+}
 /* end reh code */
 .team-card-box p a {
     background-color: transparent !important;
@@ -789,16 +828,38 @@ span {
     gap: 30px;
     color: #fff;
     font-family: poppins;
-    margin: 80px 0 0;
+    /* margin: 80px 0 0; */
+}
+.make-an-appoint {
+    margin:100px 0px;
 }
 
+.make-an-appoint .text-center  {
+    display: flex;
+    justify-content: center;
+}
 .articles {
     /* width: 55%; */
-    width: max(600px, 480px);
+    /* width: max(600px, 480px); */
     display: flex;
-    gap: 35px;
+    /* gap: 35px; */
+}
+.reh-arti-col-one{
+    width: 60%;
+
 }
 
+.reh-arti-col-tw{
+    display: flex;
+    width: 30%;
+    height:220px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.reh-arti-row-one .art-img-box img {
+    border-radius: 10px;
+    height:100px
+}
 .art-img-box {
     width: 50%;
 }
@@ -826,8 +887,8 @@ span {
 }
 
 .article-02 {
-    display: block;
-    width: 45%;
+    /* display: block; */
+    /* width: 45%; */
 }
 
 .article-root {
@@ -836,7 +897,7 @@ span {
 }
 
 .article-02 {
-    display: block;
+    /* display: block; */
 }
 
 .article-02 img {
@@ -847,9 +908,11 @@ span {
 .article-root .art-img-box {
     width: 50%;
     text-align: right;
-    margin: 0 30px 0 0;
+    margin: 0 18px 0 0;
 }
-
+.reh-arti-col-right-text h3{
+    margin:10px 0px;
+}
 /* Articles */
 
 /* footer */
@@ -983,6 +1046,10 @@ span {
 @media only screen and (max-width: 576px) {
     .top-r{
         display:none !important;
+    }
+    .re-pagination .page-item .page-link {
+        padding: 6px;
+        font-size: 12px;
     }
 
 }

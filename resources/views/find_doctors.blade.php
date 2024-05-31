@@ -64,13 +64,13 @@
 @endsection
 
 @section('content')
-    <section>
+    <section class="reh-find-doc">
         <div class="container">
-            <div class="header-sec">
-                <h1 style="color: rgb(137, 30, 30); font-weight: bold; font-size: 50px; margin-left: 45%;
-                margin-top: 0%">Find Doctors</h1>
-                <form action="">
-                    <div class="row" style="align-items: center;">
+            <div class="header-sec find-doc-form-sec">
+                <h1>Find Doctors</h1>
+                <div class="find-form-div">
+                <form action="" class="find-doc-form">
+                    <div class="row">
 
                         <div class="col-lg-5 col-md-5 col-sm-12 col-12 side-bar-search">
                             <label for="Srch-doc">Search Doctor Name & Speciality</label><br>
@@ -94,7 +94,7 @@
 
                     </div>
                 </form>
-
+                </div>
                 {{-- <form id="doctor-search-form">
                     <div class="row" style="align-items: center;">
                         <div class="col-lg-5 col-md-5 col-sm-12 col-12">

@@ -183,6 +183,7 @@
     }
 </style>
 @section('content')
+<div class="make-an-appoint">
     <div class="branch-heading">
         <h2>Make An Appointment</h2>
     </div>
@@ -211,8 +212,8 @@
     <section class="main-content-section container">
 
         <div id="skip" class="container">
-            <div class="row" style="margin-left: 20%">
-                <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
                     <div class="half_leftcol_app">
                         <h5>Please Select a Date</h5>
                         {{-- <div id="datepicker" style="width:100%;"></div> --}}
@@ -427,6 +428,7 @@
             </form>
         </div>
     </section>
+</div>
 @endsection
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="{{ url('public/js/jquery-1.4.3.min.js') }}"></script>

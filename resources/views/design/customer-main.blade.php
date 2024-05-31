@@ -8,7 +8,7 @@
                         <h3 class="red-heading">Read what other patient are saying about<br>
                             the dental implant service offered</h3>
                             <div class="slider-container-01">
-                                <div class="product-slider">
+                                <div class="product-slider re-cus-des">
                                   <div class="product-item"> 
                                     <p>We had a very pleasant experience with Dr. Meena and her staff. My daughter was very anxious about the appointment and any procedure, but Dr. Meena was very patient with her and spend a lot of time trying to calm her down, the staff was very helpful and kind and always available to help. Dr. Meena is very professional, she takes the time to explain what needs to be done and
                                         provides valuable advice , It's not easy to find a good dentist for your kids,

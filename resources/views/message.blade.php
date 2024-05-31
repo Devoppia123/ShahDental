@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <div class="message bg-main">
+    <div class="message-con bg-main">
         <div class="page-heading"> <h1>Message</h1></div>
         <div class="container">
 

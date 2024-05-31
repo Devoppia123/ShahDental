@@ -2,20 +2,17 @@
   <div class="container">  
     <div class="header-txt-blk all-txt-blk">
         <div class="top-header row">
-          <div class="empty-blk-01 col-md-2">
-          </div>
           {{-- <div class="top-cell-us col-md-8 top-r"> --}}
-          <div class="col-md-12 col-sm-12 top-r">
-              <div class="top-image-box call-us"><span>
-                  <img src="{{ url('public/images/Shah-Dental_03.png') }}" alt="03">
-                  : <a href="Gulshan-e-Iqbal Branch-021-34963440"> <span class="call-bold">Call Us</span></a>
-                  </span>
-                  
-              </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 top-r">
               <div class="top-txt-box address">
-                  <p>Gulshan-e-Iqbal Branch-021-34963440</p>
-                  <p>Bahadurabad-03341326378</p>
-                  <p>DHA Branch-021-35243482 </p>
+                <div class="top-image-box call-us"><span>
+                  <img src="{{ url('public/images/Shah-Dental_03.png') }}" alt="03">
+                  <span class="call-bold">Call Us</span>
+                  </span>          
+                </div>
+                  <p>Gulshan-e-Iqbal Branch: <a href="tel:02134963440">021-34963440</a></p>
+                  <p>Bahadurabad Branch: <a href="tel:03341326378">03341326378</a></p>
+                  <p>DHA Branch: <a href="tel:02135243482">021-35243482</a></p>
               </div>
           </div>
         </div>

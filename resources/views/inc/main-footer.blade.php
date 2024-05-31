@@ -81,7 +81,7 @@
                         </div>
                         <div class="art-txt-box">
                             <h4>Location :</h4>
-                            <a href="{{ url('branch-directions') }}?location=3920+Market+Street,+Camp+Hill,+PA+17011" target="_blank">3920 Market Street, Camp Hill, PA 17011 Make an Appointment</a>
+                            <a class="foo-address" href="{{ url('branch-directions') }}?location=3920+Market+Street,+Camp+Hill,+PA+17011" target="_blank">3920 Market Street, Camp Hill, PA 17011 Make an Appointment</a>
                         </div>
                     </div>
                 </div>

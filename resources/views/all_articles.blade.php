@@ -170,7 +170,7 @@
                                 <hr style="background-color:#fff;">
                             </div>
                         @endforeach
-                        <ul id="pagination-demo" class="pagination-sm"></ul>
+                        <ul id="pagination-demo" class="pagination-sm re-pagination"></ul>
                     </div>
                     {{-- <div class="articles article-01">
                         <div class="art-img-box">
