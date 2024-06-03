@@ -20,7 +20,7 @@
         
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ url('public/images/logo_03.png') }}" alt="" width="248" height="74" class="d-inline-block align-text-top"></a>
+                <img src="{{ url('public/images/logo_03.png') }}" alt="" class="d-inline-block align-text-top cus-logo"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>

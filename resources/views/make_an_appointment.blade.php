@@ -182,13 +182,25 @@
         display: none;
     }
 </style>
+
 @section('content')
 <div class="make-an-appoint">
     <div class="branch-heading">
         <h2>Make An Appointment</h2>
     </div>
+    <div class="row">
+        <div class="container">   
+            <div class="col-md-12" style="text-align: center;">
+                <h3>Login To Your Personal Health Record</h3>
+                <form action="https://getphr.com/" method="get">
+                    <input type="hidden" name="hospID" value="7" id="">
+                    <button class="btn btn-primary" type="submit" target="blank">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="text-center p-5 row" id="show-section">
-        <div class="col-md-4">
+        <div class="col-md-12">
             <h3>Make An Appointment As A Guest</h3>
             <div id="doc" style="margin-left: 60px">
                 <select id="doctor" class="form-control">
@@ -201,19 +213,13 @@
                 </select>
             </div>
         </div>
-        <div class="col-md-6">
-            <h3>Login To Your Personal Health Record</h3>
-            <form action="https://getphr.com/" method="get">
-                <input type="hidden" name="hospID" value="7" id="">
-                <button class="btn btn-primary" type="submit" target="blank">Login</button>
-            </form>
-        </div>
     </div>
+
     <section class="main-content-section container">
 
         <div id="skip" class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="half_leftcol_app">
                         <h5>Please Select a Date</h5>
                         {{-- <div id="datepicker" style="width:100%;"></div> --}}

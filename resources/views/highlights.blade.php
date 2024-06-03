@@ -15,7 +15,7 @@
 @endsection
 
 @section('content')
-    <div class="highlights bg-main">
+    <div class="highlights-sec bg-main">
         <div class="page-heading"><h1>Highlights of Clinics</h1></div>
         <div class="container">
 
