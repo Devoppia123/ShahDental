@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/view_schedule.css') }}">
+    <link rel="stylesheet" href="{{ url('public/css/view_schedule.css') }}">
     <div class="main-cont-wrapper">
         <div class="container-fluid">
             @php

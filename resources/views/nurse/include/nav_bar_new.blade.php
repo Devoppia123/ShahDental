@@ -18,7 +18,8 @@
                             </div>
                             <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
                                 <div class="user-tab">
-                                    <img src="{{ asset('patient/images/user-img-2.png') }}">
+                                    {{-- <img src="{{ asset('patient/images/user-img-2.png') }}"> --}}
+                                    <img src="{{ url('public/patient/images/user-img-2.png') }}">
                                     <p>
                                         <span>Otundo PHR</span><br>
                                         Task: #78

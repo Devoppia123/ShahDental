@@ -9,7 +9,8 @@
 @endsection
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/view-booking.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/view-booking.css') }}"> --}}
+    <link rel="stylesheet" href="{{ url('public/css/view-booking.css') }}">
 
     <div class="main-cont-wrapper">
         <div class="container-fluid">
@@ -24,7 +25,8 @@
                 <h2>View Monthly,<span> Bookings</span></h2>
             </div>
 
-            <div class="icon-top-right" style="float: right;"><i class="fa fa-chevron-left"></i><span>Back</span></div>
+            <div class="icon-top-right" style="float: right;">
+                <i class="fa fa-chevron-left"></i><span>Back</span></div>
             <table id="app_table" class="display reading-tble " style="width:100%">
 
                 <thead>

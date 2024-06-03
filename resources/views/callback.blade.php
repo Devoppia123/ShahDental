@@ -40,9 +40,9 @@
 
 
 @section('content')
-    <div class="page-heading">
+    {{-- <div class="page-heading">
         <h1>Call Back</h1>
-    </div>
+    </div> --}}
     <div class="container" style="padding-top: 50px">
         <form action="{{ url('docontactus') }}" method="post" id="callback-form">
             @csrf

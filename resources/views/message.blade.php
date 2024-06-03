@@ -8,7 +8,7 @@
 
 @section('content')
     <div class="message-con bg-main">
-        <div class="page-heading"> <h1>Message</h1></div>
+        {{-- <div class="page-heading"> <h1>Message</h1></div> --}}
         <div class="container">
 
             <div class="message-cont reh-cus-box">

@@ -141,7 +141,7 @@
         <div class="container">
             <div class="services-txt-blk all-txt-blk">
                 <div class="branch-heading">
-                    <h2>Articles</h2>
+                    {{-- <h2>Articles</h2> --}}
                     <p class="p-02">Online to know about our locations and ease yourself in finding us wherever you are.
                     </p>
                 </div>

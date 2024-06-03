@@ -98,6 +98,8 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/female_filter', 'female_filter');
     Route::post('/docontactus', 'docontactus');
     Route::post('/post_callback', 'post_callback');
+    // add yasir site_map route call 
+    Route::get('/site_map', 'Site_map');
 });
 
 Route::middleware(['auth.admin'])->group(function () {

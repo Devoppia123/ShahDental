@@ -8,7 +8,7 @@
 
 @section('content')
     <div class="container">
-        <div class="page-heading"> <h1>Services Treatments</h1></div>
+        {{-- <div class="page-heading"> <h1>Services Treatments</h1></div> --}}
         <div class="what-we-do-cont reh-cus-box reh-text-left">
 
 

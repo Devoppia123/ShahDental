@@ -18,9 +18,9 @@
 @endsection
 
 @section('content')
-    <div class="page-heading">
+    {{-- <div class="page-heading">
         <h1>Our Mission</h1>
-    </div>
+    </div> --}}
     <div id="our-mission" class="our-mission-con bg-main">
         <div class="container">
             <div class="reh-cus-box our-mission-cont">

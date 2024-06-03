@@ -1336,6 +1336,7 @@ body {
     font-size: 12px;
     margin: 10px 0;
     line-height: 17px;
+ 
 }
 
 .login-form input::placeholder {
@@ -1426,11 +1427,13 @@ body {
 }
 
 .login-left-inner img {
-    width: 27px;
+    /* width: 27px; */
+    width: 90%;
 }
 
 .login-right-inner img {
-    width: 47px;
+    /* width: 47px; */
+    width: 55%;
 }
 
 .login-right-inner p {

@@ -489,7 +489,7 @@ class HomeController extends Controller
 
     public function booked_appointment_withoutlogin(Request $request)
     {
-        // dd($request);
+        dd($request);
         // Define validation rules
         $validator = Validator::make($request->all(), [
             'patient_name' => 'required|string|max:255',
@@ -542,12 +542,13 @@ class HomeController extends Controller
                 ]);
 
                 DB::table('appointment_slots')
-                    ->where('slot_id', $request->get_value)
+                    ->where('slot_id', $request->slot_id)
                     ->update(['booking_id' => $booking_id]);
             } else {
                 $booking_id = DB::table('booked_appointments')->insertGetId([
                     'session' => $request->session_id,
                     'patient_id' => $patient_id,
+                    'slot_id' => $request->slot_id,
                     'doctor_id' => $request->doctor_id,
                     'appointment_procedure' => $request->appointment_procedure,
                     'mode' => $request->mode,
@@ -706,5 +707,10 @@ class HomeController extends Controller
     public function our_team()
     {
         return view('our_team');
+    }
+    // add yasir
+    public function Site_map()
+    {
+        return view('site_map');
     }
 }

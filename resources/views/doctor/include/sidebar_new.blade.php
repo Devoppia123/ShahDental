@@ -15,7 +15,8 @@
         <div class="tabs-nav col">
             <div class="sidebar-hdr-left">
                 <a class="main-logo-link" href="index.html">
-                    <img class="main-logo" src="{{ asset('images/logo.png') }}" alt="">
+                    {{-- <img class="main-logo" src="{{ asset('images/logo.png') }}" alt=""> --}}
+                    <img class="main-logo" src="{{ url('public/images/logo_03.png') }}" alt="">
                 </a>
             </div>
             <nav>
@@ -31,7 +32,9 @@
                         'doctor/add_videos/*',
                         'doctor/view_videos/*',
                         'doctor/edit_video/*')) selected @endif" id="side-bar-1"
-                    onclick="show_parts(1);"><img src="{{ asset('patient/images/sidebar-icon-1.png') }}"
+                    onclick="show_parts(1);">
+                    {{-- <img src="{{ asset('patient/images/sidebar-icon-1.png') }}" --}}
+                    <img src="{{ url('public/patient/images/sidebar-icon-1.png') }}"
                         alt=""></a>
                 <a class="side-bar-anchor-selected @if (Request::is(
                         'doctor/view_appointment_queries',
@@ -52,7 +55,9 @@
                         'doctor/view_chats',
                         'doctor/chat_with_patient/*',
                         'doctor_msg_loader/*')) selected @endif" id="side-bar-2"
-                    onclick="show_parts(2);"><img src="{{ asset('patient/images/sidebar-icons (2).png') }}"
+                    onclick="show_parts(2);">
+                    {{-- <img src="{{ asset('patient/images/sidebar-icons (2).png') }}" --}}
+                    <img src="{{ url('public/patient/images/sidebar-icons (2).png') }}"
                         alt=""></a>
             </nav>
         </div>

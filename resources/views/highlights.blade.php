@@ -15,8 +15,13 @@
 @endsection
 
 @section('content')
+<<<<<<< Updated upstream
     <div class="highlights-sec bg-main">
         <div class="page-heading"><h1>Highlights of Clinics</h1></div>
+=======
+    <div class="highlights bg-main">
+        {{-- <div class="page-heading"><h1>Highlights of Clinics</h1></div> --}}
+>>>>>>> Stashed changes
         <div class="container">
 
             <div class="highlights-cont reh-cus-box reh-text-left">

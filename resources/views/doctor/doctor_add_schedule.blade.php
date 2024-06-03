@@ -9,7 +9,8 @@
 @endsection
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/schedule.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/schedule.css') }}"> --}}
+    <link rel="stylesheet" href="{{ url('public/css/schedule.css') }}">
     <div class="main-cont-wrapper">
         <div class="container-fluid">
             <div class="monthly-schedule-head">
@@ -80,9 +81,12 @@
                     <label for="sat">Saturday</label>
                     <input type="checkbox" id="sun" name="exclude_days[]" value="0">
                     <label for="sun">Sunday</label>
-                    <button type="submit">
+                    {{-- <button type="submit">
                         Add Slots
-                    </button>
+                    </button> --}}
+                    <button type="submit" class="btn btn-primary">Add Slots</button>
+                        
+                    
                 </div>
 
                 </form>

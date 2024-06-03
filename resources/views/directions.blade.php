@@ -133,9 +133,9 @@
 @endsection
 
 @section('content')
-    <div class="branch-heading">
+    {{-- <div class="branch-heading">
         <h2>Directions</h2>
-    </div>
+    </div> --}}
     <div id="appointment-main" class="main-section">
         <div class="container">
             <div class="appoint-txt-blk all-txt-blk">
@@ -167,15 +167,17 @@
                             <p>Bahadurabad, Karachi</p>
                         </a>
                     </div>
-                    <div class="appoint-img-box Directions">
-                        <a href="#" class="no-underline" data-location="Shah+Dental+Clinic+Gulshan-e-Iqbal+Karachi">
-                            {{-- <img src="{{ url('public/images/Shah-Dental1_09.png') }}" alt=""> --}}
-                            <img src="{{ url('public/images/Shah-Dental5_32.png') }}" alt="">
+
+                    {{-- remove yasur shah dental record this is duplicate --}}
+                    {{-- <div class="appoint-img-box Directions">
+                        <a href="#" class="no-underline" data-location="Shah+Dental+Clinic+Gulshan-e-Iqbal+Karachi"> --}}
+                    {{-- <img src="{{ url('public/images/Shah-Dental1_09.png') }}" alt=""> --}}
+                    {{-- <img src="{{ url('public/images/Shah-Dental5_32.png') }}" alt="">
 
                             <h3>Shah Dental Clinic</h3>
                             <p>Gulshan-e-Iqbal, Karachi.</p>
                         </a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

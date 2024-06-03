@@ -9,7 +9,8 @@
 @endsection
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/view-booking.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/view-booking.css') }}"> --}}
+    <link rel="stylesheet" href="{{ url('public/css/view-booking.css') }}">
 
 
     <div class="main-cont-wrapper">

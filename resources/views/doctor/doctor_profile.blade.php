@@ -147,7 +147,9 @@
                         <button class="btn btn-primary" style="margin-top: 20px">Add Social Links</button>
                     </a>
                 @endif
-                <a href="{{ "/doctor/edit_profile/$doc->doctorID" }}" class="btn btn-info" style="margin-top: 20px">Edit
+                {{-- <a href="{{ "/doctor/edit_profile/$doc->doctorID" }}" class="btn btn-info" style="margin-top: 20px">Edit
+                    Profile</a> --}}
+                <a href="{{ url("/doctor/edit_profile/$doc->doctorID" ) }}" class="btn btn-info" style="margin-top: 20px">Edit
                     Profile</a>
             @endforeach
 
@@ -157,7 +159,8 @@
                         <div class="row" style="align-items: center;height: 175px;">
                             <div class="profile_logo col-lg-2 col-md-2 col-sm-4 col-xs-4">
                                 @foreach ($doctor as $doc)
-                                    <img src="{{ asset("profile_image/$doc->profile_image") }}" alt="">
+                                    {{-- <img src="{{ asset("profile_image/$doc->profile_image") }}" alt=""> --}}
+                                    <img src="{{ url("public/profile_image/$doc->profile_image") }}" alt="">
                                 @endforeach
                             </div>
                             <div class="col-lg-10">

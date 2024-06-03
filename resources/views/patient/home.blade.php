@@ -155,20 +155,21 @@
                                             @endif
                                         </span>
                                     </h6> <br>
-                                    <h6 class="info-sec">City :
-                                        {{ $aftersubmit->city }}</h6>
-                                    <br>
-                                    <h6 class="info-sec">State :
-                                        {{ $aftersubmit->state }}
+                                    {{-- <h6 class="info-sec">City:
+                                        {{ $aftersubmit->city ?? 'N/A' }}
                                     </h6>
                                     <br>
-                                    <h6 class="info-sec">Country :
-                                        {{ $aftersubmit->country }}
+                                    <h6 class="info-sec">State:
+                                        {{ $aftersubmit->state ?? 'N/A' }}
                                     </h6>
+                                    <br>
+                                    <h6 class="info-sec">Country:
+                                        {{ $aftersubmit->country ?? 'N/A' }}
+                                    </h6> --}}
                                 </div>
                                 <div class="col-md-4">
-                                    <img class="patient-img"
-                                        src="{{ asset("patient_profile/$aftersubmit->profile_image") }}" alt="">
+                                    {{-- <img class="patient-img"
+                                        src="{{ url("public/patient_profile/$aftersubmit->profile_image") }}" alt=""> --}}
                                 </div>
 
                             </div>

@@ -5,11 +5,15 @@
                 <a href="{{ url('/') }}">
                     <img src="{{ url('public/images/logo_03.png') }}" alt="">
                 </a>
-                <p>With Verber Family Dentistry, what you see is what you get. All of the photos that you
+                {{-- <p>With Verber Family Dentistry, what you see is what you get. All of the photos that you
                     see on our website are the real deal:
                     our team, our office, and our patients.
                     These photos capture us in our day-to-day work as
-                    we strive to provide the best care for your smile!</p>
+                    we strive to provide the best care for your smile!</p> --}}
+                    {{-- add with yasir --}}
+                    <p>
+                        Today and in the years ahead, Shah Dental Clinic (Prof. Syed Shah Faisal & Associates) aims to be an easily accessible, affordable and trustworthy dental clinic that provides world-class, premiere dental treatments with comfort and the best end results beyond your expectations with a fraction of cost.
+                    </p>
                 <h3>Follow Us :</h3>
                 <img src="{{ url('public/images/Shah-Dental-line_40.png') }}" alt="">
                 <div class="soical-icon">

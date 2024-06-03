@@ -10,12 +10,14 @@
         <div class="tabs-nav col">
             <div class="sidebar-hdr-left">
                 <a class="main-logo-link" href="index.html">
-                    <img class="main-logo" src="{{ asset('patient/images/main-logo.png') }}" alt="">
+                    {{-- <img class="main-logo" src="{{ asset('patient/images/main-logo.png') }}" alt=""> --}}
+                    <img class="main-logo" src="{{ url('public/patient/images/main-logo.png') }}" alt="">
                 </a>
             </div>
             <nav>
                 <a class="side-bar-anchor-selected @if (Request::is('nurse/home')) selected @endif" id="side-bar-1"
-                    onclick="show_parts(1);"><img src="{{ asset('patient/images/sidebar-icon-1.png') }}"
+                    {{-- onclick="show_parts(1);"><img src="{{ asset('patient/images/sidebar-icon-1.png') }}" --}}
+                    onclick="show_parts(1);"><img src="{{ url('public/patient/images/sidebar-icon-1.png') }}"
                         alt=""></a>
             </nav>
         </div>
@@ -40,7 +42,8 @@
                     <h6>Advanced Patient Health Records</h6>
                     <h5>BY DEVOPPIA</h5>
                     <span class="record-chrt">
-                        <img src="{{ asset('patient/images/side-bar-chart.png') }}">
+                        {{-- <img src="{{ asset('patient/images/side-bar-chart.png') }}"> --}}
+                        <img src="{{ url('public/patient/images/side-bar-chart.png') }}">
                         <ul class="record-chart-labels">
                             <li>GMB Vault</li>
                             <li>Trading Company</li>
@@ -49,7 +52,8 @@
                     </span>
                 </div>
                 <div class="helpdesk-cont">
-                    <img src="{{ asset('patient/images/sidebar-img.png') }}">
+                    {{-- <img src="{{ asset('patient/images/sidebar-img.png') }}"> --}}
+                    <img src="{{ url('public/patient/images/sidebar-img.png') }}">
                     <p>It will help us to avoid misspell and silly
                         errors since code is run through</p>
                     <a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i> Helpdesk</a>

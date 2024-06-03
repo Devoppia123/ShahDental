@@ -7,7 +7,8 @@
 @endsection
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('css/view_schedule.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/view_schedule.css') }}"> --}}
+    <link rel="stylesheet" href="{{ url('public/css/view_schedule.css') }}">
     <style>
         .view_schedule-inner-over-flw {
             overflow: auto;

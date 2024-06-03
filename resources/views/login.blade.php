@@ -5,11 +5,13 @@
             <div class="login-left">
                 <div class="login-left-inner">
                     <h3>WELCOME TO Shah Dental</h3>
-                    <img src="{{ asset('public/images/logo.png') }}" alt="Shah Dental Logo">
+                    {{-- <img src="{{ asset('public/images/logo.png') }}" alt="Shah Dental Logo"> --}}
+                    {{-- <img src="{{ url('public/images/logo.png') }}" alt="Shah Dental Logo"> --}}
+                    <img src="{{ url('public/images/logo_03.png') }}" alt="Shah Dental Logo">
                     <p>Log in to get in the moment updates on the things<br>
                         that interest you.</p>
                     <p align="center" style="color:red">
-                        @if (Session::has('message'))
+                        @if (Session::has('message'))xxxxxxxxxxxxx
                             <p style="color:red">{{ Session::get('message') }}</p>
                         @endif
                     </p>
@@ -30,7 +32,9 @@
             </div>
             <div class="login-right">
                 <div class="login-right-inner">
-                    <img src="{{ asset('images/logo.png') }}" alt="Shah Dental Logo">
+                    {{-- <img src="{{ asset('images/logo.png') }}" alt="Shah Dental Logo"> --}}
+                    {{-- <img src="{{ url('public/images/logo.png') }}" alt="Shah Dental Logo"> --}}
+                    <img src="{{ url('public/images/logo_03.png') }}" alt="Shah Dental Logo">
                     <p>We are a group of doctors gathered together and<br>
                         established an association for helping those youngsters who<br>
                         need training in Minimal Invasive Surgery. </p>

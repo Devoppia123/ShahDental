@@ -12,7 +12,7 @@
 
             <div class="our-team-cont our-tm-price-list same-tbl-cls">
 
-                <h1>Our Team</h1>
+                {{-- <h1>Our Team</h1> --}}
 
                 <p>Prof. Syed Shah Faisal &amp; Associates takes pride in introducing its dynamic team of qualified
                     experienced &amp; professionally competent Dental Surgeon supported by well-trained chair side

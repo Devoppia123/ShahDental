@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="health-video-content">
                         <div class="row">
-                            <h2>Our Services</h2>
+                            {{-- <h2>Our Services</h2> --}}
                             <p>Dr. Shah Faisal & Associates takes pride in introducing its dynamic team of qualified
                                 experienced &
                                 professionally competent Dental Surgeon supported by well-trained chair side assistants,

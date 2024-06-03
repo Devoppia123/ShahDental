@@ -50,9 +50,9 @@
 @endsection
 
 @section('content')
-    <div class="page-heading">
+    {{-- <div class="page-heading">
         <h1>Contact Us</h1>
-    </div>
+    </div> --}}
     <div class="container reh-contact-form" style="padding-top: 50px">
         <form action="{{ url('docontactus') }}" method="post" id="contact-form">
             @csrf

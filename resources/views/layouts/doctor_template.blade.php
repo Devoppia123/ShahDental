@@ -14,18 +14,18 @@
 
     <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900') }}" rel="stylesheet">
 
-    <link rel="stylesheet" href=" {{ asset('patient/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href=" {{ url('public/patient/css/bootstrap.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('patient/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('patient/css/meanmenu.min.css') }}">
+    <link rel="stylesheet" href="{{ url('public/patient/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url('public/patient/css/meanmenu.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('patient/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('patient/css/custom.css') }}">
-    <link rel="stylesheet" href="{{ asset('patient/css/scrollbar/jquery.mCustomScrollbar.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('sidebar/styletwo.css') }}">
-    <link rel="stylesheet" href="{{ asset('sidebar/stylethree.css') }}">
-    <link rel="stylesheet" href="{{ asset('sidebar/responsive.css') }}">
-    <script src="{{ asset('patient/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url('public/patient/css/main.css') }}">
+    <link rel="stylesheet" href="{{ url('public/patient/css/custom.css') }}">
+    <link rel="stylesheet" href="{{ url('public/patient/css/scrollbar/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ url('public/sidebar/styletwo.css') }}">
+    <link rel="stylesheet" href="{{ url('public/sidebar/stylethree.css') }}">
+    <link rel="stylesheet" href="{{ url('public/sidebar/responsive.css') }}">
+    <script src="{{ url('public/patient/js/vendor/modernizr-2.8.3.min.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
@@ -53,20 +53,20 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="{{ asset('patient/js/carousel-main.js') }}"></script>
+    <script src="{{ url('public/patient/js/carousel-main.js') }}"></script>
 
-    <script src="{{ asset('patient/js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ url('public/patient/js/vendor/jquery-1.12.4.min.js') }}"></script>
 
-    <script src="{{ asset('patient/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('patient/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url('public/patient/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url('public/patient/js/owl.carousel.min.js') }}"></script>
 
-    <script src="{{ asset('patient/js/scrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-    <script src="{{ asset('patient/js/scrollbar/mCustomScrollbar-active.js') }}"></script>
+    <script src="{{ url('public/patient/js/scrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+    <script src="{{ url('public/patient/js/scrollbar/mCustomScrollbar-active.js') }}"></script>
 
-    <script src="{{ asset('patient/js/metisMenu/metisMenu.min.js') }}"></script>
-    <script src="{{ asset('patient/js/metisMenu/metisMenu-active.js') }}"></script>
+    <script src="{{ url('public/patient/js/metisMenu/metisMenu.min.js') }}"></script>
+    <script src="{{ url('public/patient/js/metisMenu/metisMenu-active.js') }}"></script>
 
-    <script src="{{ asset('patient/js/morrisjs/raphael-min.js') }}"></script>
+    <script src="{{ url('public/patient/js/morrisjs/raphael-min.js') }}"></script>
 
     @yield('js_code')
 

@@ -50,7 +50,7 @@
             @foreach ($doctors as $doc)
                 <div class="col-md-3 col-sm-6 col-xs-12 text-center">
                     <div class="card" style="">
-                        <img style="border-radius:100%; width: 50%;" src="{{ asset("profile_image/$doc->profile_image") }}"
+                        <img style="border-radius:100%; width: 50%;" src="{{ url("public/profile_image/$doc->profile_image") }}"
                             class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="margin-top: 10px;">{{ $doc->doctor_name }}</h5>

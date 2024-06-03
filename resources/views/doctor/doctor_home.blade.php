@@ -110,7 +110,7 @@
             <div class="set-monthly-heading">
                 <h2>set monthly <span>schedule</span> </h2>
             </div>
-            <span id="nulldate" class="text-danger" style="font-weight: bold;"></span>
+            {{-- <span id="nulldate" class="text-danger" style="font-weight: bold;"></span> --}}
             <div class="calender-date-picker">
                 <form id="date-form" method="get" action="{{ url('/doctor/set_doctor_schedule') }}">
                     <input type="hidden" name="doctor_id" value="{{ Session('user')['id'] }}" id="">
@@ -123,7 +123,11 @@
                             date" autocomplete="off"
                                     name="date2" id="datepicker2"></p>
                         </div>
-                        <button type="submit" class="schdule-nxt-btn col-lg-12" id="submit">Next</button>
+                        <span id="nulldate" class="text-danger" style="font-weight: bold;"></span>
+                        {{-- <button type="submit" class="schdule-nxt-btn col-lg-12" id="submit">Next</button> --}}
+                        <div class="col-md-4">
+                            <button type="submit" class="schdule-nxt-btn col-lg-12" id="submit">Next</button>
+                        </div>
                     </div>
 
 

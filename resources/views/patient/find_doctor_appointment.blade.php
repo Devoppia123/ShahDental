@@ -9,8 +9,10 @@
 @endsection
 
 @section('content')
-    <link type="text/css" href="{{ asset('css/jquery-ui-1.7.3.custom.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/book-appointment.css') }}">
+    {{-- <link type="text/css" href="{{ asset('css/jquery-ui-1.7.3.custom.css') }}" rel="stylesheet"> --}}
+    <link type="text/css" href="{{ url('public/css/jquery-ui-1.7.3.custom.css') }}" rel="stylesheet">
+    {{-- <link rel="stylesheet" href="{{ asset('css/book-appointment.css') }}"> --}}
+    <link rel="stylesheet" href="{{ url('public/css/book-appointment.css') }}">
 
     <div class="main-cont-wrapper">
         <div class="container-fluid">
@@ -89,15 +91,16 @@
 @section('js_code')
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="{{ asset('js/jquery-1.4.3.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery-ui-1.7.3.custom.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.easing.min.js') }}" type="text/javascript"></script>
-    <script type="text/javascript" src="{{ asset('js/pscripts.js') }}"></script>
-    <script language="javascript" type="text/javascript" src="{{ asset('js/actb.js') }}"></script>
-    <script language="javascript" type="text/javascript" src="{{ asset('js/common.js') }}"></script>
-    <script language="javascript" src="{{ asset('js/ajax-call2.js') }}"></script>
-    <script language="javascript" src="{{ asset('js/CalendarPopup.js') }}"></script>
-    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+    {{-- <script src="{{ asset('js/jquery-1.4.3.min.js') }}"></script> --}}
+    <script src="{{ url('public/js/jquery-1.4.3.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url('public/js/jquery-ui-1.7.3.custom.min.js') }}"></script>
+    <script src="{{ url('public/js/jquery.easing.min.js') }}" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ url('public/js/pscripts.js') }}"></script>
+    <script language="javascript" type="text/javascript" src="{{ url('public/js/actb.js') }}"></script>
+    <script language="javascript" type="text/javascript" src="{{ url('public/js/common.js') }}"></script>
+    <script language="javascript" src="{{ url('public/js/ajax-call2.js') }}"></script>
+    <script language="javascript" src="{{ url('public/js/CalendarPopup.js') }}"></script>
+    <script src="{{ url('public/js/jquery.magnific-popup.min.js') }}"></script>
     <script language="javascript" src="https://momentjs.com/downloads/moment.js"></script>
     <script>
         $(document).ready(function() {

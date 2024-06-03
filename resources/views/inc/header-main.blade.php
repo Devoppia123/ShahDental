@@ -1,3 +1,10 @@
+<style>
+  /* add wrp class yasir */
+.announcmnt-wrap {
+    font-size: 24px;
+}
+</style>
+
 <div id="header-main" class="main-section">
   <div class="container">  
     <div class="header-txt-blk all-txt-blk">
@@ -7,7 +14,7 @@
               <div class="top-txt-box address">
                 <div class="top-image-box call-us"><span>
                   <img src="{{ url('public/images/Shah-Dental_03.png') }}" alt="03">
-                  <span class="call-bold">Call Us</span>
+                  <span class="call-bold"></span>
                   </span>          
                 </div>
                   <p>Gulshan-e-Iqbal Branch: <a href="tel:02134963440">021-34963440</a></p>
@@ -71,6 +78,18 @@
                 {{ session('error') }}
             </div>
         @endif
+
+         {{-- add marquee yasir --}}
+         <div class="announcmnt-wrap">
+          <div class="container">
+            {{-- <strong>Announcement</strong> --}}
+            <marquee direction="left" onmouseout="start()" onmouseover="stop()">
+                       Stay home and stay safe in this rainy season we are available online for any dental emergency.
+                       Dental clinics reopened with all SOPs. 
+              
+            </marquee>
+          </div>
+        </div>
 
         <div id="banner-block-01">
             <div class="banner-txt-blk">

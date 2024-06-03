@@ -185,8 +185,9 @@
 
 @section('content')
 <div class="make-an-appoint">
-    <div class="branch-heading">
+    {{-- <div class="branch-heading">
         <h2>Make An Appointment</h2>
+<<<<<<< Updated upstream
     </div>
     <div class="row">
         <div class="container">   
@@ -199,6 +200,9 @@
             </div>
         </div>
     </div>
+=======
+    </div> --}}
+>>>>>>> Stashed changes
     <div class="text-center p-5 row" id="show-section">
         <div class="col-md-12">
             <h3>Make An Appointment As A Guest</h3>
@@ -634,14 +638,14 @@
                             $("#get_number_identity-error").html(errors[
                                 'get_number_identity'][0]);
                         }
-                        if (selectedIdentityType === 'passport' && errors[
+                        else if (selectedIdentityType === 'passport' && errors[
                                 'get_passport_number']) {
-                            $("input[name='get_passport_number']").addClass('is-invalid');
+                            $("input[name='get_passport_number']").removeClass('is-invalid');
                             $("#get_passport_number-error").html(errors[
                                 'get_passport_number'][0]);
                         }
-                        if (errors['passport_date']) {
-                            $(".pass_box select").addClass(
+                        else if (errors['passport_date']) {
+                            $(".pass_box select").removeClass(
                             'is-invalid'); // Add 'is-invalid' class to all select elements inside .pass_box
                             $("#passport_date-error").html(errors['passport_date'][0]);
                         }
