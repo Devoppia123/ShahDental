@@ -138,7 +138,7 @@
 
 @section('content')
     <div id="article-main" class="main-section">
-        <div class="container">
+        <div class="container-xxl">
             <div class="services-txt-blk all-txt-blk">
                 <div class="branch-heading">
                     {{-- <h2>Articles</h2> --}}

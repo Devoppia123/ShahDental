@@ -74,10 +74,6 @@ body {
     border: none;
 }
 
-.navbar-brand img {
-    width: 200px;
-    margin-left: -30px;
-}
 
 nav .navbar {
     background-color: #f8f9fa00 !important;

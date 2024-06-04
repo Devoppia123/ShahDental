@@ -181,30 +181,30 @@
     .d-none {
         display: none;
     }
+
+    /* .book-apo-form {
+    width: 100%;
+    padding-left:220px;
+    margin-top:40px;
+    } */
+
+    .Cardiology {
+        margin-top:40px;
+        text-align: center;
+    }
+    .rk-boking-form-section {
+    padding-top: 60px;
+}
 </style>
 
 @section('content')
 <div class="make-an-appoint">
-    {{-- <div class="branch-heading">
+    <div class="branch-heading">
         <h2>Make An Appointment</h2>
-<<<<<<< Updated upstream
     </div>
-    <div class="row">
-        <div class="container">   
-            <div class="col-md-12" style="text-align: center;">
-                <h3>Login To Your Personal Health Record</h3>
-                <form action="https://getphr.com/" method="get">
-                    <input type="hidden" name="hospID" value="7" id="">
-                    <button class="btn btn-primary" type="submit" target="blank">Login</button>
-                </form>
-            </div>
-        </div>
     </div>
-=======
-    </div> --}}
->>>>>>> Stashed changes
     <div class="text-center p-5 row" id="show-section">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h3>Make An Appointment As A Guest</h3>
             <div id="doc" style="margin-left: 60px">
                 <select id="doctor" class="form-control">
@@ -217,6 +217,13 @@
                 </select>
             </div>
         </div>
+        <div class="col-md-6" style="text-align: center;">
+            <h3>Login To Your Personal Health Record</h3>
+            <form action="https://getphr.com/" method="get">
+                <input type="hidden" name="hospID" value="7" id="">
+                <button class="btn btn-primary" type="submit" target="blank">Login</button>
+            </form>
+        </div>        
     </div>
 
     <section class="main-content-section container">
@@ -231,211 +238,214 @@
                     </div>
                 </div>
             </div>
-
-            <div class="Cardiology">
-                <h2 style="font-weight: 700;" id="hide">Make An Appointment From</h2>
-            </div>
-            <form action="{{ url('booked_appointment_withoutlogin') }}" method="POST" id="get_appointment_form">
-                @csrf
-                <input type="hidden" id="date_input" class="form-control" name="appointment_date" value="">
-                <input type="hidden" id="doctor_id" name="doctor_id" value="">
-                <div class="row">
-                    <div class="col-md-4 p-2 form-group">
-                        <label>Full Name</label>
-                        <input type="text" name="patient_name" id="patient_name" class="form-control">
-                        <p class="invalid-feedback" id="patient_name-error"></p>
-                    </div>
-                    <div class="col-md-4 p-2 form-group">
-                        <label>Email </label>
-                        <input type="email" name="patient_email" id="patient_email" class="form-control">
-                        <p class="invalid-feedback" id="patient_email-error"></p>
-                    </div>
+            <div class="row justify-content-around rk-boking-form-section">
+                <div class="Cardiology">
+                    <h2 style="font-weight: 700;" id="hide">Make An Appointment From</h2>
                 </div>
-                <div class="row">
-                    <div class="col-md-4 p-2 form-group">
-                        <label>Phone</label>
-                        <input type="text" name="patient_phone" id="patient_phone" class="form-control">
-                        <p class="invalid-feedback" id="patient_phone-error"></p>
-                    </div>
-                    <div class="col-md-4 p-2 form-group" id="show-slots" style="display: none;">
-                        <label>Available Slots</label>
-                        <div id="appointments-container">
+                <form action="{{ url('booked_appointment_withoutlogin') }}" method="POST" id="get_appointment_form" class="book-apo-form">
+                    @csrf
+                    <input type="hidden" id="date_input" class="form-control" name="appointment_date" value="">
+                    <input type="hidden" id="doctor_id" name="doctor_id" value="">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 p-2 form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="patient_name" id="patient_name" class="form-control">
+                            <p class="invalid-feedback" id="patient_name-error"></p>
                         </div>
-                        <p class="invalid-feedback" id="show-slots-error"></p>
+                        <div class="col-md-4 p-2 form-group">
+                            <label>Email </label>
+                            <input type="email" name="patient_email" id="patient_email" class="form-control">
+                            <p class="invalid-feedback" id="patient_email-error"></p>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <p>Gender</p>
-                    <div class="col-md-4 p-2 form-group">
-                        <label>Male</label>
-                        <input type="radio" name="male" id="gender" value="1">
-
-                    </div>
-                    <div class="col-md-4 p-2 form-group">
-                        <label>Female</label>
-                        <input type="radio" name="female" value="0">
-                        <p class="invalid-feedback" id="gender-error"></p>
-
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-4 p-2 form-group">
-                        <label>Age (Optional)</label>
-                        <input type="text" name="age" class="form-control">
-                    </div>
-                    <div class="col-md-4 p-2 form-group">
-                        <label>DOB (Optional)</label>
-                        <input type="date" name="dob" class="form-control">
-                    </div>
-                </div>
-                <div>
-                    <div class="col-md-6 services-col-multi">
-                        <label>Select Procedure (Optional)</label>
-                        <select name="appointment_procedure" id="appointment_procedure" class="form-control">
-                            <option value="">Select Procedure</option>
-                            @foreach ($procedures as $procedure)
-                                <option value="{{ $procedure->id }}">{{ $procedure->name }}</option>
-                            @endforeach
-                        </select>
-                        <p class="invalid-feedback" id="appointment_procedure-error"></p>
-                    </div>
-                </div>
-                <div class="additional-search col-lg-8" id="clinic">
-                    <div class="xyz row">
-                        <div class="col-lg-6"> <label for="Radio">
-                                <input type="radio" id="At_Clinic" name="mode" value="At Clinic" checked="checked"
-                                    class="">
-                                At Clinic</label></div>
-                        <div class="row p-2 branch_value">
-                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
-                                @foreach ($branches as $branch)
-                                    <input type="radio" name="branch_id" value="{{ $branch->id }}"
-                                        class="branch-radio" id="branch_{{ $branch->id }}">
-                                    <label for="branch_{{ $branch->id }}">{{ $branch->branch_name }}</label>
-                                @endforeach
-                                <p class="invalid-feedback" id="branch_id-error"></p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 p-2 form-group">
+                            <label>Phone</label>
+                            <input type="text" name="patient_phone" id="patient_phone" class="form-control">
+                            <p class="invalid-feedback" id="patient_phone-error"></p>
+                        </div>
+                        <div class="col-md-4 p-2 form-group" id="show-slots" style="display: none;">
+                            <label>Available Slots</label>
+                            <div id="appointments-container">
                             </div>
+                            <p class="invalid-feedback" id="show-slots-error"></p>
                         </div>
-                        <div class="col-lg-6"> <label for="Radio"> <input type="radio" name="mode"
-                                    id="online_option" value="Online" class="">
-                                Online</label></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 p-2 form-group">
+                            <p>Gender</p>
+                            <label>Male</label>
+                            <input type="radio" name="male" id="gender" value="1">
+
+                        </div>
+                        <div class="col-md-4 p-2 form-group">
+                            <label>Female</label>
+                            <input type="radio" name="female" value="0">
+                            <p class="invalid-feedback" id="gender-error"></p>
+
+                        </div>
                     </div>
                     <br>
-                    <div class="online_value">
-                        <div class="row">
-                            <div class="col-lg-6"><label for="select">Platform:</label>
-                                <select id="platform" class="form-control" name="platform">
-                                    <option value="">Select Option</option>
-                                    <option value="Facebook">Facebook</option>
-                                    <option value="Twitter">Twitter</option>
-                                    <option value="Skype">Skype</option>
-                                    <option value="Google Meet">Google Meet</option>
-                                </select>
-                                <p class="text-danger" id="platform-error"></p>
-                            </div>
-                            {{-- <div class="col-lg-6">
-                                <label for="Id_Number">ID/number:</label>
-                                <input type="text" class="form-control" name="id_number" value="">
-                                <p class="text-danger" id="id_number-error"></p>
-                            </div> --}}
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 p-2 form-group">
+                            <label>Age (Optional)</label>
+                            <input type="text" name="age" class="form-control">
                         </div>
-
-
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-12 p-0">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="radio" id="ic_number" name="identity_no" checked="checked"
-                                        value="identity">
-                                    <label for="ic_number">Identity Number:</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="radio" id="passport-input" name="identity_no" value="passport">
-                                    <label for="passport-input" class="passport_no" style="margin-left:15px">Passport
-                                        Number:</label>
-                                </div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-md-12">
-                                    <input type="number" class="form-control" id="identity_number"
-                                        name="get_number_identity" placeholder="Identity Number">
-                                    <p class="invalid-feedback" id="get_number_identity-error"></p>
-                                    <input type="number" class="form-control d-none" id="passport_number"
-                                        name="get_passport_number" placeholder="Passport Number">
-                                    <p class="invalid-feedback" id="get_passport_number-error"></p>
-                                    <input type="hidden" name="check_value" id="check_value" value="1">
-                                </div>
-                            </div>
-                        </div>
-
-                        <br> <br>
-                        <div class="pass_box col-lg-12">
-                            <label for="select">Platform:</label>
-                            <div class="row">
-                                <select class="form-control col-3" name="passport_date">
-                                    <option value="">Day</option>
-                                    @php
-                                        $i = 00;
-                                    @endphp
-                                    @for ($i; $i < 32; $i++)
-                                        @if ($i < 10)
-                                            <option value="0{{ $i }}">
-                                                0{{ $i }}</option>
-                                        @else
-                                            <option value="{{ $i }}">
-                                                {{ $i }}</option>
-                                        @endif
-                                    @endfor
-                                </select>
-
-                                <select class="form-control col-3" name="passport_date">
-                                    <option value="">Month</option>
-                                    @for ($m = 1; $m <= 12; $m++)
-                                        @php
-                                            $month = date('F', mktime(0, 0, 0, $m, 1));
-                                        @endphp
-                                        <option value="{{ $month }}">
-                                            {{ $month }}</option>
-                                    @endfor
-                                </select>
-
-                                <select class="form-control col-3" name="passport_date">
-                                    <option value="">Year</option>
-                                    @php
-                                        $i = 1920;
-                                    @endphp
-                                    @for ($i; $i < 2024; $i++)
-                                        <option value="{{ $i }}">
-                                            {{ $i }}</option>
-                                    @endfor
-                                </select>
-                                <p class="invalid-feedback col-3" id="passport_date-error"></p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12">
-                            <label for="Radio"> Appointment Reason: <input style="margin-left:0px !important"
-                                    class="inpt-alignment" type="radio" value="1st Time Consultation"
-                                    name="consultation_type" id="" checked="checked"> 1st
-                                Time
-                                Consultation</label>
-                            <label for="Radio"><input class="inpt-alignment" value="Follow up Consultation"
-                                    type="radio" name="consultation_type" id="">
-                                Follow up
-                                Consultation</label>
-                            <br>
-                            <textarea class="txt-area mandtry form-control" name="appointment_reason" id="appointment_reason" cols="45"
-                                rows="5"></textarea>
-                            <p class="invalid-feedback" id="appointment_reason-error"></p>
-                            <br>
-                            <button type="submit" style="margin-top: 20px"
-                                class="nxt-btn btn btn-warning action-button">Submit</button>
+                        <div class="col-md-4 p-2 form-group">
+                            <label>DOB (Optional)</label>
+                            <input type="date" name="dob" class="form-control">
                         </div>
                     </div>
-                </div>
-            </form>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 services-col-multi">
+                            <label>Select Procedure (Optional)</label>
+                            <select name="appointment_procedure" id="appointment_procedure" class="form-control">
+                                <option value="">Select Procedure</option>
+                                @foreach ($procedures as $procedure)
+                                    <option value="{{ $procedure->id }}">{{ $procedure->name }}</option>
+                                @endforeach
+                            </select>
+                            <p class="invalid-feedback" id="appointment_procedure-error"></p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="additional-search col-lg-8" id="clinic">
+                            <div class="xyz row">
+                                <div class="col-lg-6"> <label for="Radio">
+                                        <input type="radio" id="At_Clinic" name="mode" value="At Clinic" checked="checked"
+                                            class="">
+                                        At Clinic</label></div>
+                                <div class="row p-2 branch_value">
+                                    <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                        @foreach ($branches as $branch)
+                                            <input type="radio" name="branch_id" value="{{ $branch->id }}"
+                                                class="branch-radio" id="branch_{{ $branch->id }}">
+                                            <label for="branch_{{ $branch->id }}">{{ $branch->branch_name }}</label>
+                                        @endforeach
+                                        <p class="invalid-feedback" id="branch_id-error"></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6"> <label for="Radio"> <input type="radio" name="mode"
+                                            id="online_option" value="Online" class="">
+                                        Online</label></div>
+                            </div>
+                            <br>
+                            <div class="online_value">
+                                <div class="row">
+                                    <div class="col-lg-6"><label for="select">Platform:</label>
+                                        <select id="platform" class="form-control" name="platform">
+                                            <option value="">Select Option</option>
+                                            <option value="Facebook">Facebook</option>
+                                            <option value="Twitter">Twitter</option>
+                                            <option value="Skype">Skype</option>
+                                            <option value="Google Meet">Google Meet</option>
+                                        </select>
+                                        <p class="text-danger" id="platform-error"></p>
+                                    </div>
+                                    {{-- <div class="col-lg-6">
+                                        <label for="Id_Number">ID/number:</label>
+                                        <input type="text" class="form-control" name="id_number" value="">
+                                        <p class="text-danger" id="id_number-error"></p>
+                                    </div> --}}
+                                </div>
+
+
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 p-0">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="radio" id="ic_number" name="identity_no" checked="checked"
+                                                value="identity">
+                                            <label for="ic_number">Identity Number:</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="radio" id="passport-input" name="identity_no" value="passport">
+                                            <label for="passport-input" class="passport_no" style="margin-left:15px">Passport
+                                                Number:</label>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-12">
+                                            <input type="number" class="form-control" id="identity_number"
+                                                name="get_number_identity" placeholder="Identity Number">
+                                            <p class="invalid-feedback" id="get_number_identity-error"></p>
+                                            <input type="number" class="form-control d-none" id="passport_number"
+                                                name="get_passport_number" placeholder="Passport Number">
+                                            <p class="invalid-feedback" id="get_passport_number-error"></p>
+                                            <input type="hidden" name="check_value" id="check_value" value="1">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br> <br>
+                                <div class="pass_box col-lg-12">
+                                    <label for="select">Platform:</label>
+                                    <div class="row">
+                                        <select class="form-control col-3" name="passport_date">
+                                            <option value="">Day</option>
+                                            @php
+                                                $i = 00;
+                                            @endphp
+                                            @for ($i; $i < 32; $i++)
+                                                @if ($i < 10)
+                                                    <option value="0{{ $i }}">
+                                                        0{{ $i }}</option>
+                                                @else
+                                                    <option value="{{ $i }}">
+                                                        {{ $i }}</option>
+                                                @endif
+                                            @endfor
+                                        </select>
+
+                                        <select class="form-control col-3" name="passport_date">
+                                            <option value="">Month</option>
+                                            @for ($m = 1; $m <= 12; $m++)
+                                                @php
+                                                    $month = date('F', mktime(0, 0, 0, $m, 1));
+                                                @endphp
+                                                <option value="{{ $month }}">
+                                                    {{ $month }}</option>
+                                            @endfor
+                                        </select>
+
+                                        <select class="form-control col-3" name="passport_date">
+                                            <option value="">Year</option>
+                                            @php
+                                                $i = 1920;
+                                            @endphp
+                                            @for ($i; $i < 2024; $i++)
+                                                <option value="{{ $i }}">
+                                                    {{ $i }}</option>
+                                            @endfor
+                                        </select>
+                                        <p class="invalid-feedback col-3" id="passport_date-error"></p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <label for="Radio"> Appointment Reason: <input style="margin-left:0px !important"
+                                            class="inpt-alignment" type="radio" value="1st Time Consultation"
+                                            name="consultation_type" id="" checked="checked"> 1st
+                                        Time
+                                        Consultation</label>
+                                    <label for="Radio"><input class="inpt-alignment" value="Follow up Consultation"
+                                            type="radio" name="consultation_type" id="">
+                                        Follow up
+                                        Consultation</label>
+                                    <br>
+                                    <textarea class="txt-area mandtry form-control" name="appointment_reason" id="appointment_reason" cols="45"
+                                        rows="5"></textarea>
+                                    <p class="invalid-feedback" id="appointment_reason-error"></p>
+                                    <br>
+                                    <button type="submit" style="margin-top: 20px"
+                                        class="nxt-btn btn btn-warning action-button">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 </div>

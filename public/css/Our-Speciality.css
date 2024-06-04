@@ -117,11 +117,6 @@ li.nav-item {
     text-decoration: none;
 }
 
-li.nav-item .nav-link {
-    color: #111111;
-    font-size: 14px;
-    font-family: 'RedHatDisplay-Bold';
-}
 
 .dropdown-item {
     display: block;

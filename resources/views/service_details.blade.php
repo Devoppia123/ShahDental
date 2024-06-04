@@ -211,10 +211,11 @@
                                             <div class="col-lg-8" style="padding-left: 10px">
                                                 <div class="blog-content">
                                                     <h5>{{ $article->title }}</h5>
-                                                    <h6>
-                                                        {!! $article->description !!}<a
+                                                    <p>
+                                                        {{ Str::limit($article->description, 150) }}
+                                                        <a
                                                             href="{{ url("/view_article/$article->id ") }}">Read More</a>
-                                                    </h6>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>

@@ -6,7 +6,7 @@
 </style>
 
 <div id="header-main" class="main-section">
-  <div class="container">  
+  <div class="container-xxl">  
     <div class="header-txt-blk all-txt-blk">
         <div class="top-header row">
           {{-- <div class="top-cell-us col-md-8 top-r"> --}}
@@ -25,7 +25,7 @@
         </div>
 
         
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-xl navbar-light">
           <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ url('public/images/logo_03.png') }}" alt="" class="d-inline-block align-text-top cus-logo"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

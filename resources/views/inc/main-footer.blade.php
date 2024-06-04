@@ -1,5 +1,5 @@
 <div class="cus-footer" style="margin-top: 100px;">
-    <div class="container">
+    <div class="container-xxl">
         <div class="row cus-row justify-content-center align-items-center">
             <div class="col-lg-5 col-md-12 mb-sc col-sm-12">
                 <a href="{{ url('/') }}">

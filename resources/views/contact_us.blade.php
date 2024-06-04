@@ -32,11 +32,6 @@
             margin: 0 auto;
         }
 
-        body .container {
-            max-width: 1600px !important;
-            margin: 0 auto;
-        }
-
         .cus-img {
             top: 0 !important;
         }

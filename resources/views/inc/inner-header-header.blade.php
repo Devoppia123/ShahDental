@@ -31,7 +31,7 @@
             break;
     }
 @endphp" id="header-inner">
-  <div class="container">
+  <div class="container-xxl">
       <div class="header-txt-blk all-txt-blk">
           <div class="top-header row">
               <div class="empty-blk-01 col-md-2"></div>
@@ -51,7 +51,7 @@
               </div>
           </div>
 
-          <nav class="navbar navbar-expand-lg navbar-light">
+          <nav class="navbar navbar-expand-xl navbar-light">
               <a class="navbar-brand" href="{{ url('/') }}">
                   <img src="{{ url('public/images/logo_03.png') }}" alt="" class="d-inline-block align-text-top cus-logo">
               </a>

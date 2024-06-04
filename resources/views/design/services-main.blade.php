@@ -1,5 +1,5 @@
  <div id="services-main" class="main-section">
-     <div class="container">
+     <div class="container-xxl overflow-hidden">
          <div class="services-txt-blk all-txt-blk">
              <div class="branch-heading">
                  <h2>Our Services</h2>
@@ -14,9 +14,9 @@
                      @foreach ($specialities as $sp)
                          @if ($count % 4 == 0)
                  </div>
-                 <div class="services-blocks">
+                 <div class="services-blocks row g-5">
                      @endif
-                     <div class="services-box-blk">
+                     <div class="services-box-blk col-lg-3 col-md-6 col-sm-12">
                          <div class="ser-img-box">
                              {{-- <img src="{{ url('public/images/Shah-Dental-card_1.png') }}" alt=""> --}}
                              <img src="{{ url("/public/service_image/$sp->image") }}" alt="">

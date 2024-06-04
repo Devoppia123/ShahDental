@@ -1,8 +1,8 @@
  <div id="customer-main" class="main-section">
-        <div class="container">
+        <div class="container-xxl">
             <div class="record-txt-blk all-txt-blk">
-                <div class="record-block">
-                    <div class="recorde-txt">
+                <div class="record-block row">
+                    <div class="recorde-txt col-lg-6 col-md-12 col-sm-12">
                         <h2>What Our Customer Say</h2>
                         <img src="{{url('public/images/Shah-Dental-line_05.png')}}" alt="">
                         <h3 class="red-heading">Read what other patient are saying about<br>
@@ -34,7 +34,7 @@
                               </div>
                           
                     </div>
-                    <div class="record-img">
+                    <div class="record-img col-lg-6 col-md-12 col-sm-12">
                         <img src="{{url('public/images/Shah-Dental-say_05.png')}}" alt="">
                     </div>
                 </div>

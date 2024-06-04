@@ -1,5 +1,5 @@
  <div id="patient-main" class="main-section">
-        <div class="container">
+        <div class="container-xxl">
             <div class="patient-txt-blk all-txt-blk">
                 <div class="branch-heading">
                     <h2>Patient Services</h2>

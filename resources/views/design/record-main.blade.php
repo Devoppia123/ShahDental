@@ -1,8 +1,8 @@
 <div id="record-main" class="reh-record main-section">
-    <div class="container">
+    <div class="container-xxl">
         <div class="record-txt-blk all-txt-blk">
-            <div class="record-block">
-                <div class="recorde-txt">
+            <div class="record-block row gy-5">
+                <div class="recorde-txt col-lg-6 col-md-12 col-sm-12">
                     <h2>Dental Records</h2>
                     <p>Dr. Shah Faisal & Associates takes pride in introducing its dynamic team<br>
                         of qualified experienced & professionally competent Dental Surgeon supported<br>
@@ -32,7 +32,7 @@
                         <button type="submit" class="patient_login btn btn-primary" target="blank">Access Pateint Records</button>
                     </form>
                 </div>
-                <div class="record-img">
+                <div class="record-img col-lg-6 col-md-12 col-sm-12">
                     <img src=" {{ url('public/images/Shah-Dental-com_03.png') }}" alt="">
                 </div>
             </div>

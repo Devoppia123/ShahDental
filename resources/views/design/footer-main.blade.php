@@ -1,6 +1,6 @@
 @include('inc.main-footer')
 <div class="footer-copy">
-    <div class="container">
+    <div class="container-xxl">
         <div class="row cus-row ">
             <div class="foo-copy-col foo-copy-col-a">
                 <div class="site-map">
