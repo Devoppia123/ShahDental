@@ -260,6 +260,7 @@ class HomeController extends Controller
     public function services_details($services_id)
     {
         $speciality = DB::table('specialities')->where('specialities.id', $services_id)->first();
+        
         $articles = DB::table('articles')->where('speciality_id', $services_id)->where('articles.status', 1)
             ->take(3)
             ->orderBy('id', 'desc')

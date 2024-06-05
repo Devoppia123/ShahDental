@@ -161,7 +161,7 @@
     }
 
     .ui-datepicker .ui-datepicker-next {
-        left: 180px;
+        left: 96%;
     }
 
     .ui-icon {
@@ -170,8 +170,14 @@
         background-image: url({{ url('public/images/arrow-next.png') }});
     }
 
-    .ui-widget-content .ui-icon {
+    .ui-widget-content .ui-icon-circle-triangle-e {
         background-image: url("{{ url('public/images/arrow-next.png') }}");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .ui-widget-content .ui-icon-circle-triangle-w {
+        background-image: url("{{ url('public/images/arrow-prev.png') }}");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -198,6 +204,7 @@
 </style>
 
 @section('content')
+<div class="rk-form-bg">
 <div class="make-an-appoint">
     <div class="branch-heading">
         <h2>Make An Appointment</h2>
@@ -238,7 +245,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-around rk-boking-form-section">
+            <div class="row rk-boking-form-section">
                 <div class="Cardiology">
                     <h2 style="font-weight: 700;" id="hide">Make An Appointment From</h2>
                 </div>
@@ -274,6 +281,11 @@
                     <div class="row justify-content-center">
                         <div class="col-md-4 p-2 form-group">
                             <p>Gender</p>
+                        </div>
+                        <div class="col-md-4 p-2 form-group"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 p-2 form-group">
                             <label>Male</label>
                             <input type="radio" name="male" id="gender" value="1">
 
@@ -439,7 +451,7 @@
                                     <p class="invalid-feedback" id="appointment_reason-error"></p>
                                     <br>
                                     <button type="submit" style="margin-top: 20px"
-                                        class="nxt-btn btn btn-warning action-button">Submit</button>
+                                        class="nxt-btn btn btn-primary action-button">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -448,6 +460,7 @@
             </div>
         </div>
     </section>
+</div>
 </div>
 @endsection
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -512,7 +525,7 @@
         function initializeDatePicker() {
             $("#datepicker").datepicker({
                 minDate: +1,
-                numberOfMonths: 2,
+                numberOfMonths: 1,
                 beforeShowDay: function(date) {
                     var day = date.getDay();
                     var formattedDate = $.datepicker.formatDate('dd-mm-yyyy', date);

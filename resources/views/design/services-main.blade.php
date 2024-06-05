@@ -8,15 +8,15 @@
                      competent Dental Surgeon supported by well-trained chair side assistants, lab technicians &
                      receptionist.</p>
              </div>
-             <div class="services">
-                 <div class="services-blocks">
-                     @php $count = 0; @endphp
+             <div class="rk-services-row row gy-5 gx-3">
+                 {{-- <div class="services-blocks"> --}}
+                     {{-- @php $count = 0; @endphp --}}
                      @foreach ($specialities as $sp)
-                         @if ($count % 4 == 0)
-                 </div>
-                 <div class="services-blocks row g-5">
-                     @endif
-                     <div class="services-box-blk col-lg-3 col-md-6 col-sm-12">
+                    {{-- @if ($count % 4 == 0) --}}
+                 {{-- </div> --}}
+                 {{-- <div class="cus-di"> --}}
+                     {{-- @endif --}}
+                     <div class="rk-services-box-blk col col-lg-3 col-md-6 col-sm-12">
                          <div class="ser-img-box">
                              {{-- <img src="{{ url('public/images/Shah-Dental-card_1.png') }}" alt=""> --}}
                              <img src="{{ url("/public/service_image/$sp->image") }}" alt="">
@@ -27,11 +27,11 @@
                                  target="_blank">VIEW MORE</a>
                          </div>
                      </div>
-                     @php $count++; @endphp
+                     {{-- @php $count++; @endphp --}}
                      @endforeach
-                 </div>
+                 {{-- </div> --}}
              </div>
-             <div class="view-more">
+             <div class="rk-btn-more view-more">
                  <a class="team-view" href="{{ url('/all-services') }}">LOAD MORE</a>
              </div>
          </div>

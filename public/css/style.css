@@ -110,6 +110,15 @@ li {
     background-position: center;
     background-size: cover;    
 }
+.rk-services-box-blk .ser-txt-box.view-more {
+    background-color: #fff !important;
+    border-radius: 0px 0px 25px 25px;
+    margin-top:-14px;
+}
+.rk-btn-more.view-more {
+    margin-top: 72px;
+    padding-bottom:12px !important;
+}
 
 .contact-us {
     background-image: url('../images/contact-us-bg.jpeg');
@@ -564,7 +573,10 @@ div#banner-block-01 {
     padding: 20px 40px;
     text-align: center;
 }
-
+.contact-us-from .col-md-6 {
+    flex: 0 0 auto;
+    width: 49% !important;
+}
 .reh-text-left {
     text-align: left;
 }
@@ -573,15 +585,32 @@ div#banner-block-01 {
     font-size: 20px;
     line-height: 28px;
 }
+/* form bg */
+.rk-boking-form-section, .rk-form-bg {
+    background-color: #f1f1e7;
+    padding: 60px 0px !important;
+}
+
+.speciality-detail .speciality-detail-img{
+    margin:40px 0px;
+    border-radius:25px;
+    border:1px solid #8d1a22;
+}
 
 /* all-articles page */
-
+button.btn.btn-primary {
+    background-color: #a2262e !important;
+    border: none;
+}
 .reh-cus-article {
     width: 70%;
     margin: auto;
 }
 .reh-img-col-4 {
     width: 40%;
+}
+.article-01 .reh-arti-left {
+    margin-left: 16px;
 }
 .reh-article-img {
     width: 100%;

@@ -115,7 +115,7 @@
 
 @section('content')
     <main>
-        <section class="speciality-name">
+        <section class="speciality-name speciality-detail">
             <div class="container">
                 <div class="branch-heading">
                     <h2>{{ $speciality->speciality }}</h2>
@@ -124,7 +124,7 @@
                 {{-- add this line to image fetch --}}
                 @if ($latest_article != null)
                     <div class="blog-sec-01 text-center">
-                        <img style="width: 60%" src="{{ url("public/articles/$latest_article->image") }}" alt="">
+                        <img class="speciality-detail-img" style="width: 60%" src="{{ url("public/articles/$latest_article->image") }}" alt="">
                     </div>
                 @endif
                 <h6>{!! $speciality->description !!}</h6>

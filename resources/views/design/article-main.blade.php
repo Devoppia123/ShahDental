@@ -16,7 +16,7 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="art-txt-box reh-arti-text">
+                                    <div class="reh-arti-left art-txt-box reh-arti-text pl-3">
                                         <h4 class="arti-sub-head">{{ $article->speciality }}</h4>
                                         <h3 class="arti-head">{{ $article->title }}</h3>
                                         <p>{!! Str::limit($article->description, 200) !!}</p>

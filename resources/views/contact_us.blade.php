@@ -48,10 +48,12 @@
     {{-- <div class="page-heading">
         <h1>Contact Us</h1>
     </div> --}}
+
+<div class="rk-form-bg">
     <div class="container reh-contact-form" style="padding-top: 50px">
-        <form action="{{ url('docontactus') }}" method="post" id="contact-form">
+        <form action="{{ url('docontactus') }}" method="post" id="contact-form" class="contact-us-from">
             @csrf
-            <div class="row">
+            <div class="row g-3">
                 <div class="col-md-6">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" placeholder="Enter your name" class="form-control">
@@ -64,7 +66,7 @@
                     <p class="invalid-feedback" id="error-phone"></p>
                 </div>
             </div>
-            <div class="row" style="padding-top: 20px">
+            <div class="row g-3">
                 <div class="col-md-6">
                     <label for="email">Email:</label>
                     <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email">
@@ -87,10 +89,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-8">
+            <div class="row g-3">
+                <div class="col-12">
                     <label for="message">Message:</label>
-                    <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="5" class="form-control"></textarea>
                     <p class="invalid-feedback" id="error-message"></p>
                 </div>
             </div>
@@ -102,6 +104,7 @@
             </div>
         </form>
     </div>
+</div>
 @endsection
 
 @section('footer-main')
