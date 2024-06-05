@@ -6,6 +6,44 @@
     <link rel="stylesheet" href="{{ asset('css/Our-Speciality.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <style>
+        .Our-services ul {
+            list-style-type: circle;
+            padding: 0;
+        }
+
+        .Our-services ul li {
+            margin-bottom: 10px;
+        }
+
+        .Our-services ul li a {
+            text-decoration: none;
+            /* Remove underline */
+            color: #1414b7;
+            /* Change link color */
+            font-weight: bold;
+            /* Make the text bold */
+            font-size: 18px;
+            /* Adjust font size */
+        }
+
+        .Our-services ul li a:hover {
+            color: #010101;
+            /* Change link color on hover */
+        }
+
+        .Our-services h1 {
+            font-size: 24px;
+            /* Adjust heading size */
+            margin-bottom: 20px;
+            /* Add some space below the heading */
+        }
+
+        .container {
+            margin-top: 2%;
+        }
+    </style>
 @endsection
 @section('header-main')
     {{-- @include('design.header-main') --}}
@@ -17,19 +55,117 @@
         <section class="Our-services">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <select name="site" id="site" class="form-control" onchange="redirectToPage()">
-                            <option value="1">--Select Option--</option>
-                            <option value="1">Dental Service</option>
-                            <option value="2">Direction</option>
-                            <option value="3">Our Teams</option>
-                            <option value="4">Appointments</option>
-                            <option value="5">Contact Us</option>
-                            <option value="6">Gallery</option>
-                            <option value="7">Our Branches</option>
-                            <option value="8">Patient Check-in</option>
-
-                        </select>
+                    <div class="col-md-12">
+                        <div class="white-box">
+                            <ul>
+                                <h2><strong>Header Pages:</strong></h2>
+                                <li><a href="{{ url('/our-mission') }}">Our Mission</a></li>
+                                <li><a href="{{ url('/message') }}">Message</a></li>
+                                <li><a href="{{ url('/highlights') }}">Highlights</a></li>
+                                <li><a href="{{ url('/all-articles') }}">Articles</a></li>
+                                <li><a href="{{ url('/gallery') }}">Gallery</a></li>
+                                <li><a href="{{ url('/services-treatments') }}">Service/Treatment</a></li>
+                                <li><a href="{{ url('/contact-us') }}">Contact</a></li>
+                                <li><a href="{{ url('/make-an-appointment') }}">Make An Appointment</a></li>
+                                <li><a href="{{ url('/find-doctors') }}">Find Doctors</a></li>
+                                <li><a href="{{ url('/callback') }}">Call Back</a></li>
+                                <li><a href="{{ url('/branch-directions') }}">Directions</a></li>
+                                <!-- Add more list items as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="white-box">
+                            <ul>
+                                <h2><strong>Our Branches:</strong></h2>
+                                <li><a
+                                        href="{{ url('/branch-directions?location=Shah+Dental+Clinic+Gulshan-e-Iqbal+Karachi') }}">Shah
+                                        Dental Clinic</a></li>
+                                <li><a
+                                        href="{{ url('/branch-directions?location=Dental+Art+Clinic+Phase+6+DHA+Karachi') }}">Dental
+                                        Art Clinic</a></li>
+                                <li><a
+                                        href="{{ url('/branch-directions?location=Prof+Syed+Shah+Faisal+Bahadurabad+Karachi') }}">Prof.
+                                        Syed Shah Faisal
+                                        And Associates</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="white-box">
+                            <ul>
+                                <h2><strong>Meet The Team:</strong></h2>
+                                <li><a href="{{ url('find-doctors') }}">Find Doctor</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="white-box">
+                            <ul>
+                                <h2><strong>Our Services:</strong></h2>
+                                <li><a href="{{ url('/services_details/10') }}">Pediatric Dentistry Services</a></li>
+                                <li><a href="{{ url('/services_details/7') }}">DENTURES</a></li>
+                                <li><a href="{{ url('/services_details/6') }}">DENTAL SURGERIES</a></li>
+                                <li><a href="{{ url('/services_details/5') }}">DENTAL IMPLANT</a></li>
+                                <li><a href="{{ url('/services_details/3') }}">ORTHODONTICS</a></li>
+                                <li><a href="{{ url('/services_details/2') }}">TOOTH CLEANING</a></li>
+                                <li><a href="{{ url('/services_details/1') }}">ROOT CANAL TREATMENT</a></li>
+                                <li><a href="{{ url('/all-services') }}">Veiw All Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="white-box">
+                            <ul>
+                                <h2><strong>Articles:</strong></h2>
+                                <li><a href="{{ url('/view_article/44') }}">Sedation Dentistry</a></li>
+                                <li><a href="{{ url('/view_article/43') }}">Dental Trauma</a></li>
+                                <li><a href="{{ url('/view_article/42') }}">Malocclusion</a></li>
+                                <li><a href="{{ url('/view_article/2') }}">Accessing the Pulp Chamber</a></li>
+                                <li><a href="{{ url('/view_article/3') }}">Cleaning and Shaping</a></li>
+                                <li><a href="{{ url('/view_article/4') }}">Root Canal Treatment</a></li>
+                                <li><a href="{{ url('/all-articles') }}">Veiw All Articles</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="white-box">
+                            <ul>
+                                <h2><strong>Footer Pages:</strong></h2>
+                                <li><a href="https://getphr.com/" target="_blank">Patient Check-In</a></li>
+                                <li><a href="{{ url('/branch-directions') }}">Our Branches</a></li>
+                                <li><a
+                                        href="{{ url('/branch-directions?location=3920+Market+Street,+Camp+Hill,+PA+17011') }}">Location</a>
+                                </li>
+                                <li><a href="{{ url('/our-team') }}">Our Team</a></li>
+                                <li><a href="http://www.webwooter.com" target="_blank">Webwooter Official Site</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="white-box">
+                            <ul>
+                                <h2><strong>Social Links:</strong></h2>
+                                <li><a href="https://www.facebook.com/dentalartclinicpk/" target="_blank">Dental Art Clinic
+                                        On Facebook</a></li>
+                                <li><a href="https://www.facebook.com/shahdentalclinicSyedShahFaisal" target="_blank">Shah
+                                        Dental Clinic On Facebook</a></li>
+                                <li><a href="https://www.instagram.com/dentalartclinicc" target="_blank">Instragra</a></li>
+                                <li><a href="https://twitter.com/SYEDSHA07606672" target="_blank">twitter</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -38,54 +174,7 @@
 @endsection
 
 {{-- add script to redirect pages --}}
-<script>
-    function redirectToPage() {
-        var selectElement = document.getElementById('site');
-        var selectedValue = selectElement.value;
 
-        switch (selectedValue) {
-            case '1':
-                window.location.href = '{{ url("/services-treatments") }}';
-                break;
-            case '2':
-                window.location.href = '{{ url("/branch-directions") }}';
-                break;
-            case '3':
-                window.location.href = '{{ url("/our-teams") }}';
-                break;
-            case '4':
-                window.location.href = '{{ url("/make-an-appointment") }}';
-                break;
-            case '5':
-                window.location.href = '{{ url("/contact-us") }}';
-                break;
-            case '6':
-                window.location.href = '{{ url("/gallery") }}';
-                break;
-            case '7':
-                window.location.href = '{{ url("/branch-directions") }}';
-                break;
-                case '8':
-                    // Dynamically create and submit a form
-                    var form = document.createElement("form");
-                    form.setAttribute("method", "get");
-                    form.setAttribute("action", "https://getphr.com/");
-                    form.setAttribute("target", "_blank");
-
-                    var hospID = document.createElement("input");
-                    hospID.setAttribute("type", "hidden");
-                    hospID.setAttribute("name", "hospID");
-                    hospID.setAttribute("value", "7");
-
-                    form.appendChild(hospID);
-                    document.body.appendChild(form);
-                    form.submit();
-                    break;
-            default:
-                break;
-        }
-    }
-</script>
 @section('footer-main')
     @include('design.footer-main')
 @endsection

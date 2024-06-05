@@ -490,29 +490,34 @@ class HomeController extends Controller
 
     public function booked_appointment_withoutlogin(Request $request)
     {
-        dd($request);
+        // dd($request);
+        // Adjusting the request data for validation
+        $request->merge(['gender' => $request->input('male')]);
+
         // Define validation rules
         $validator = Validator::make($request->all(), [
             'patient_name' => 'required|string|max:255',
             'patient_email' => 'required|email|max:255',
             'patient_phone' => 'required|string|max:20',
-            'gender' => 'required|in:1,0',
+            'gender' => 'required|in:1,0',  // Adjusted from 'male'
             'appointment_reason' => 'required|string',
             'mode' => 'required|in:At Clinic,Online',
             'doctor_id' => 'required|integer',
             'branch_id' => 'required_if:mode,At Clinic|integer',
             'get_number_identity' => 'required|numeric',
-            'get_passport_number' => 'required|numeric',
-            'platform' => 'required_if:mode,Online|string',
-            'passport_date' => 'required|',
-            'id_number' => 'required_if:mode,Online|string',
-            // 'get_value' => 'required_without:session|integer',
-            // 'session' => 'required_without:get_value|string',
-            'session' => 'required',
+            'get_passport_number' => 'nullable|numeric',  // Adjusted to nullable
+            'platform' => 'nullable|string',
+            'passport_date' => 'nullable|date',  // Adjusted to nullable and valid date
+            // 'id_number' => 'required_if:mode,Online|string',
         ]);
 
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'errors' => $validator->errors()
+            ]);
+        }
         if ($validator->passes()) {
-            // proceed with appointment booking logic
             $random_string = substr(md5(uniqid(mt_rand(), true)), 0, 10);
 
             $patient_id = DB::table('patient_profiles')->insertGetId([
@@ -525,10 +530,12 @@ class HomeController extends Controller
                 'age' => $request->age
             ]);
 
-            if ($request->get_value != null) {
+            if ($request->slot_id != null) {
                 $booking_id = DB::table('booked_appointments')->insertGetId([
-                    'slot_id' => $request->get_value,
+                    // 'slot_id' => $request->get_value,
+                    'slot_id' => $request->slot_id,
                     'patient_id' => $patient_id,
+                    'doctor_id' => $request->doctor_id,
                     'appointment_procedure' => $request->appointment_procedure,
                     'mode' => $request->mode,
                     'platform' => $request->platform,
@@ -548,8 +555,9 @@ class HomeController extends Controller
             } else {
                 $booking_id = DB::table('booked_appointments')->insertGetId([
                     'session' => $request->session_id,
-                    'patient_id' => $patient_id,
+                    // 'slot_id' => $request->get_value,
                     'slot_id' => $request->slot_id,
+                    'patient_id' => $patient_id,
                     'doctor_id' => $request->doctor_id,
                     'appointment_procedure' => $request->appointment_procedure,
                     'mode' => $request->mode,
@@ -560,20 +568,21 @@ class HomeController extends Controller
                     'consultation_type' => $request->consultation_type,
                     'appointment_reason' => $request->appointment_reason,
                     'appointment_date' => $request->appointment_date,
+                    'branch_id' => $request->branch_id,
                     'status' => 1
                 ]);
-                return response()->json([
-                    'status' => true,
-                    'message' => 'Appointment booked successfully!',
-                    'redirect_url' => url("/appointment_instructions/$booking_id")
-                ]);
+
+                // return response()->json([
+                //     'status' => true,
+                //     'message' => 'Appointment booked successfully!',
+                //     'Booking_id' => $booking_id
+                // ]);
+                return redirect()->to("appointment_instructions/{$booking_id}");
             }
-        } else {
-            return response()->json([
-                'status' => false,
-                'errors' => $validator->errors()
-            ]);
         }
+
+        // Proceed with appointment booking logic
+
     }
 
     public function appointment_instructions($booking_id)

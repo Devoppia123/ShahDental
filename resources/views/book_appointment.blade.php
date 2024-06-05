@@ -631,7 +631,7 @@
                             if (errors['passport_date']) {
                                 $(".pass_box select").addClass(
                                     'is-invalid'
-                                    ); // Add 'is-invalid' class to all select elements inside .pass_box
+                                ); // Add 'is-invalid' class to all select elements inside .pass_box
                                 $("#passport_date-error").html(errors['passport_date'][0]);
                             }
                             // if (errors['id_number']) {

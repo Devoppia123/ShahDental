@@ -86,45 +86,60 @@
           @endif
 
           <div id="banner-block-01 row">
-              <div class="inner-heading">
-                  <h1>
-                      <strong>
-                          @php
-                              $path = request()->path();
-                              switch ($path) {
-                                  case 'our-mission':
-                                      echo 'Our Mission';
-                                      break;
-                                  case 'message':
-                                      echo 'Message';
-                                      break;
-                                  case 'highlights':
-                                      echo 'Highlights';
-                                      break;
-                                  case 'all-articles':
-                                      echo 'Articles';
-                                      break;
-                                  case 'gallery':
-                                      echo 'Gallery';
-                                      break;
-                                  case 'services-treatments':
-                                      echo 'Services/Treatments';
-                                      break;
-                                  case 'contact-us':
-                                      echo 'Contact Us';
-                                      break;
-                                  case 'make-an-appointment':
-                                      echo 'Make an Appointment';
-                                      break;
-                                  default:
-                                      echo 'Call Back';
-                                      break;
-                              }
-                          @endphp
-                      </strong>
-                  </h1>
-              </div>
-          </div>
+            <div class="inner-heading">
+                <h1>
+                    <strong>
+                        <?php
+                        $url = $_SERVER['REQUEST_URI']; // Get the current URL
+        
+                        // Split the URL by "/" and get the last element
+                        $parts = explode("/", $url);
+                        $id = end($parts);
+        
+                        // Check if the URL contains "services_details/" and display the title accordingly
+                        if (strpos($url, 'services_details/') !== false) {
+                            echo 'Service Details ';
+                        }
+                        else if(strpos($url, 'view_article/') !== false){
+                            echo 'View Articles ';
+                        } else {
+                            // Handle other cases or fallback
+                            switch ($url) {
+                                case 'our-mission':
+                                    echo 'Our Mission';
+                                    break;
+                                case 'message':
+                                    echo 'Message';
+                                    break;
+                                case 'highlights':
+                                    echo 'Highlights';
+                                    break;
+                                case 'all-articles':
+                                    echo 'Articles';
+                                    break;
+                                case 'gallery':
+                                    echo 'Gallery';
+                                    break;
+                                case 'services-treatments':
+                                    echo 'Services/Treatments';
+                                    break;
+                                case 'contact-us':
+                                    echo 'Contact Us';
+                                    break;
+                                case 'make-an-appointment':
+                                    echo 'Make an Appointment';
+                                    break;
+                                default:
+                                    echo 'Call Back';
+                                    break;
+                            }
+                        }
+                        ?>
+                    </strong>
+                </h1>
+            </div>
+        </div>
+        
       </div>
   </div>
 </div>
