@@ -10,12 +10,12 @@
                   @foreach ($articles as $index => $article)
                       @if ($index == 0)
                           <div class="articles article-01 reh-arti reh-arti-col-one col-lg-6 col-md-12 col-sm-12">
-                                <div class="col-6">                                
+                                <div class="col-md-6 col-sm-12">                                
                                     <div class="art-img-box reh-arti-img-box">
                                         <img src="{{ url("public/articles/$article->image") }}" alt="NO  IMAGE">
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-md-6 col-sm-12">
                                     <div class="reh-arti-left art-txt-box reh-arti-text pl-3">
                                         <h4 class="arti-sub-head">{{ $article->speciality }}</h4>
                                         <h3 class="arti-head">{{ $article->title }}</h3>

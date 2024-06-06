@@ -6,6 +6,10 @@
     font-family: "bill corporate narrow W00 super";
     src: url("fonts/bill\ corporate\ narrow\ W00\ super.ttf");
 }
+@font-face {
+    font-family: "RedHatDisplay";
+    src: url("fonts/RedHatDisplay-Bold.ttf");
+}
 
 @font-face {
     font-family: "bill corporate narrow W00medium";
@@ -17,13 +21,19 @@ body {
     margin: 0 !important;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    /* font-family: 'bill corporate narrow W00medium'; */
+    font-family: 'RedHatDisplay', !important;
+}
+
+h1
+ {
     font-family: 'bill corporate narrow W00medium';
+    /* font-family: 'RedHat', !important; */
 }
 .row{
     margin: 0px !important;
@@ -1179,6 +1189,12 @@ span {
     .re-pagination .page-item .page-link {
         padding: 6px;
         font-size: 12px;
+    }
+    .reh-arti-img-box img {
+        height: 60%;
+    }
+    .home-sec-team img {
+        width: 50%;
     }
 
 }
