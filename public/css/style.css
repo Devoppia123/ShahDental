@@ -71,7 +71,7 @@ li {
     background-image: url('../images/our-mission-bg.jpg');
     height: 350px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:left;
     background-size: cover; 
 }
 
@@ -548,7 +548,8 @@ div#banner-block-01 {
     padding-top: 12px;
 }
 .inner-heading {
-    text-align: center;
+    /* text-align: center; */
+    /* text-align: ; */
     margin-top: 55px;
 }
 .inner-heading h1{

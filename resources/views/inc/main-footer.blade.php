@@ -67,7 +67,7 @@
                         </div>
                         <div class="art-txt-box">
                             <h4>Call Us :</h4>
-                            <a href="tel:717-737-4337">717-737-4337</a>
+                            <a href="tel:03323582940">03323582940</a>
                         </div>
                     </div>
                     <div class="icon-address gap">
