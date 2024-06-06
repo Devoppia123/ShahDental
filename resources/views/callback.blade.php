@@ -48,12 +48,12 @@
         <form action="{{ url('docontactus') }}" method="post" id="callback-form" class="contact-us-from">
             @csrf
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" placeholder="Enter your name" class="form-control">
                     <p class="invalid-feedback" id="error-name"></p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12">
                     <label for="phone">Phone:</label>
                     <input type="text" name="phone" id="phone" class="form-control"
                         placeholder="Enter your number">
@@ -61,12 +61,12 @@
                 </div>
             </div>
             <div class="row gy-3">
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12">
                     <label for="email">Email:</label>
                     <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email">
                     <p class="invalid-feedback" id="error-email"></p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12">
                     <div class="form-group">
                         {{-- <h5>Subject :</h5>
                         <input type="radio" name="subject" value="feedback" class="form-check-input" id="subject-feedback">

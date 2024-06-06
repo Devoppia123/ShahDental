@@ -12,7 +12,7 @@
     <link type="text/css" href="{{ asset('css/jquery-ui-1.7.3.custom.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/book-appointment.css') }}">
 
-    <div class="main-cont-wrapper">
+    <div class="main-cont-wrapper" style="border:1px solid red;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">

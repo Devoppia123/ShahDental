@@ -235,12 +235,22 @@ li {
     text-decoration: none;
 }
 
-a.nav-btn-01 {
+/* a.nav-btn-01 {
     padding: 15px 20px;
     border: 2px solid #1b1b1b;
     border-radius: 70px;
     margin: 0 0 0 30px;
+} */
+
+a.nav-btn-01 {
+    padding: 10px 2px;
+    border: 2px solid #1b1b1b;
+    border-radius: 25px;
+    margin: 0 0 0 0px;
+    width: 206px;
+    text-align: center;
 }
+
 
 /* nav */
 
@@ -563,7 +573,9 @@ div#banner-block-01 {
     cursor: pointer;
 }
 
-
+.reh-article-img {
+    border-radius: 25px;
+}
 .reh-cus-box {
     border: 1px solid #9b212a;
     border-radius: 25px;
@@ -573,10 +585,10 @@ div#banner-block-01 {
     padding: 20px 40px;
     text-align: center;
 }
-.contact-us-from .col-md-6 {
+/* .contact-us-from .col-md-6 {
     flex: 0 0 auto;
     width: 49% !important;
-}
+} */
 .reh-text-left {
     text-align: left;
 }
@@ -586,7 +598,7 @@ div#banner-block-01 {
     line-height: 28px;
 }
 /* form bg */
-.rk-boking-form-section, .rk-form-bg {
+.rk-boking-form-section, .rk-form-bg, .get-appointment {
     background-color: #f1f1e7;
     padding: 60px 0px !important;
 }
@@ -629,6 +641,20 @@ button.btn.btn-primary {
 .reh-contact-form {
     width: 75% !important;
     margin: auto;
+}
+/* articles Detail page */
+.article-detail-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap:10px;
+}
+.article-detail-content img{
+    border-radius:25px;
+}
+.article-detail-content p{
+    line-height:28px;
 }
 
 /* .cus-img {
@@ -1143,6 +1169,10 @@ span {
 }
 
 @media only screen and (max-width: 576px) {
+    .home-banner-content {
+        position: absolute;
+        top: 16% !important;
+    }
     .top-r{
         display:none !important;
     }
@@ -1153,6 +1183,25 @@ span {
 
 }
 @media only screen and (max-width: 1024px) {
+    .navbar-collapse  {
+        background-color: #f3efe4;
+        padding:22px;
+        border-radius:12px;
+        z-index: 5555;
+    }
+    a.nav-btn-01 {
+        padding: 10px 2px;
+        border: 2px solid #1b1b1b;
+        border-radius: 25px;
+        margin: 0 0 0 0px;
+        width: 190px;
+        text-align: center;
+    }
+    
+    .home-banner-content {
+        position: absolute;
+        top: 30%;
+    }
     .reh-cus-box{
         width: 70vw;
     }    

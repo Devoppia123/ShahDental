@@ -24,7 +24,7 @@
           </div>
         </div>
 
-        
+      <div class="mian-nav">
         <nav class="navbar navbar-expand-xl navbar-light">
           <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ url('public/images/logo_03.png') }}" alt="" class="d-inline-block align-text-top cus-logo"></a>
@@ -61,11 +61,10 @@
                 </ul>
               </div>
           </nav>
+        </div>
 
 
-
-
-
+      <div class="home-banner-content">
         {{-- Display Success and Fail Status --}}
         @if (session('success'))
             <div class="alert alert-success">
@@ -120,7 +119,8 @@
                 </a>
 
             </div>
-        </div>          
+        </div>  
+      </div>        
     </div>
   </div>
 </div>

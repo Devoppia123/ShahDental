@@ -44,13 +44,13 @@
                       </span>
                   </div>
                   <div class="top-txt-box address">
-                      <p>Gulshan-e-Iqbal Branch-021-34963440</p>
-                      <p>Bahadurabad-03341326378</p>
-                      <p>DHA Branch-021-35243482</p>
+                      <p>Gulshan-e-Iqbal Branch-<a href="tel:02134963440">021-34963440</a></p>
+                      <p>Bahadurabad-<a href="tel:03341326378">03341326378</a></p>
+                      <p>DHA Branch-<a href="tel:021-35243482">021-35243482</a></p>
                   </div>
               </div>
           </div>
-
+          <div class="mian-nav">
           <nav class="navbar navbar-expand-xl navbar-light">
               <a class="navbar-brand" href="{{ url('/') }}">
                   <img src="{{ url('public/images/logo_03.png') }}" alt="" class="d-inline-block align-text-top cus-logo">
@@ -71,7 +71,8 @@
                   </ul>
               </div>
           </nav>
-
+      </div>
+          <div class="home-banner-content">
           {{-- Display Success and Fail Status --}}
           @if (session('success'))
               <div class="alert alert-success">
@@ -138,6 +139,7 @@
                     </strong>
                 </h1>
             </div>
+        </div>
         </div>
         
       </div>

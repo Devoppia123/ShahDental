@@ -16,7 +16,7 @@
                  {{-- </div> --}}
                  {{-- <div class="cus-di"> --}}
                      {{-- @endif --}}
-                     <div class="rk-services-box-blk col col-lg-3 col-md-6 col-sm-12">
+                     <div class="rk-services-box-blk col-lg-3 col-md-6 col-sm-12 col-xs-12">
                          <div class="ser-img-box">
                              {{-- <img src="{{ url('public/images/Shah-Dental-card_1.png') }}" alt=""> --}}
                              <img src="{{ url("/public/service_image/$sp->image") }}" alt="">
