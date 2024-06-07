@@ -150,7 +150,6 @@
                             <div class="main-table">
                                 <div class="row article-row p-2">
                                     <div class="col-md-4 reh-img-col-4">
-                                        <!-- <img style="width: 250px; height: 150px;" src="{{ asset("articles/$article->image") }}"> -->
                                         <img class="reh-article-img"
                                             src="{{ url("public/articles/$article->image") }}">
                                     </div>
@@ -210,6 +209,9 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            {{ $articles->links() }}
+        </div>
         {{-- <div class="container" id="main-table-div" style="padding-top: 50px">
             @foreach ($articles as $article)
                 <div class="col-lg-10 main-table">
@@ -235,7 +237,7 @@
         </div> --}}
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js"></script>
-    <script>
+    {{-- <script>
         var item_perpage = 3;
         var total_pages = Math.ceil($('#main-table-div .main-table').length / item_perpage);
 
@@ -255,7 +257,7 @@
                 }
             }
         });
-    </script>
+    </script> --}}
 @endsection
 
 @section('footer-main')

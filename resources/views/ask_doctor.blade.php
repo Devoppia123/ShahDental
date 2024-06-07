@@ -1,11 +1,13 @@
 @extends('design.template')
 @section('title', 'Shah Dental |Ask Doctor')
 @section('header-main')
-    @include('design.header-main')
+    {{-- @include('design.header-main') --}}
+    @include('inc.inner-header-header')
+
 @endsection
 @section('customCSS')
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('css/Our-Speciality.css') }}"> --}}
     {{-- <link rel="stylesheet" href="{{ url('public/css/Our-Speciality.css') }}"> --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
@@ -50,6 +52,7 @@
 
 
 @section('content')
+<div class="ask_doctor">
     <div class="container" style="padding-top: 50px">
         <h2 class="text-center">Ask Doctor</h2>
         {{-- <form class="ask-doc-form" method="POST" action="{{ url('/submit_question') }}"> --}}
@@ -57,15 +60,15 @@
             @csrf
             @method('POST')
             <input type="hidden" name="doctor_id" value="{{ $doctor->id }}">
-            <div class="row">
-                <div class="col-lg-6">
+            <div class="row gy-3">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">
                         <label>Full Name :</label>
                         <input type="text" name="full_name" class="form-control" placeholder="Enter full name">
                         <span class="text-danger error-text full_name_error"></span>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">
                         <label>Phone :</label>
                         <input type="text" name="phone" class="form-control" placeholder="Enter Phone">
@@ -73,15 +76,15 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6">
+            <div class="row gy-3">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">
                         <label>Email :</label>
                         <input type="text" name="email" class="form-control" placeholder="Enter Email">
                         <span class="text-danger error-text email_error"></span>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">
                         <fieldset>
                             <label>Subject :</label> <br>
@@ -110,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row gy-3">
                 <div class="col-lg-12">
                     <div class="form-group">
                         <label>Message :</label>
@@ -125,6 +128,7 @@
 
         </form>
     </div>
+</div>    
 @endsection
 
 @section('footer-main')
@@ -132,9 +136,9 @@
 @endsection
 
 @section('script')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> --}}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>/ --}}
     <script>
         $(document).ready(function() {
             $('#ask-doc-form').on('submit', function(e) {

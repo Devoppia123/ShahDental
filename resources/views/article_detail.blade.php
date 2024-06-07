@@ -38,7 +38,8 @@
             {{-- <img style="width:100%;" src="{{ asset("articles/$article->image") }}" alt=""> --}}
             {{-- @dd($article); --}}
             {{-- <img style="width:100%;" src="{{ url("public/articles/$article->image") }}" alt=""> --}}
-            <img class="arti-detail-img" src="{{ url("public/service_image/$article->image") }}" alt="">
+            <img class="arti-detail-img" src="{{ url("public/articles/$article->image") }}" alt="">
+            {{-- <img class="arti-detail-img" src="{{ url("public/articles/$article->image") }}"> --}}
             <h1 class="text-center mt-5">{{ $article->title }}</h1>
             <h5>{{ $article->speciality }}</h5>
             <p>{!! $article->description !!}</p>

@@ -69,7 +69,8 @@ class HomeController extends Controller
 
     public function all_articles()
     {
-        $articles =  DB::table('articles')->where('status', 1)->get();
+        // $articles =  DB::table('articles')->where('status', 1)->get();
+        $articles =  DB::table('articles')->where('status', 1)->paginate(4);
         // return view('wordpress.all_articles', compact('articles'));
         return view('all_articles', compact('articles'));
     }

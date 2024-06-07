@@ -145,6 +145,34 @@ li {
     background-position: center;
     background-size: cover;
 }
+.doctor-profile{
+    background-image: url('../images/what-we-do-bg.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.service-details {
+    background-image: url('../images/contact-us-bg.jpeg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.View-Articles{
+    background-image: url('../images/blog-bg.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.get-appointment-2{
+    background-image: url('../images/blog-bg.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 .make-an-appointment {
     background-image: url('../images/what-we-do-bg.jpg');
@@ -609,7 +637,7 @@ div#banner-block-01 {
     line-height: 28px;
 }
 /* form bg */
-.rk-boking-form-section, .rk-form-bg, .get-appointment {
+.rk-boking-form-section, .rk-form-bg, .get-appointment, .ask_doctor {
     background-color: #f1f1e7;
     padding: 60px 0px !important;
 }

@@ -162,7 +162,9 @@
     </style>
 @endsection
 @section('header-main')
-    @include('design.header-main')
+    {{-- @include('design.header-main') --}}
+    @include('inc.inner-header-header')
+
 @endsection
 
 

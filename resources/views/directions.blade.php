@@ -129,7 +129,9 @@
     </style>
 @endsection
 @section('header-main')
-    @include('design.header-main')
+    {{-- @include('design.header-main') --}}
+    @include('inc.inner-header-header')
+
 @endsection
 
 @section('content')
@@ -137,7 +139,7 @@
         <h2>Directions</h2>
     </div> --}}
     <div id="appointment-main" class="main-section">
-        <div class="container">
+        <div class="container-xxl">
             <div class="appoint-txt-blk all-txt-blk">
                 <div class="appoint-inner-block">
                     <div class="appoint-img-box appointment">

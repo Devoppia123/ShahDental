@@ -7,10 +7,15 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
 
         // Check if the URL contains "services_details/" and display the title accordingly
         if (strpos($url, 'services_details/') !== false) {
-            echo 'Service Details ';
+            echo 'service-details ';
         }
         else if(strpos($url, 'view_article/') !== false){
-            echo 'View Articles ';
+            echo 'View-Articles ';
+        } 
+        else if(strpos($url, 'doctor_profile/') !== false){
+            echo 'doctor-profile ';
+        } else if(strpos($url, 'get_appointment/') !== false){
+            echo 'get-appointment-2 ';
         } else {
             $path = request()->path();
     switch ($path) {
@@ -119,7 +124,11 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
                                     echo 'Service Details ';
                                 } elseif (strpos($url, 'view_article/') !== false) {
                                     echo 'View Articles ';
-                                } else {
+                                } else if(strpos($url, 'doctor_profile/') !== false){
+                                    echo 'Doctor Profile ';
+                                } else if(strpos($url, 'get_appointment/') !== false){
+                                    echo 'Get Appointment ';
+                                    } else {
                                     $path = request()->path();
                                     switch ($path) {
                                         case 'our-mission':
