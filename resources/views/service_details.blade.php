@@ -110,6 +110,11 @@
         .plyr--video {
             height: 150px;
         }
+        .article-image{
+            width: 100%;
+            border-radius: 2%;
+        }
+        
     </style>
 @endsection
 
@@ -127,7 +132,8 @@
                         <img class="speciality-detail-img" style="width: 60%" src="{{ url("public/articles/$latest_article->image") }}" alt="">
                     </div>
                 @endif
-                <h6>{!! $speciality->description !!}</h6>
+                {{-- <h6>{!! $speciality->description !!}</h6> --}}
+                <p>{{Str::limit( $speciality->description,500) }}</p>
             </div>
         </section>
 
@@ -190,10 +196,10 @@
                             {{-- Latest Article --}}
                             <div class="col-lg-4 col-md-12">
                                 <div class="blog-sec-01">
-                                    <img style="width: 300px" src="{{ url("public/articles/$latest_article->image") }}"
+                                    <img class="article-image" src="{{ url("public/articles/$latest_article->image") }}"
                                         alt="">
                                     <h3 class="heading-tab-1">{{ $latest_article->title }}</h3>
-                                    <p>{!! $latest_article->description !!}</p>
+                                    <p>{{ Str::limit($latest_article->description, 200) }}</p>
                                     <a class="btn btn-success btn-sm"
                                         href="{{ url("/view_article/$latest_article->id ") }}">View Article</a>
                                 </div>

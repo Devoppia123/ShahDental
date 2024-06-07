@@ -76,7 +76,7 @@
                         </div>
                         <div class="art-txt-box">
                             <h4>Email :</h4>
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Info@gmail.com">Info@gmail.com</a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@shahdentalsmile.com">info@shahdentalsmile.com</a>
                         </div>
                     </div>
                     <div class="icon-address">

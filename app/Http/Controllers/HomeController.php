@@ -263,7 +263,7 @@ class HomeController extends Controller
         $speciality = DB::table('specialities')->where('specialities.id', $services_id)->first();
         
         $articles = DB::table('articles')->where('speciality_id', $services_id)->where('articles.status', 1)
-            ->take(3)
+            // ->take(3)
             ->orderBy('id', 'desc')
             ->get();
         $latest_article = DB::table('articles')->where('speciality_id', $services_id)->where('articles.status', 1)->orderBy('id', 'DESC')->take(1)->first();
@@ -361,11 +361,13 @@ class HomeController extends Controller
 
     public function view_article($article_id)
     {
-        $article = DB::table('articles')
-            ->join('specialities', 'articles.speciality_id', '=', 'specialities.id')
-            ->where('articles.id', $article_id)
-            ->where('articles.status', 1)
-            ->first();
+        // $article = DB::table('articles')
+        //     ->join('specialities', 'articles.speciality_id', '=', 'specialities.id')
+        //     ->where('articles.id', $article_id)
+        //     ->where('articles.status', 1)
+        //     ->first();
+        //     dd($article);
+        $article =Articles::with('Speciality')->where('id',$article_id)->first();
         // return view('wordpress.article_detail', compact('article'));
         return view('article_detail', compact('article'));
     }

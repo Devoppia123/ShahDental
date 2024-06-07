@@ -24,6 +24,11 @@
             color: #fff;
             font-weight: 600;
         }
+        .article-image{
+            width: 50%;
+            margin-left: 26%;
+            border-radius: 2%;
+        }
     </style>
 @endsection
 @section('header-main')
@@ -41,8 +46,9 @@
             <img class="arti-detail-img" src="{{ url("public/articles/$article->image") }}" alt="">
             {{-- <img class="arti-detail-img" src="{{ url("public/articles/$article->image") }}"> --}}
             <h1 class="text-center mt-5">{{ $article->title }}</h1>
-            <h5>{{ $article->speciality }}</h5>
-            <p>{!! $article->description !!}</p>
+            <h5>{{ $article->speciality[0]->speciality }}</h5>
+            <p>{{ $article->description }}</p>
+            
         </div>
     </div>
 @endsection

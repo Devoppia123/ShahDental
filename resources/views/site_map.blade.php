@@ -116,7 +116,7 @@
                                 <li><a href="{{ url('/services_details/3') }}">ORTHODONTICS</a></li>
                                 <li><a href="{{ url('/services_details/2') }}">TOOTH CLEANING</a></li>
                                 <li><a href="{{ url('/services_details/1') }}">ROOT CANAL TREATMENT</a></li>
-                                <li><a href="{{ url('/all-services') }}">Veiw All Services</a></li>
+                                <li><a href="{{ url('/all-services') }}">View All Services</a></li>
                             </ul>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                                 <li><a href="{{ url('/view_article/2') }}">Accessing the Pulp Chamber</a></li>
                                 <li><a href="{{ url('/view_article/3') }}">Cleaning and Shaping</a></li>
                                 <li><a href="{{ url('/view_article/4') }}">Root Canal Treatment</a></li>
-                                <li><a href="{{ url('/all-articles') }}">Veiw All Articles</a></li>
+                                <li><a href="{{ url('/all-articles') }}">View All Articles</a></li>
                             </ul>
                         </div>
                     </div>
@@ -162,8 +162,8 @@
                                         On Facebook</a></li>
                                 <li><a href="https://www.facebook.com/shahdentalclinicSyedShahFaisal" target="_blank">Shah
                                         Dental Clinic On Facebook</a></li>
-                                <li><a href="https://www.instagram.com/dentalartclinicc" target="_blank">Instragra</a></li>
-                                <li><a href="https://twitter.com/SYEDSHA07606672" target="_blank">twitter</a></li>
+                                <li><a href="https://www.instagram.com/dentalartclinicc" target="_blank">Instragram</a></li>
+                                <li><a href="https://twitter.com/SYEDSHA07606672" target="_blank">Twitter</a></li>
                             </ul>
                         </div>
                     </div>

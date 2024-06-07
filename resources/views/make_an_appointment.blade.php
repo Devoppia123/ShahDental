@@ -206,9 +206,9 @@
 @section('content')
 <div class="rk-form-bg">
 <div class="make-an-appoint">
-    <div class="branch-heading">
+    {{-- <div class="branch-heading">
         <h2>Make An Appointment</h2>
-    </div>
+    </div> --}}
     </div>
     <div class="text-center p-5 row" id="show-section">
         <div class="col-md-6">
@@ -246,9 +246,9 @@
                 </div>
             </div>
             <div class="row rk-boking-form-section">
-                <div class="Cardiology">
+                {{-- <div class="Cardiology">
                     <h2 style="font-weight: 700;" id="hide">Make An Appointment From</h2>
-                </div>
+                </div> --}}
                 <form action="{{ url('booked_appointment_withoutlogin') }}" method="POST" id="get_appointment_form" class="book-apo-form">
                     @csrf
                     <input type="hidden" id="date_input" class="form-control" name="appointment_date" value="">

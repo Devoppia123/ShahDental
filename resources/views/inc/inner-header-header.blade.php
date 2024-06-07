@@ -43,6 +43,9 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
         case 'make-an-appointment':
             echo 'make-an-appointment';
             break;
+        case 'site_map':
+            echo 'site_map';
+            break;
         default:
             echo 'callback';
             break;
@@ -154,6 +157,9 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
                                             break;
                                         case 'make-an-appointment':
                                             echo 'Make an Appointment';
+                                            break;
+                                        case 'site_map':
+                                            echo 'Site Map';
                                             break;
                                         default:
                                             echo 'Call Back';

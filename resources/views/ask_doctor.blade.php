@@ -54,7 +54,7 @@
 @section('content')
 <div class="ask_doctor">
     <div class="container" style="padding-top: 50px">
-        <h2 class="text-center">Ask Doctor</h2>
+        {{-- <h2 class="text-center">Ask Doctor</h2> --}}
         {{-- <form class="ask-doc-form" method="POST" action="{{ url('/submit_question') }}"> --}}
         <form id="ask-doc-form" class="ask-doc-form" method="POST" action="{{ url('/submit_question') }}">
             @csrf

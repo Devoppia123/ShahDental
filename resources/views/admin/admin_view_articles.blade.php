@@ -27,7 +27,7 @@
                         @foreach ($article as $item)
                             <div class="col-md-3">
                                 <div class="card" style="width: 250px; margin-bottom: 20px;">
-                                    <img class="card-img-top" height="165" src="{{ asset("articles/$item->image") }}"
+                                    <img class="card-img-top" height="165" src="{{ url("public/articles/$item->image") }}"
                                         alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-title" data-toggle="tooltip" data-placement="left"

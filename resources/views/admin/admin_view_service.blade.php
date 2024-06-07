@@ -25,7 +25,7 @@
                             <td>{{ $sp->id }}</td>
                             <td>{{ $sp->speciality }}</td>
                             <td>{!! $sp->description !!}</td>
-                            <td><img style="width: 200px" src="{{ asset("service_image/$sp->image") }}" alt=""></td>
+                            <td><img style="width: 200px" src="{{ url("public/service_image/$sp->image") }}" alt=""></td>
                             {{-- <td><a href="#">Delete</a></td> --}}
                         </tr>
                     @endforeach

@@ -57,7 +57,7 @@
                     <div class="address-icon-blk botted-border">
                         <img src="{{ url('public/images/Shah-Dental5_28.png') }}" alt="">
                         {{-- <p><a href="#">Tel: 021-34963440, 03323582940</a></p> --}}
-                        <p><a href="tel:021-34963440">Tel: 021-34963440</a></p>
+                        <p><a href="tel: 021-34963440">Tel:  021-34963440</a> <a href="tel: 03323582940">,  03323582940</a></p>
                     </div>
                     <div class="address-icon-blk">
                         <img src="{{ url('public/images/Shah-Dental5_34.png') }}" alt="">
@@ -105,7 +105,7 @@
           </div>
           <div class="address-icon-blk botted-border">
               <img src="{{ url('public/images/Shah-Dental5_28.png') }}" alt="">
-              <p><a href="tel:021-34963440">Tel: 021-34963440</a></p>
+              <p><a href="tel:021-34963440">Tel: 021-34963440</a> <a href="tel:03323582940">, 03323582940</a></p>
 
           </div>
           <div class="address-icon-blk">
@@ -137,7 +137,7 @@
           </div>
           <div class="address-icon-blk botted-border">
               <img src="{{ url('public/images/Shah-Dental5_28.png') }}" alt="">
-                <p><a href="tel:021-35243482">Tel: 021-35243482</a></p>
+                <p><a href="tel: 021-35243482">Tel:  021-35243482</a> <a href="tel:03327009030">, 03327009030</a></p>
           </div>
           <div class="address-icon-blk">
               <img src="{{ url('public/images/Shah-Dental5_34.png') }}" alt="">

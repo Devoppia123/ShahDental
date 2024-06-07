@@ -119,6 +119,9 @@
             background-color: #fff;
             display: flex;
         }
+        .curved-image{
+            border-radius: 2%;
+        }
     </style>
     <link rel="stylesheet" href="{{ url('public/css/Our-Speciality.css') }}">
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
