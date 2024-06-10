@@ -89,38 +89,87 @@
             </marquee>
           </div>
         </div>
-
-        <div id="banner-block-01">
-            <div class="banner-txt-blk">
-                <p class="p-01">Welcome To Shah Dental</p>
-                <h1>We Are <strong>Creating <br>Natural Beauty</strong> With <br> Extraordinary <span
-                        class="color-01"><strong>Smiles</strong></span></h1>
-                <p>Greetings and welcome to Shah Dental Clinic (Prof. Syed Shah<br>
-                    Faisal & Associates). We are proud to serve the people of<br>
-                    Karachi since 1998. </p>
-                <a href="{{ url('/make-an-appointment') }}">Get Started <img class="cus-img"
-                        src="{{ url('public/images/Shah-Dental_10.jpg') }}" alt=""></a>
-            </div>
-            <div class="follow-main">
-                <p>Follow Us</p><br>
-                {{-- <img src="{{ asset('images/Shah-Dental-0_03.png') }}" alt=""><br><br> --}}
-                <img src="{{ url('public/images/Shah-Dental-0_03.png') }}" alt=""><br><br>
-                <a href="https://www.facebook.com/Shah-Dental-Clinic-884470434977957">
-                    {{-- <img src="{{ asset('images/Shah-Dental-0_07.png') }}" alt=""> --}}
-                    <img src="{{ url('public/images/Shah-Dental-0_07.png') }}" alt="">
-                </a><br>
-                <a href="https://www.instagram.com/dentalartclinicc/">
-                    {{-- <img src="{{ asset('images/Shah-Dental-0_10.png') }}" alt=""> --}}
-                    <img src="{{ url('public/images/Shah-Dental-0_10.png') }}" alt="">
-                </a><br>
-                <a href="https://twitter.com/SYEDSHA07606672">
-                    {{-- <img src="{{ asset('images/Shah-Dental-0_12.png') }}" alt=""> --}}
-                    <img src="{{ url('public/images/Shah-Dental-0_12.png') }}" alt="">
-                </a>
-
-            </div>
-        </div>  
+        </div>          
       </div>        
     </div>
   </div>
+</div>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-inner-left">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="http://127.0.0.1/ShahDental/public/images/banner-image_01.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption carousel-content">
+          <div class="carousel-left">
+            <h5>1-Welcome To Shah Dental</h5>
+            <h1>We Are Creating Natural Beauty With Extraordinary Smiles</h1>
+            <p>Greetings and welcome to Shah Dental Clinic (Prof. Syed Shah
+              Faisal & Associates). We are proud to serve the people of Karachi since 1998.</p>
+              <a class="get-start" href="{{ url('/make-an-appointment') }}">Get Started <img class="cus-img"
+                src="{{ url('public/images/Shah-Dental_10.jpg') }}" alt=""></a>
+          </div>
+          <div class="follow-main">
+            <p>Follow Us</p><br>
+            {{-- <img src="{{ asset('images/Shah-Dental-0_03.png') }}" alt=""><br><br> --}}
+            <img src="{{ url('public/images/Shah-Dental-0_03.png') }}" alt=""><br><br>
+            <a href="https://www.facebook.com/Shah-Dental-Clinic-884470434977957">
+                {{-- <img src="{{ asset('images/Shah-Dental-0_07.png') }}" alt=""> --}}
+                <img src="{{ url('public/images/Shah-Dental-0_07.png') }}" alt="">
+            </a><br>
+            <a href="https://www.instagram.com/dentalartclinicc/">
+                {{-- <img src="{{ asset('images/Shah-Dental-0_10.png') }}" alt=""> --}}
+                <img src="{{ url('public/images/Shah-Dental-0_10.png') }}" alt="">
+            </a><br>
+            <a href="https://twitter.com/SYEDSHA07606672">
+                {{-- <img src="{{ asset('images/Shah-Dental-0_12.png') }}" alt=""> --}}
+                <img src="{{ url('public/images/Shah-Dental-0_12.png') }}" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="http://127.0.0.1/ShahDental/public/images/banner-image_01.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption carousel-content">
+          <div class="carousel-left">
+            <h5>2-Welcome To Shah Dental</h5>
+            <h1>We Are Creating Natural Beauty With Extraordinary Smiles</h1>
+            <p>Greetings and welcome to Shah Dental Clinic (Prof. Syed Shah
+              Faisal & Associates). We are proud to serve the people of Karachi since 1998.</p>
+              <a class="get-start" href="{{ url('/make-an-appointment') }}">Get Started <img class="cus-img"
+                src="{{ url('public/images/Shah-Dental_10.jpg') }}" alt=""></a>
+          </div>
+          <div class="follow-main">
+            <p>Follow Us</p><br>
+            {{-- <img src="{{ asset('images/Shah-Dental-0_03.png') }}" alt=""><br><br> --}}
+            <img src="{{ url('public/images/Shah-Dental-0_03.png') }}" alt=""><br><br>
+            <a href="https://www.facebook.com/Shah-Dental-Clinic-884470434977957">
+                {{-- <img src="{{ asset('images/Shah-Dental-0_07.png') }}" alt=""> --}}
+                <img src="{{ url('public/images/Shah-Dental-0_07.png') }}" alt="">
+            </a><br>
+            <a href="https://www.instagram.com/dentalartclinicc/">
+                {{-- <img src="{{ asset('images/Shah-Dental-0_10.png') }}" alt=""> --}}
+                <img src="{{ url('public/images/Shah-Dental-0_10.png') }}" alt="">
+            </a><br>
+            <a href="https://twitter.com/SYEDSHA07606672">
+                {{-- <img src="{{ asset('images/Shah-Dental-0_12.png') }}" alt=""> --}}
+                <img src="{{ url('public/images/Shah-Dental-0_12.png') }}" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>

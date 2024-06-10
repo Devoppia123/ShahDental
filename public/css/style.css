@@ -66,12 +66,16 @@ li {
 }
 
 #header-main {
+    background-color: #f5f2e9;
+}
+/* #header-main {
     background-image: url('../images/banner-image_01.jpg');
     height: 1100px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left center;
-}
+} */
+
 /* #header-inner {
     background-image: url('../images/Inner-page01-header-bg_01.png');
     height: 350px;
@@ -373,6 +377,41 @@ div#banner-block-01 {
     width: 10%;
 }
 
+/* banner slider */
+
+.carousel-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-content .carousel-left {
+    width: 560px;
+    text-align: left;
+}
+.carousel-content .carousel-left h1{
+    font-family: "bill corporate narrow W00medium";
+    font-size:60px;
+}
+.get-start{
+    padding: 20px 30px;
+    background-color: #8d1a22;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'bill corporate narrow W00medium';
+    font-size: 18px;
+    border-radius: 100px;
+}
+.get-start img {
+    border-radius: 100%;
+    top: 0px;
+    position: relative;
+    left: 15px;
+}
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 30% !important;
+}
 /* banner */
 
 /* header */
