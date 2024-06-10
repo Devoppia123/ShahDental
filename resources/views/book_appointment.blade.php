@@ -306,9 +306,11 @@
                                 <div class="row p-2 branch_value">
                                     <div class="col-lg-8 col-md-8 col-sm-12 col-12">
                                         @foreach ($branches as $branch)
+                                        <div class="branch-div">
                                             <input type="radio" name="branch_id" value="{{ $branch->id }}"
                                                 class="branch-radio" id="branch_{{ $branch->id }}">
                                             <label for="branch_{{ $branch->id }}">{{ $branch->branch_name }}</label>
+                                        </div>
                                         @endforeach
                                         <p class="invalid-feedback" id="branch_id-error"></p>
                                     </div>

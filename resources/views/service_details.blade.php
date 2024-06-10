@@ -186,16 +186,16 @@
         </section>
 
         {{-- Related Articles --}}
-        <section class="speciality-blog" style="margin: 150px">
+        <section class="speciality-blog">
             <div class="container">
                 {{-- <h2>{{ $speciality->speciality }}</h2> --}}
                 <h2>Articles</h2>
-                <div class="container">
+                <div class="container-mo">
                     <div class="row">
                         @if (!$articles->isEmpty())
                             {{-- Latest Article --}}
-                            <div class="col-lg-4 col-md-12">
-                                <div class="blog-sec-01">
+                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                <div class="blog-sec-01 pb-5">
                                     <img class="article-image" src="{{ url("public/articles/$latest_article->image") }}"
                                         alt="">
                                     <h3 class="heading-tab-1">{{ $latest_article->title }}</h3>
@@ -206,15 +206,15 @@
 
                             </div>
                             {{-- All previous Articles --}}
-                            <div class="col-lg-8 col-md-12" style="display: flex; flex-direction: column; align-items: center;">
+                            <div class="col-lg-8 col-md-12 col-sm-12" style="display: flex; flex-direction: column; align-items: center;">
                                 @foreach ($articles as $article)
                                     <div class="col-lg-10">
                                         <div class="row">
-                                            <div class="col-lg-4">
+                                            <div class="col-lg-4 col-sm-12">
                                                 <img style="width: 100%"
                                                     src="{{ url("public/articles/$article->image") }}">
                                             </div>
-                                            <div class="col-lg-8" style="padding-left: 10px">
+                                            <div class="col-lg-8 col-sm-12" style="padding-left: 10px">
                                                 <div class="blog-content">
                                                     <h5>{{ $article->title }}</h5>
                                                     <p>

@@ -46,6 +46,12 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
         case 'site_map':
             echo 'site_map';
             break;
+        case 'find-doctors':
+            echo 'find-doctors';
+            break;
+        case 'all-services':
+            echo 'all-services';
+            break;
         default:
             echo 'callback';
             break;
@@ -127,11 +133,14 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
                                     echo 'Service Details ';
                                 } elseif (strpos($url, 'view_article/') !== false) {
                                     echo 'View Articles ';
-                                } else if(strpos($url, 'doctor_profile/') !== false){
+                                } elseif (strpos($url, 'doctor_profile/') !== false) {
                                     echo 'Doctor Profile ';
-                                } else if(strpos($url, 'get_appointment/') !== false){
+                                } elseif (strpos($url, 'get_appointment/') !== false) {
                                     echo 'Get Appointment ';
-                                    } else {
+                                } elseif (strpos($url, 'ask_doctor/') !== false) {
+                                    echo 'Ask Doctor ';
+                                }
+                                else {
                                     $path = request()->path();
                                     switch ($path) {
                                         case 'our-mission':
@@ -160,6 +169,15 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
                                             break;
                                         case 'site_map':
                                             echo 'Site Map';
+                                            break;
+                                        case 'find-doctors':
+                                            echo 'find doctors';
+                                            break;
+                                        case 'branch-directions':
+                                            echo 'Branch Direction';
+                                            break;
+                                        case 'all-services':
+                                            echo 'All Services';
                                             break;
                                         default:
                                             echo 'Call Back';

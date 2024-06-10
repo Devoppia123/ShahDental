@@ -34,7 +34,8 @@
                             <p> Bahadurabad, Karachi.</p>
                         </div>
                     </div>
-                    <div class="clinic-img-box" data-clinic="shah-dental-clinic">
+                    {{-- remove duplication shah dental clinic from yasir 10-06-2024 --}}
+                    {{-- <div class="clinic-img-box" data-clinic="shah-dental-clinic">
                         <div class="clinic-img-01">
                             <img src="{{ url('public/images/Shah-Dental5_32.png') }}" alt="">
                         </div>
@@ -42,7 +43,7 @@
                             <h3>Shah Dental Clinic</h3>
                             <p>Gulshan-e-Iqbal, Karachi.</p>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="clinic-address" id="clinic-details">
                     <img class="botted-img" src="{{ url('public/images/Shah-Dental6_03.png') }}" alt="">
@@ -57,7 +58,8 @@
                     <div class="address-icon-blk botted-border">
                         <img src="{{ url('public/images/Shah-Dental5_28.png') }}" alt="">
                         {{-- <p><a href="#">Tel: 021-34963440, 03323582940</a></p> --}}
-                        <p><a href="tel: 021-34963440">Tel:  021-34963440</a> <a href="tel: 03323582940">,  03323582940</a></p>
+                        <p><a href="tel: 021-34963440">Tel: 021-34963440</a> <a href="tel: 03323582940">,
+                                03323582940</a></p>
                     </div>
                     <div class="address-icon-blk">
                         <img src="{{ url('public/images/Shah-Dental5_34.png') }}" alt="">
@@ -132,9 +134,10 @@
          <img class="botted-img" src="{{ url('public/images/Shah-Dental6_03.png') }}" alt="">
           <h3>Dental Art Clinic:</h3>
           <div class="address-icon-blk">
-              <img src="{{ url('public/images/Shah-Dental5_22.png') }}" alt="">
-              <p><a href="{{ url('/branch-directions') }}?location=Dental+Art+Clinic+Phase+6+DHA+Karachi">Phase 6, DHA, Karachi.</a></p>
-          </div>
+    <img src="{{ url('public/images/Shah-Dental5_22.png') }}" alt="">
+    <p><a href="{{ url('/branch-directions') }}?location=Plot+6868+BL-3+FL-42+Hira+Apartment+CPBR+Society+Bahadurabad+Karachi">Plot #: 6868, BL-3, FL-42, Hira apartment, CPBR Society, Bahadurabad, Karachi</a></p>
+</div>
+
           <div class="address-icon-blk botted-border">
               <img src="{{ url('public/images/Shah-Dental5_28.png') }}" alt="">
                 <p><a href="tel: 021-35243482">Tel:  021-35243482</a> <a href="tel:03327009030">, 03327009030</a></p>
@@ -163,9 +166,10 @@
       <img class="botted-img" src="{{ url('public/images/Shah-Dental6_03.png') }}" alt="">
           <h3>Prof Syed Shah Faisal:</h3>
           <div class="address-icon-blk">
-              <img src="{{ url('public/images/Shah-Dental5_22.png') }}" alt="">
-              <p><a href="{{ url('/branch-directions') }}?location=Prof+Syed+Shah+Faisal+Bahadurabad+Karachi">Bahadurabad, Karachi.</a></p>
-          </div>
+    <img src="{{ url('public/images/Shah-Dental5_22.png') }}" alt="">
+    <p><a href="{{ url('/branch-directions') }}?location=Plot+6868+BL-3+FL-42+Hira+Apartment+CPBR+Society+Bahadurabad+Karachi">Plot #: 6868, BL-3, FL-42, Hira apartment, CPBR Society, Bahadurabad, Karachi.</a></p>
+</div>
+
           <div class="address-icon-blk botted-border">
               <img src="{{ url('public/images/Shah-Dental5_28.png') }}" alt="">
                 <p><a href="tel:03341326378">Tel: 03341326378</a></p>

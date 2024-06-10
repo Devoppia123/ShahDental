@@ -137,7 +137,21 @@ li {
     background-position: center;
     background-size: cover;    
 }
-
+/* add yasir find doctor and all services */
+.find-doctors{
+    background-image: url('../images/find-doctor.jpeg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+}
+.all-services{
+    background-image: url('../images/all-services.jpeg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;  
+}
 .callback {
     background-image: url('../images/contact-us-bg.jpeg');
     height: 350px;

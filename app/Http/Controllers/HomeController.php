@@ -319,14 +319,6 @@ class HomeController extends Controller
 
     public function submit_question(Request $request)
     {
-        // $validatedData = $request->validate([
-        //     'full_name' => 'required|max:255',
-        //     'doctor_id' => 'required',
-        //     'phone' => 'required|max:255',
-        //     'email' => 'required|email|max:255',
-        //     'subject' => 'required|max:255',
-        //     'message' => 'required',
-        // ]);
         $validator = Validator::make($request->all(), [
             'full_name' => 'required|max:255',
             'phone' => ['required', 'regex:/^\+?[0-9\s\-\(\)]{10,20}$/'],
@@ -335,28 +327,27 @@ class HomeController extends Controller
             'message' => 'required',
         ]);
 
-        if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
+        if ($validator->passes()) {
+            DB::table('ask_doctors')->insert([
+                'doctor_id' => $request->doctor_id,
+                'name' => $request->full_name,
+                'phone' => $request->phone,
+                'email' => $request->email,
+                'subject' => $request->subject,
+                'message' => $request->message,
+            ]);
+            return response()->json([
+                'status' => true,
+                'message' => 'ask doctor sent successfully'
+            ]);
+
+        } else {
+            return response()->json([
+                'status' => false,
+                'errors' => $validator->errors()
+            ]);
+
         }
-        // dd($request);
-
-        DB::table('ask_doctors')->insert([
-            'doctor_id' => $request->doctor_id,
-            'name' => $request->full_name,
-            'phone' => $request->phone,
-            'email' => $request->email,
-            'subject' => $request->subject,
-            'message' => $request->message,
-        ]);
-
-        // return redirect('/'); // Redirect to the homepage
-        return response()->json(['success' => 'Your question has been submitted.']);
-
-        // return redirect('/')->with('success', 'Your question has been submitted successfully!');
-        // return response()->json(['errors' => $validator->errors()], 422);
-
-        // return redirect("/doctor_profile/$request->doctor_id");
-        // return response()->json(['success' => 'Your question has been submitted.']);
     }
 
     public function view_article($article_id)
