@@ -194,8 +194,8 @@ li {
     background-position: center;
     background-size: cover; 
 }
-.ask_doctor {
-    background-image: url('../images/dental.jpg');
+.ask_doctor-1 {
+    background-image: url('../images/our-mission-bg.jpg');
     height: 350px;
     background-repeat: no-repeat;
     background-position: center;
@@ -1350,7 +1350,36 @@ span {
     .home-sec-team img {
         width: 50%;
     }
+    .carousel-left h5 {
+        margin-bottom: 10px;
+    }
+    .carousel-left {
+        margin-top: 110px;
+    }
+    .carousel-content .carousel-left h1 {
+        font-size: 22px !important;
+    }
+    .carousel-content p {
+        font-size: 10px;
+        margin:5px 0px !important;
+    }
+    
+    .carousel-content h5 {
+        font-size: 14px;
+    }
+    .get-start{
+        padding: 10px 15px;
+        background-color: #8d1a22;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'bill corporate narrow W00medium';
+        font-size: 14px;
+        border-radius: 100px;
+    }
 
+    .follow-main>img{
+        opacity:0;
+    }
 }
 @media only screen and (max-width: 1024px) {
     .navbar-collapse  {
@@ -1367,7 +1396,13 @@ span {
         width: 190px;
         text-align: center;
     }
-    
+    .carousel-caption {
+        position: absolute;
+        bottom: 12% !important;
+    }
+    .carousel-content .carousel-left h1 {
+        font-size: 50px;
+    }
     .home-banner-content {
         position: absolute;
         top: 30%;
@@ -1399,6 +1434,17 @@ span {
 }
 
 @media only screen and (max-width: 768px) {
+    .carousel-caption {
+    position: absolute;
+    right: 0% !important;
+    bottom: 0% !important;
+        }
+    .carousel-content .carousel-left h1 {
+        font-size: 42px;
+    }
+    .carousel-left p {
+        margin: 26px 0px;
+    }
     .reh-cus-box{
         width: 90vw;
     }
