@@ -149,6 +149,35 @@ li {
     background-position: center;
     background-size: cover;    
 }
+.site_map{
+    background-image: url('../images/Site.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;   
+}
+.branch-directions{
+    background-image: url('../images/branch.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+
+.call_back{
+    background-image: url('../images/CallBack.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.ask_doctor {
+    background-image: url('../images/dental.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
 .all-services{
     background-image: url('../images/all-services.jpeg');
     height: 350px;
