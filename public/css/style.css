@@ -88,7 +88,30 @@ li {
     background-position:left;
     background-size: cover; 
 }
-
+.site_map {
+    background-image: url('../images/Inner-page01-header-bg_02.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size: cover; 
+}
+.branch-direction {
+    background-image: url('../images/blog-bg.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size: cover; 
+}
+.our-team-1 {
+    background-image: url('../images/Dental-Doctor-Team.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size: cover; 
+}
+.our-team.bg-main {
+    margin: 100px 0px;
+}
 .message {
     background-image: url('../images/message-banner.png');
     height: 350px;
@@ -374,7 +397,7 @@ div#banner-block-01 {
 
 .follow-main {
     text-align: center;
-    width: 10%;
+    width: 6%;
 }
 
 /* banner slider */
@@ -383,7 +406,12 @@ div#banner-block-01 {
     display: flex;
     justify-content: space-between;
 }
-
+.carousel-left h5{
+    margin-bottom:20px;
+}
+.carousel-left p {
+    margin: 38px 0px ;
+}
 .carousel-content .carousel-left {
     width: 560px;
     text-align: left;
@@ -392,6 +420,17 @@ div#banner-block-01 {
     font-family: "bill corporate narrow W00medium";
     font-size:60px;
 }
+.carousel-caption {
+    position: absolute;
+    /* right: 6% !important; */
+    /* bottom: 1.25rem; */
+    bottom: 0rem !important;
+    /* left: 6% !important; */
+}
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    width: 6% !important;
+} 
 .get-start{
     padding: 20px 30px;
     background-color: #8d1a22;
@@ -407,10 +446,14 @@ div#banner-block-01 {
     position: relative;
     left: 15px;
 }
+
 .carousel-caption {
     position: absolute;
-    right: 15%;
-    bottom: 30% !important;
+    right: 0% !important;
+    bottom: 25% !important;
+    left: 0% !important;
+    color: #fff;
+    text-align: center;
 }
 /* banner */
 

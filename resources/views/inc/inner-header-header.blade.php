@@ -46,11 +46,17 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
         case 'site_map':
             echo 'site_map';
             break;
+        case 'branch-directions':
+            echo 'branch-direction';
+            break;
         case 'find-doctors':
             echo 'find-doctors';
             break;
         case 'all-services':
             echo 'all-services';
+            break;
+        case 'our-team':
+            echo 'our-team-1';
             break;
         default:
             echo 'callback';
@@ -178,6 +184,9 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
                                             break;
                                         case 'all-services':
                                             echo 'All Services';
+                                            break;
+                                        case 'our-team':
+                                            echo 'Our Team';
                                             break;
                                         default:
                                             echo 'Call Back';

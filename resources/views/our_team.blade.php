@@ -2,7 +2,9 @@
 @section('title', 'Shah Dental | Our Teams')
 
 @section('header-main')
-    @include('design.header-main')
+    {{-- @include('design.header-main') --}}
+    @include('inc.inner-header-header')
+
 @endsection
 
 @section('content')
