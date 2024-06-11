@@ -503,8 +503,6 @@ class DoctorController extends Controller
     public function doctor_reply_appointment_query($booking_id)
     {
         $doctor_id = Session::get('user')['id'];
-
-
         $bookings_slots = DB::table('booked_appointments')
             ->select([
                 'patient_profiles.patient_name',

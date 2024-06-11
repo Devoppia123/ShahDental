@@ -11,10 +11,10 @@
 <body>
     @foreach ($details as $item)
         <h3>Doctor Name: {{ $item->doctor_name ?? 'N/A' }}</h3>
-        @if (isset($list->patient_name))
-            <h5>{{ $list->patient_name }}</h5>
+        @if (isset($item->patient_name))
+            <h5>{{ $item->patient_name }}</h5>
         @else
-            <h5>{{ $list->patient_name }}</h5>
+            <h5>N/A</h5>
         @endif
         <p>Appointment Query: {{ $item->appointment_reason }}</p>
         <p>Reply From Doctor: {{ $item->reply }}</p>
@@ -22,3 +22,4 @@
 </body>
 
 </html>
+

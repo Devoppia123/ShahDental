@@ -21,6 +21,9 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
         elseif (strpos($url, 'ask_doctor/') !== false) {
             echo 'ask_doctor-1';
         }
+        elseif (strpos($url, 'view_video/') !== false) {
+            echo 'view_video';
+        }
         else {
             $path = request()->path();
     switch ($path) {
@@ -156,6 +159,8 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
                                     echo 'Get Appointment ';
                                 } elseif (strpos($url, 'ask_doctor/') !== false) {
                                     echo 'Ask Doctor ';
+                                } elseif (strpos($url, 'view_video/') !== false) {
+                                    echo 'View Video ';
                                 }
                                 else {
                                     $path = request()->path();

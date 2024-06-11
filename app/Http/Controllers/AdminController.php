@@ -611,6 +611,7 @@ class AdminController extends Controller
             ->get();
 
         $bookings_combined = $bookings_slots->concat($bookings_session);
+        dd($bookings_combined);
 
         return view('admin.admin_view_appointment_queries', compact('bookings_combined'));
     }

@@ -1,7 +1,8 @@
 @extends('design.template')
 @section('title', 'Shah Dental | View Video')
 @section('header-main')
-    @include('design.header-main')
+    {{-- @include('design.header-main') --}}
+    @include('inc.inner-header-header')
 
 @endsection
 @section('customCSS')

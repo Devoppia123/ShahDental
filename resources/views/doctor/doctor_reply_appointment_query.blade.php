@@ -13,7 +13,8 @@
         <div class="container-fluid">
             <h1>Reply Appointment Query</h1>
             @foreach ($bookings_combined as $list)
-                <form method="post" action="{{ url("/admin/doreply_appointment_query/$list->booking_id") }}">
+                {{-- <form method="post" action="{{ url("/admin/doreply_appointment_query/$list->booking_id") }}"> --}}
+                <form method="post" action="{{ url("/doctor/doreply_appointment_query/$list->booking_id") }}">
                     @csrf
                     <div class="form-group">
                         <label></label>

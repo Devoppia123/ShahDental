@@ -168,7 +168,9 @@
                         @endforeach
                         <div class="row text-center m-auto view-more-btn">
                             <div class="col-sm-12">
-                                <a class="btn-appointment text-center" href="{{ url('/find_doctors') }}">VIEW MORE >> </a>
+                                {{-- <a class="btn-appointment text-center" href="{{ url('/find_doctors') }}">VIEW MORE >> </a> --}}
+                                {{-- update url find doctors yasir 11-06-2024 --}}
+                                <a class="btn-appointment text-center" href="{{ url('/find-doctors') }}">VIEW MORE >> </a>
                             </div>
                         </div>
                     </div>

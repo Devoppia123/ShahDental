@@ -35,7 +35,7 @@
                     </div>
                     <div class="form-group">
                         <label>Reply Query : </label>
-                        <textarea class="form-control" name="reply"></textarea>
+                        <textarea class="form-control" name="reply" id="reply"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
