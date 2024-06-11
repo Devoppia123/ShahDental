@@ -14,9 +14,14 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
         } 
         else if(strpos($url, 'doctor_profile/') !== false){
             echo 'doctor-profile ';
-        } else if(strpos($url, 'get_appointment/') !== false){
+        } 
+        else if(strpos($url, 'get_appointment/') !== false){
             echo 'get-appointment-2 ';
-        } else {
+        } 
+        elseif (strpos($url, 'ask_doctor/') !== false) {
+            echo 'ask_doctor ';
+        }
+        else {
             $path = request()->path();
     switch ($path) {
         case 'our-mission':
@@ -55,8 +60,16 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
         case 'all-services':
             echo 'all-services';
             break;
+<<<<<<< HEAD
         case 'our-team':
             echo 'our-team-1';
+=======
+        case 'branch-directions':
+            echo 'branch-directions';
+            break;
+        case 'our-team':
+            echo 'our_team';
+>>>>>>> d64a2d5175a2dba8072108116898ae8ed3d1107c
             break;
         default:
             echo 'callback';

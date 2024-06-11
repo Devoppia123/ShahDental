@@ -4,7 +4,10 @@
 @section('header-main')
     {{-- @include('design.header-main') --}}
     @include('inc.inner-header-header')
+<<<<<<< HEAD
 
+=======
+>>>>>>> d64a2d5175a2dba8072108116898ae8ed3d1107c
 @endsection
 
 @section('content')
