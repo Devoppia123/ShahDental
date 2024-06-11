@@ -89,7 +89,8 @@ li {
     background-size: cover; 
 }
 .site_map {
-    background-image: url('../images/Inner-page01-header-bg_02.jpg');
+    /* background-image: url('../images/Inner-page01-header-bg_02.jpg'); */
+    background-image: url('../images/blog-bg.jpg');
     height: 350px;
     background-repeat: no-repeat;
     background-position:left;
@@ -165,19 +166,20 @@ li {
     background-size: cover;    
 }
 /* add yasir find doctor and all services */
+
+.View_Articles{
+    background-image: url('../images/what-we-do-bg.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
 .find-doctors{
     background-image: url('../images/find-doctor.jpeg');
     height: 350px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;    
-}
-.site_map{
-    background-image: url('../images/Site.jpg');
-    height: 350px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;   
 }
 .branch-directions{
     background-image: url('../images/branch.jpg');

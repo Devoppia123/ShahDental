@@ -10,7 +10,7 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
             echo 'service-details ';
         }
         else if(strpos($url, 'view_article/') !== false){
-            echo 'View-Articles ';
+            echo 'View_Articles ';
         } 
         else if(strpos($url, 'doctor_profile/') !== false){
             echo 'doctor-profile ';
@@ -62,6 +62,7 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
             break;
         case 'our-team':
             echo 'our-team-1';
+            break;
         case 'branch-directions':
             echo 'branch-directions';
             break;
