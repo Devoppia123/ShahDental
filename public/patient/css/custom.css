@@ -293,6 +293,24 @@ body {
     display: inline-block;
     float: right;
 }
+img.main-logo {
+    width: 43px !important;
+    margin-top: -7px;
+}
+
+/* doc social links */
+
+.so-icon {
+    width: 50px;
+}
+
+.small-box {
+    text-align: center;
+    padding: 30px 0px;
+}
+.small-box h4{
+    margin-top:38px
+}
 
 .record-chart-labels li:after {
     content: '\f10c';

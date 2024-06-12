@@ -16,7 +16,7 @@
             <div class="sidebar-hdr-left">
                 <a class="main-logo-link" href="index.html">
                     {{-- <img class="main-logo" src="{{ asset('images/logo.png') }}" alt=""> --}}
-                    <img class="main-logo" src="{{ url('public/images/logo_03.png') }}" alt="">
+                    <img class="main-logo" src="{{ url('public/images/logo_033.png') }}" alt="">
                 </a>
             </div>
             <nav>
