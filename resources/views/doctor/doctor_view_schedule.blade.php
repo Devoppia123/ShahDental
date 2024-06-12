@@ -17,13 +17,13 @@
                 $monthName = date('F', $currentTimeStamp);
                 $numDays = date('t', $currentTimeStamp);
                 $counter = 0;
-                
+
                 $monthName . ' ' . $year;
                 $numDays = date('t', $currentTimeStamp);
-                
+
                 $day = '01';
                 $date = $year . '-' . $month . '-' . $day;
-                
+
                 $date = date('Y-m-d', strtotime($date));
             @endphp
 
@@ -73,7 +73,7 @@
                         @for ($i = 1; $i < $numDays + 1; $i++, $counter++)
                             @php
                                 $timeStamp = strtotime("$year-$month-$i");
-                                
+
                             @endphp
 
                             @if ($i == 1)
@@ -127,9 +127,12 @@
 
 
 @section('js_code')
+{{-- add yasir  --}}
+    <script>
+        var baseUrl = "{{ url('/doctor/view_schedule/') }}";
+    </script>
     <script>
         function goLastMonth(month, year, doctor_id, mydate) {
-
             if (month == 1) {
                 --year;
                 month = 13;
@@ -139,13 +142,14 @@
             if (month < 10) {
                 month = '0' + month;
             }
-            var url = "doctor/view_schedule/" + month + '/' + year + '/' + doctor_id;
+            // var url = baseUrl + "/ShahDental/doctor/view_schedule/" + month + '/' + year + '/' + doctor_id;
+            // add this url for Yasir 1206-2024
+            var url = baseUrl + '/' + month + '/' + year + '/' + doctor_id;
 
-            document.location.href = '/' + url;
+            document.location.href = url;
         }
 
         function goNextMonth(month, year, doctor_id, mydate) {
-
             if (month == 12) {
                 ++year;
                 month = 0;
@@ -155,10 +159,13 @@
             if (month < 10) {
                 month = '0' + month;
             }
-            var url = "doctor/view_schedule/" + month + '/' + year + '/' + doctor_id;
+            // var url = baseUrl + "/ShahDental/doctor/view_schedule/" + month + '/' + year + '/' + doctor_id;
+            // add this url for Yasir 1206-2024
+            var url = baseUrl + '/' + month + '/' + year + '/' + doctor_id;
 
-            document.location.href = '/' + url;
+            document.location.href = url;
         }
+
 
 
         function showDays() {

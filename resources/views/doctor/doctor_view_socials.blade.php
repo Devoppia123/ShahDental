@@ -9,6 +9,7 @@
 @endsection
 @section('content')
     <div class="main-cont-wrapper">
+<<<<<<< Updated upstream
         <div class="container-fluid">            
             <div class="row doc-view-social-links">
                 <div class="col-lg-3 col-6">
@@ -56,6 +57,17 @@
                 </div>
                 <!-- ./col -->
             </div>
+=======
+        <div class="container-fluid">
+            <a href="{{ $social->whatsapp }}"><img style="width: 100px" src="{{ url('public/img/whatsapp.png') }}"
+                    alt=""></a>
+            <a href="{{ $social->facebook }}"><img style="width: 100px" src="{{ url('public/img/facebook.png') }}"
+                    alt=""></a>
+            <a href="{{ $social->twitter }}"><img style="width: 100px" src="{{ url('public/img/Twitter.png') }}"
+                    alt=""></a>
+            <a href="{{ $social->linkedin }}"><img style="width: 100px" src="{{ url('public/img/linkedin.png') }}"
+                    alt=""></a>
+>>>>>>> Stashed changes
         </div>
     </div>
 @endsection

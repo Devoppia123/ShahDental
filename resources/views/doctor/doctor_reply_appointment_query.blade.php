@@ -14,7 +14,7 @@
             <h1>Reply Appointment Query</h1>
             @foreach ($bookings_combined as $list)
                 {{-- <form method="post" action="{{ url("/admin/doreply_appointment_query/$list->booking_id") }}"> --}}
-                <form method="post" action="{{ url("/doctor/doreply_appointment_query/$list->booking_id") }}">
+                <form method="post" action="{{ url("/doctor/doreply_appointment_query/$list->booking_id") }}" id="appointment_query">
                     @csrf
                     <div class="form-group">
                         <label></label>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="form-group">
                         <label>Reply Query : </label>
-                        <textarea class="form-control" name="reply"></textarea>
+                        <textarea class="form-control" name="reply" id="reply" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -43,3 +43,4 @@
         </div>
     </div>
 @endsection
+

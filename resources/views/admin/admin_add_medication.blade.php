@@ -38,12 +38,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="white-box">
-                        <form class="form-horizontal" method="post" action="{{ url('/admin/add-procedure-post') }}"
+                        {{-- <form class="form-horizontal" method="post" action="{{ url('/admin/add-procedure-post') }}" --}}
+                        <form class="form-horizontal" method="post" action="{{ url('/admin/add-medication-post') }}"
                             enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>Procedure Name :</label>
+                                    {{-- <label>Procedure Name :</label> --}}
+                                    <label>Medication Name :</label>
                                     <input class="form-control" type="text" required name="name" class="txt-field"
                                         size="35" maxlength="130" />
                                 </div>

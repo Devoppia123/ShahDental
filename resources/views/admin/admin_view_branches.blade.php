@@ -27,7 +27,8 @@
                                 <td>{{ $branch->id }}</td>
                                 <td>{{ $branch->branch_name }}</td>
                                 <td>
-                                    <a href="{{ "/admin/delete_branch/$branch->id" }}">Delete</a>
+                                    {{-- <a href="{{ "/admin/delete_branch/$branch->id" }}">Delete</a> --}}
+                                    <a href="{{ "/admin/delete_branch/$branch->id" }}" class="btn btn-primary">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

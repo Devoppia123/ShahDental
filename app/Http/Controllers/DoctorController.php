@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Validator;
 
 class DoctorController extends Controller
 {
@@ -251,6 +252,7 @@ class DoctorController extends Controller
 
     public function doctor_view_current_month_booking($start_date, $end_date)
     {
+
         $data = DB::table('appointment_slots')
             ->select(
                 'appointment_slots.start_time AS start_time',
@@ -277,6 +279,7 @@ class DoctorController extends Controller
             ->join('patient_profiles', 'patient_profiles.patient_id', '=', 'booked_appointments.patient_id')
             ->where('booked_appointments.status', 1)
             ->get();
+        // dd($patient);
         return view('doctor.doctor_view_current_month', compact('data', 'patient'));
     }
 
@@ -500,47 +503,49 @@ class DoctorController extends Controller
         return view('doctor.doctor_view_appointment_queries', compact('bookings_combined'));
     }
 
-    public function doctor_reply_appointment_query($booking_id)
+    public function doctor_reply_appointment_query($booking_id, Request $request)
     {
-        $doctor_id = Session::get('user')['id'];
-        $bookings_slots = DB::table('booked_appointments')
-            ->select([
-                'patient_profiles.patient_name',
-                'patient_profiles.patient_email',
-                'patient_profiles.mrn',
-                'booked_appointments.appointment_reason',
-                'booked_appointments.booking_id',
-                'booked_appointments.reply',
-                'appointment_schedules.doctor_id'
-            ])
-            ->join('patient_profiles', 'patient_profiles.patient_id', '=', 'booked_appointments.patient_id')
-            ->join('appointment_slots', 'appointment_slots.slot_id', '=', 'booked_appointments.slot_id')
-            ->join('appointment_schedules', 'appointment_schedules.id', '=', 'appointment_slots.schedule_id')
-            ->join('users as doctor', 'doctor.id', '=', 'appointment_schedules.doctor_id')
-            ->where('doctor.id', $doctor_id)
-            ->where('booked_appointments.booking_id', $booking_id)
-            ->get();
+      
+            $doctor_id = Session::get('user')['id'];
+            $bookings_slots = DB::table('booked_appointments')
+                ->select([
+                    'patient_profiles.patient_name',
+                    'patient_profiles.patient_email',
+                    'patient_profiles.mrn',
+                    'booked_appointments.appointment_reason',
+                    'booked_appointments.booking_id',
+                    'booked_appointments.reply',
+                    'appointment_schedules.doctor_id'
+                ])
+                ->join('patient_profiles', 'patient_profiles.patient_id', '=', 'booked_appointments.patient_id')
+                ->join('appointment_slots', 'appointment_slots.slot_id', '=', 'booked_appointments.slot_id')
+                ->join('appointment_schedules', 'appointment_schedules.id', '=', 'appointment_slots.schedule_id')
+                ->join('users as doctor', 'doctor.id', '=', 'appointment_schedules.doctor_id')
+                ->where('doctor.id', $doctor_id)
+                ->where('booked_appointments.booking_id', $booking_id)
+                ->get();
 
-        $bookings_session = DB::table('booked_appointments')
-            ->select([
-                'patient_profiles.patient_name',
-                'patient_profiles.patient_email',
-                'patient_profiles.mrn',
-                'booked_appointments.reply',
-                'booked_appointments.doctor_id',
-                'booked_appointments.booking_id',
-                'booked_appointments.appointment_reason'
-            ])
-            ->join('patient_profiles', 'patient_profiles.patient_id', '=', 'booked_appointments.patient_id')
-            ->join('sessions', 'sessions.id', '=', 'booked_appointments.session')
-            ->join('users as doctor', 'doctor.id', '=', 'booked_appointments.doctor_id')
-            ->where('doctor.id', $doctor_id)
-            ->where('booked_appointments.booking_id', $booking_id)
-            ->get();
+            $bookings_session = DB::table('booked_appointments')
+                ->select([
+                    'patient_profiles.patient_name',
+                    'patient_profiles.patient_email',
+                    'patient_profiles.mrn',
+                    'booked_appointments.reply',
+                    'booked_appointments.doctor_id',
+                    'booked_appointments.booking_id',
+                    'booked_appointments.appointment_reason'
+                ])
+                ->join('patient_profiles', 'patient_profiles.patient_id', '=', 'booked_appointments.patient_id')
+                ->join('sessions', 'sessions.id', '=', 'booked_appointments.session')
+                ->join('users as doctor', 'doctor.id', '=', 'booked_appointments.doctor_id')
+                ->where('doctor.id', $doctor_id)
+                ->where('booked_appointments.booking_id', $booking_id)
+                ->get();
 
-        $bookings_combined = $bookings_slots->concat($bookings_session);
+            $bookings_combined = $bookings_slots->concat($bookings_session);
 
-        return view('doctor.doctor_reply_appointment_query', compact('bookings_combined'));
+            return view('doctor.doctor_reply_appointment_query', compact('bookings_combined'));
+       
     }
 
     public function doctor_doreply_appointment_query(Request $request, $booking_id)

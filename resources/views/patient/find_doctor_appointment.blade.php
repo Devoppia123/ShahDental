@@ -22,7 +22,7 @@
                     <div class="inner-pg-cont">
                         <div class="inner-container">
                             <h2 class="main-head">Get <span>Appointment</span></h2>
-                            <p>PWe will make every effort to contact you within the next 24 hours or the next working
+                            <p>We will make every effort to contact you within the next 24 hours or the next working
                                 day to
                                 confirm your request.</p>
                             <p>If this is a medical emergency, please contact our Accident & Emergency service (A&E)
@@ -36,6 +36,7 @@
                                             <div id="datepicker" style="float:left;  width:100%;"></div>
                                             <input type="hidden" id="date_input" name="appointment_date" value="">
                                         </div>
+                                        
                                         <div id="appointment-form" style="display:none; margin-top:20px;">
                                             <div style="margin-top: 20px; display: inline-block;">
                                                 <input type="radio" name="demo" value="One" checked /> Search By

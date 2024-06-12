@@ -56,7 +56,8 @@
                     <div class="card text-center" style="">
                         <div class="imgbox-inner">
                             <img style="border-radius:100%; width: 140px;height: 138px;"
-                                src="{{ asset("profile_image/$doc->profile_image") }}" class="card-img-top" alt="...">
+                                {{-- src="{{ asset("profile_image/$doc->profile_image") }}" class="card-img-top" alt="..."> --}}
+                                src="{{ url("public/profile_image/$doc->profile_image") }}" class="card-img-top" alt="...">
                         </div>
                         <div class="card-body">
                             @foreach ($doc->user_role as $show)

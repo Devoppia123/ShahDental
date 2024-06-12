@@ -46,8 +46,7 @@ class NurseController extends Controller
             ->join('doctors', 'doctors.doctorID', '=', 'doctor.id')
             ->where('nurse.id', $nurse_id)
             ->get();
-
-        return view('nurse.nurse_home', compact('doctors'));
+        return view('nurse.nurse_home', compact('doctors','nurse_id'));
     }
 
     public function nurse_manage_doctor($doctor_id)

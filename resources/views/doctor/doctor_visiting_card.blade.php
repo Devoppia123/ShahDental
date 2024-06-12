@@ -29,11 +29,13 @@
                         <input type="hidden" name="doctor_id" value="{{ $doctor_id }}">
                         <div class="form-group">
                             <label> Select Visiting Card Front Picture</label>
-                            <input type="file" name="front_image" class="form-control">
+                            {{-- <input type="file" name="front_image" class="form-control"> --}}
+                            <input type="file" name="front_image" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label> Select Visiting Card Back Picture</label>
-                            <input type="file" name="back_image" class="form-control">
+                            {{-- <input type="file" name="back_image" class="form-control"> --}}
+                            <input type="file" name="back_image" class="form-control" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Add Card</button>
                     </form>

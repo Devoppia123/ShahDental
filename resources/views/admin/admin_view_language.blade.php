@@ -22,7 +22,8 @@
                         <tr>
                             <td>{{ $lang->id }}</td>
                             <td>{{ $lang->language }}</td>
-                            <td><a href="#">Delete</a></td>
+                            {{-- <td><a href="#">Delete</a></td> --}}
+                            <td><a href="#" class="btn btn-primary">Delete</a></td>
                         </tr>
                     @endforeach
                 </tbody>

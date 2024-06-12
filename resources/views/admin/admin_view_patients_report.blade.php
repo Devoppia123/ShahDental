@@ -40,7 +40,8 @@
 @endsection
 @section('js_code')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="{{ asset('js/jquery.table2excel.js') }}"></script>
+    {{-- <script src="{{ asset('js/jquery.table2excel.js') }}"></script> --}}
+    <script src="{{ url('public/js/jquery.table2excel.js') }}"></script>
     <script>
         function exportExcel() {
             $(".exportToExcel").click();

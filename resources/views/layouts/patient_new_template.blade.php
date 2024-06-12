@@ -11,7 +11,7 @@
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900') }}" rel="stylesheet">
+    <link href="{{ url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900') }}" rel="stylesheet">
 
     <link rel="stylesheet" href=" {{ url('public/patient/css/bootstrap.min.css') }}">
 

@@ -1151,6 +1151,33 @@ class AdminController extends Controller
 
         return view('admin.admin_add_treatment');
     }
+    public function add_treatment_post(Request $request)
+    {
+        if (isset($_POST['update'])) {
+
+
+            $id = $request->id;
+            $data = [
+                'treatments_name' => $request->treatment_name,
+                'tooth_number' => $request->tooth_number,
+                'rate' => $request->rate,
+            ];
+
+            $Treatment = DB::table('treatments')->where('id', $id)->update($data);
+        } else {
+
+
+            $Treatment = new Treatment();
+            $Treatment->treatments_name = $request->treatment_name;
+            $Treatment->tooth_number = $request->tooth_number;
+            $Treatment->rate = $request->rate;
+            $Treatment->status = 1;
+
+            $Treatment->save();
+        }
+
+        return redirect('admin/treatment');
+    }
     public function edit_treatment($id)
     {
         $Treatment = DB::table('treatments')->find($id);
@@ -1218,7 +1245,8 @@ class AdminController extends Controller
 
     public function add_medication()
     {
-        return view('admin.admin_add_procedure');
+        // return view('admin.admin_add_procedure');
+        return view('admin.admin_add_medication');
     }
 
     public function add_radiology()
@@ -1296,18 +1324,23 @@ class AdminController extends Controller
     public function edit_radiology($id)
     {
         $radiologys = DB::table('radiologys')->find($id);
-        return view('admin.admin_edit_medication', compact('radiologys'));
+        
+        // return view('admin.admin_edit_medication', compact('radiologys'));
+        return view('admin.admin_edit_radiology', compact('radiologys'));
     }
 
     public function add_medication_post(Request $request)
     {
         if (isset($_POST['medications'])) {
-
+            // add thi yasir
+            $id = $request->id;
             $data = [
                 'name' => $request->name,
             ];
-            $id = $request->id;
-            $medications = DB::table('medications')->where('id', $id)->update($data);
+         
+            // $medications = DB::table('medications')->where('id', $id)->update($data);
+            // yasir update this line
+            DB::table('medications')->where('id', $id)->update($data);
         } else {
 
 
@@ -1342,33 +1375,6 @@ class AdminController extends Controller
         return view('admin.admin_radiology', compact('radiologys'));
     }
 
-    public function add_treatment_post(Request $request)
-    {
-        if (isset($_POST['update'])) {
-
-
-            $id = $request->id;
-            $data = [
-                'treatments_name' => $request->treatment_name,
-                'tooth_number' => $request->tooth_number,
-                'rate' => $request->rate,
-            ];
-
-            $Treatment = DB::table('treatments')->where('id', $id)->update($data);
-        } else {
-
-
-            $Treatment = new Treatment();
-            $Treatment->treatments_name = $request->treatment_name;
-            $Treatment->tooth_number = $request->tooth_number;
-            $Treatment->rate = $request->rate;
-            $Treatment->status = 1;
-
-            $Treatment->save();
-        }
-
-        return redirect('admin/treatment');
-    }
 
     public function admin_view_slots($schedule_id, $month, $year, $doctor_id)
     {

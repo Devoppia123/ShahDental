@@ -155,7 +155,8 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top_border_doc_profile">
                         <div class="row" style="align-items: center;height: 175px;">
                             <div class="profile_logo col-lg-2 col-md-2 col-sm-2 col-xs-2"><img
-                                    src="{{ asset("profile_image/$doctor->profile_image") }}" alt=""></div>
+                                    {{-- src="{{ asset("profile_image/$doctor->profile_image") }}" alt=""></div> --}}
+                                    src="{{ url("public/profile_image/$doctor->profile_image") }}" alt=""></div>
                             <div class="col-lg-10">
                                 <div class="row" style="align-items: center;">
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">

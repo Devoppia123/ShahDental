@@ -22,20 +22,20 @@
     <div class="main-cont-wrapper">
         <div class="container-fluid">
             @php
-                
+
                 $currentTimeStamp = strtotime("$year-$month-01");
                 $monthName = date('F', $currentTimeStamp);
                 $numDays = date('t', $currentTimeStamp);
                 $counter = 0;
-                
+
                 $monthName . ' ' . $year;
                 $numDays = date('t', $currentTimeStamp);
-                
+
                 $day = '01';
                 $date = $year . '-' . $month . '-' . $day;
-                
+
                 $date = date('Y-m-d', strtotime($date));
-                
+
             @endphp
 
             {{-- message show --}}
@@ -59,11 +59,18 @@
                 <p>Slot is Enable</p>
             @endif
             <div class='prv-nxt'>
-                <input type='button' class='previous-btn' value=' PREVIOUS '
+                {{-- <input type='button' class='previous-btn' value=' PREVIOUS '
+                    onClick='goLastMonth({{ $month . ',' . $year . ',' . $doctor_id }})'> --}}
+
+                    {{-- add class on button  yasir 12-06-2024--}}
+                         <input type='button' class='previous-btn btn btn-success' value=' PREVIOUS '
                     onClick='goLastMonth({{ $month . ',' . $year . ',' . $doctor_id }})'>
-                <input type='button' class='next-btn' value=' NEXT '
+                {{-- <input type='button' class='next-btn' value=' NEXT '
+                    onClick='goNextMonth({{ $month . ',' . $year . ',' . $doctor_id }})'> --}}
+                    <input type='button' class='next-btn btn btn-success' value=' NEXT '
                     onClick='goNextMonth({{ $month . ',' . $year . ',' . $doctor_id }})'>
             </div>
+            <br>
             <div class="view_schedule-inner-over-flw">
                 <div class="calender-slot">
                     <ul>
@@ -86,7 +93,7 @@
                         @for ($i = 1; $i < $numDays + 1; $i++, $counter++)
                             @php
                                 $timeStamp = strtotime("$year-$month-$i");
-                                
+
                             @endphp
 
                             @if ($i == 1)
@@ -140,9 +147,12 @@
 
 
 @section('js_code')
+    {{-- add yasir script to url in next and previous button 12-06-2024 --}}
+    <script>
+        var baseUrl = "{{ url('/admin/view_schedule/') }}";
+    </script>
     <script>
         function goLastMonth(month, year, doctor_id, mydate) {
-
             if (month == 1) {
                 --year;
                 month = 13;
@@ -152,13 +162,14 @@
             if (month < 10) {
                 month = '0' + month;
             }
-            var url = "admin/view_schedule/" + month + '/' + year + '/' + doctor_id;
+            // var url = baseUrl + "/ShahDental/doctor/view_schedule/" + month + '/' + year + '/' + doctor_id;
+            // add this url for Yasir 1206-2024
+            var url = baseUrl + '/' + month + '/' + year + '/' + doctor_id;
 
-            document.location.href = '/' + url;
+            document.location.href = url;
         }
 
         function goNextMonth(month, year, doctor_id, mydate) {
-
             if (month == 12) {
                 ++year;
                 month = 0;
@@ -168,10 +179,13 @@
             if (month < 10) {
                 month = '0' + month;
             }
-            var url = "admin/view_schedule/" + month + '/' + year + '/' + doctor_id;
+            // var url = baseUrl + "/ShahDental/doctor/view_schedule/" + month + '/' + year + '/' + doctor_id;
+            // add this url for Yasir 1206-2024
+            var url = baseUrl + '/' + month + '/' + year + '/' + doctor_id;
 
-            document.location.href = '/' + url;
+            document.location.href = url;
         }
+
 
 
 

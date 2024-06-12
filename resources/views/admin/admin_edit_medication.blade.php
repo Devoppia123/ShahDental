@@ -38,22 +38,19 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="white-box">
-                        <form class="form-horizontal" method="post" action="{{ url('/admin/add-radiology-post') }}"
+                        <form class="form-horizontal" method="post" action="{{ url('/admin/add-medication-post') }}"
                             enctype="multipart/form-data">
                             @csrf
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Radiologys Name :</label>
-                                    <input class="form-control" value="{{$radiologys->name}}" type="text" required name="name" class="txt-field"
-                                        size="35" maxlength="130" />
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Medication Name :</label>
+                                        <input class="form-control" value="{{ $medications->name }}" type="text" required
+                                            name="name" class="txt-field" size="35" maxlength="130" />
+                                    </div>
+                                    <input type="hidden" name="id" value="{{ $medications->id }}">
                                 </div>
-
-                             <input type="hidden" name="id" value="{{$radiologys->id}}">
-                            </div>
-
-                            
-
-                            <input class="btn mt-3 btn-info" name="radiologys" style="margin-top: 5px" type="submit" value="Update">
+                            <input class="btn mt-3 btn-info" name="medications" style="margin-top: 5px" type="submit"
+                                value="Update">
 
                         </form>
                     </div>
