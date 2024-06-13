@@ -517,8 +517,8 @@ class AdminController extends Controller
         $add->branch_name = $request->branch_name;
         $add->status = 1;
         $add->save();
-        Session::put('success', 'Branch Add Successfully');
-        return redirect('/admin/view_branches');
+        // Session::put('success', 'Branch Add Successfully');
+        return redirect('/admin/view_branches')->with('success', 'Branch Add Successfully');
     }
 
     public function admin_view_branches()
@@ -529,11 +529,29 @@ class AdminController extends Controller
 
     public function admin_delete_branch($branch_id)
     {
-        $update = Branch::find($branch_id);
+        // dd($branch_id);
+        $branch = Branch::find($branch_id);
+        $branch->delete();
+        return redirect("/admin/view_branches")->with('success', 'Branch Add Successfully');;
+    }
+    public function admin_edit_branch($branch_id)
+    {
+
+        // dd($branch_id);
+        $ebranch = Branch::find($branch_id);
+        return view('admin.edit-branch',compact('ebranch'));
+
+        // return redirect("/admin/view_branches");
+    }
+    public function admin_update_branch(Request $request, $id)
+    {
+        $branch = Branch::find($id);        
+        $branch->update($request->all());
+        return redirect("/admin/view_branches");
         $update->status = 0;
         $update->save();
+        // return redirect("/admin/view_branches");
 
-        return redirect("/admin/view_branches");
     }
 
     public function admin_add_session()

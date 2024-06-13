@@ -6,7 +6,6 @@
     @include('admin.include.navbar')
 @endsection
 @section('content')
-<<<<<<< Updated upstream
 <style>
     /* doc social links */
 
@@ -33,7 +32,6 @@
                     <h4>Dr.Rida Sabir</h4>
                 </div>
             </div>
-=======
     <div class="main-cont-wrapper">
         <div class="container-fluid">
             {{-- <p>{{ $social->twitter }}</p> --}}
@@ -45,7 +43,6 @@
             {{-- <p>{{ $social->linkedin }}</p> --}}
             <a href="{{ $social->linkedin }}"><img style="width: 100px" src="{{ url('public/img/linkedin.png') }}" alt=""></a>
     </div>
->>>>>>> Stashed changes
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-6">

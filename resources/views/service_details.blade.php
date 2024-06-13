@@ -128,7 +128,7 @@
 
                 {{-- add this line to image fetch --}}
                 @if ($latest_article != null)
-                    <div class="blog-sec-01 text-center">
+                    <div class="blog-sec-01 text-center latest_article">
                         <img class="speciality-detail-img" style="width: 60%" src="{{ url("public/articles/$latest_article->image") }}" alt="">
                     </div>
                 @endif
@@ -209,7 +209,7 @@
                             </div>
                             {{-- All previous Articles --}}
                             <div class="col-lg-8 col-md-12 col-sm-12" style="display: flex; flex-direction: column; align-items: center;">
-                                @foreach ($articles as $article)
+                                @foreach ($articles as $article )
                                     <div class="col-lg-10">
                                         <div class="row">
                                             <div class="col-lg-4 col-sm-12">

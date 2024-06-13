@@ -791,6 +791,9 @@ button.btn.btn-primary {
     width: 70%;
     margin: auto;
 }
+.reh-cus-article .article-row  {
+    border-radius: 25px !important;
+}
 .reh-img-col-4 {
     width: 40%;
 }

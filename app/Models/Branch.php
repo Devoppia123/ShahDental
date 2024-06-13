@@ -9,5 +9,8 @@ class Branch extends Model
 {
     use HasFactory;
 
-    protected $guards = [];
+    protected $fillable = [
+        'branch_name',
+        'status'
+    ];
 }

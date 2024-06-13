@@ -267,6 +267,8 @@ Route::middleware(['auth.admin'])->group(function () {
         Route::post('/admin/doadd_branch', 'admin_doadd_branch');
         Route::get('/admin/view_branches', 'admin_view_branches');
         Route::get('/admin/delete_branch/{branch_id}', 'admin_delete_branch');
+        Route::get('/admin/edit_branch/{branch_id}/edit', 'admin_edit_branch')->name('branch.edit');
+        Route::post('/admin/update_branch/{branch_id}', 'admin_update_branch')->name('branch.update');
         Route::get('/admin/add_session', 'admin_add_session');
         Route::post('/admin/doadd_session', 'admin_doadd_session');
         Route::get('/admin/view_sessions', 'admin_view_sessions');

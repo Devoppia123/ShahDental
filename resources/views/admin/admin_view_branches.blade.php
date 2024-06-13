@@ -13,6 +13,11 @@
         <div class="staff-list-main-sec">
             <a class="btn btn-primary btn-sm mb-3" href="{{ url('/admin/add_branch') }}">Add Branch</a>
             <div class="table-responsive">
+                @if ($message = Session::get('success'))
+                <div class="alert alert-primary" role="alert">
+                    {{ $message }}
+                  </div>
+                @endif
                 <table class="table" id="app_table">
                     <thead>
                         <tr>
@@ -28,7 +33,9 @@
                                 <td>{{ $branch->branch_name }}</td>
                                 <td>
                                     {{-- <a href="{{ "/admin/delete_branch/$branch->id" }}">Delete</a> --}}
-                                    <a href="{{ "/admin/delete_branch/$branch->id" }}" class="btn btn-primary">Delete</a>
+                                    <a href="{{ route('branch.edit', $branch->id) }}" class="btn btn-warning">Edit</a>
+                                    <a href="{{ url("/admin/delete_branch/$branch->id") }}" class="btn btn-primary">Delete</a>
+                                    {{-- <a href=" {{route('/admin/delete_branch/'$branch->id) }}">Delete</a> --}}
                                 </td>
                             </tr>
                         @endforeach

@@ -239,7 +239,7 @@
             <ul id="pagination-demo" class="pagination-sm"></ul>
         </div> --}}
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js"></script> --}}
     {{-- <script>
         var item_perpage = 3;
         var total_pages = Math.ceil($('#main-table-div .main-table').length / item_perpage);
