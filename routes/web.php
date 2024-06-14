@@ -78,7 +78,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/adviser', 'adviser');
     Route::get('/services',  'services');
     Route::get('/all-services',  'all_services');
-    Route::get('/services_details/{services_id}',  'services_details');
+    Route::get('/services_details/{services_id}', 'services_details');
     Route::get('/doctors', 'doctors');
     Route::get('/doctor_profile/{doctor_id}',  'doctor_profile');
     Route::get('/ask_doctor/{doctor_id}', 'ask_doctor');

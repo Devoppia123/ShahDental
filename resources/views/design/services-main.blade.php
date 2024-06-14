@@ -8,7 +8,7 @@
                      competent Dental Surgeon supported by well-trained chair side assistants, lab technicians &
                      receptionist.</p>
              </div>
-             <div class="rk-services-row row gy-5 gx-3">
+             <div class="rk-services-row row gx-3">
                  {{-- <div class="services-blocks"> --}}
                      {{-- @php $count = 0; @endphp --}}
                      @foreach ($specialities as $sp)

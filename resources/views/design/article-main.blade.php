@@ -6,7 +6,7 @@
                   <p class="p-02">Online to know about our locations and ease yourself in finding us wherever you are.
                   </p>
               </div>
-              <div class="article-block row gy-5">
+              <div class="article-block row">
                   @foreach ($articles as $index => $article)
                       @if ($index == 0)
                           <div class="articles article-01 reh-arti reh-arti-col-one col-lg-6 col-md-12 col-sm-12">

@@ -1,7 +1,7 @@
 <div id="record-main" class="reh-record main-section">
     <div class="container-xxl">
         <div class="record-txt-blk all-txt-blk">
-            <div class="record-block row gy-5">
+            <div class="record-block row gy-2">
                 <div class="recorde-txt col-lg-6 col-md-12 col-sm-12">
                     <h2>Dental Records</h2>
                     <p>Dr. Shah Faisal & Associates takes pride in introducing its dynamic team<br>

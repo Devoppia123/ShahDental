@@ -80,19 +80,26 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
     <div class="container-xxl">
         <div class="header-txt-blk all-txt-blk">
             <div class="top-header row">
-                <div class="empty-blk-01 col-md-2"></div>
-                <div class="col-md-12 col-sm-12 top-r">
-                    <div class="top-image-box call-us">
-                        <span>
+                <div class="top-r">
+                    <div class="address">    
+                      <div class="row">
+                        <div class="col-lg-3 col-md-3">
+                          <div class="top-image-box call-us"><span>
                             <img src="{{ url('public/images/Shah-Dental_03.png') }}" alt="03">
-                            : <a href="Gulshan-e-Iqbal Branch-021-34963440">
-                                <span class="call-bold"></span></a>
-                        </span>
-                    </div>
-                    <div class="top-txt-box address">
-                        <p>Gulshan-e-Iqbal Branch-<a href="tel:02134963440">021-34963440</a></p>
-                        <p>Bahadurabad-<a href="tel:03341326378">03341326378</a></p>
-                        <p>DHA Branch-<a href="tel:021-35243482">021-35243482</a></p>
+                            <span class="call-bold"><a href="tel:02134963440">02134963440</a></span>
+                            </span>          
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                          <p>Gulshan-e-Iqbal: <a href="tel:02134963440">021-34963440</a></p>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                          <p>Bahadurabad Branch: <a href="tel:03341326378">03341326378</a></p>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                          <p>DHA Branch: <a href="tel:02135243482">021-35243482</a></p>
+                        </div>
+                      </div>                        
                     </div>
                 </div>
             </div>
