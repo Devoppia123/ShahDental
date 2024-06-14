@@ -113,7 +113,7 @@
   <div class="carousel-inner">
     <div class="carousel-inner-left">
       <div class="carousel-item active" data-bs-interval="10000">
-        <img src="http://127.0.0.1/ShahDental/public/images/banner-image_01.jpg" class="d-block w-100" alt="...">
+        <img src="{{ url('public/images/banner-image_01.jpg') }}" class="d-block w-100" alt="...">
         <div class="carousel-caption carousel-content container-xxl">
           <div class="carousel-left">
             <h5>1-Welcome To Shah Dental</h5>

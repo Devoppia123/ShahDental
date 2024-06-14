@@ -200,7 +200,7 @@ $url = $_SERVER['REQUEST_URI']; // Get the current URL
                                             echo 'Site Map';
                                             break;
                                         case 'find-doctors':
-                                            echo 'find doctors';
+                                            echo 'Find Doctors';
                                             break;
                                         case 'branch-directions':
                                             echo 'Branch Direction';

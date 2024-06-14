@@ -110,11 +110,11 @@
         .plyr--video {
             height: 150px;
         }
-        .article-image{
+
+        .article-image {
             width: 100%;
             border-radius: 2%;
         }
-        
     </style>
 @endsection
 
@@ -128,12 +128,18 @@
 
                 {{-- add this line to image fetch --}}
                 @if ($latest_article != null)
+<<<<<<< Updated upstream
                     <div class="blog-sec-01 text-center latest_article">
                         <img class="speciality-detail-img" style="width: 60%" src="{{ url("public/articles/$latest_article->image") }}" alt="">
+=======
+                    <div class="blog-sec-01 text-center">
+                        <img class="speciality-detail-img" style="width: 60%"
+                            src="{{ url("public/articles/$latest_article->image") }}" alt="">
+>>>>>>> Stashed changes
                     </div>
                 @endif
                 {{-- <h6>{!! $speciality->description !!}</h6> --}}
-                <p>{{Str::limit( $speciality->description,500) }}</p>
+                <p>{{ Str::limit($speciality->description, 500) }}</p>
             </div>
         </section>
 
@@ -208,8 +214,14 @@
 
                             </div>
                             {{-- All previous Articles --}}
+<<<<<<< Updated upstream
                             <div class="col-lg-8 col-md-12 col-sm-12" style="display: flex; flex-direction: column; align-items: center;">
                                 @foreach ($articles as $article )
+=======
+                            <div class="col-lg-8 col-md-12 col-sm-12"
+                                style="display: flex; flex-direction: column; align-items: center;">
+                                @foreach ($articles as $article)
+>>>>>>> Stashed changes
                                     <div class="col-lg-10">
                                         <div class="row">
                                             <div class="col-lg-4 col-sm-12">
@@ -220,9 +232,8 @@
                                                 <div class="blog-content">
                                                     <h5>{{ $article->title }}</h5>
                                                     <p>
-                                                        {{ Str::limit($article->description, 150) }}
-                                                        <a
-                                                            href="{{ url("/view_article/$article->id ") }}">Read More</a>
+                                                        {!! Str::limit(($article->description), 150) !!}
+                                                        <a href="{{ url("/view_article/$article->id ") }}">Read More</a>
                                                     </p>
                                                 </div>
                                             </div>

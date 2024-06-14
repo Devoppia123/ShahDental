@@ -47,7 +47,7 @@
             {{-- <img class="arti-detail-img" src="{{ url("public/articles/$article->image") }}"> --}}
             <h1 class="text-center mt-5">{{ $article->title }}</h1>
             <h5>{{ $article->speciality[0]->speciality }}</h5>
-            <p>{{ $article->description }}</p>
+            <p>{!! $article->description !!}</p>
             
         </div>
     </div>

@@ -300,7 +300,9 @@ li {
     color: #fff;
     text-decoration: none;
 }
-
+.ser-img-box img {
+    border-radius: 16px 16px 0 0;
+}
 /* find doc */
 .reh-find-doc{
     margin-top: 100px;
